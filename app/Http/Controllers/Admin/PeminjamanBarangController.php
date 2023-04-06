@@ -19,6 +19,10 @@ class PeminjamanBarangController extends Controller
     {
         abort_if(Gate::denies('peminjaman_barang_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        if (!auth()->user()->is_admin) {
+            $peminjamanBarangs = PeminjamanBarang::with(['barang', 'user'])->when('user_id', auth()->id())->get();
+            return view('admin.peminjamanBarangs.index', compact('peminjamanBarangs'));
+        }
         $peminjamanBarangs = PeminjamanBarang::with(['barang', 'user'])->get();
 
         return view('admin.peminjamanBarangs.index', compact('peminjamanBarangs'));

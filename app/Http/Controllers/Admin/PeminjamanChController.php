@@ -19,6 +19,10 @@ class PeminjamanChController extends Controller
     {
         abort_if(Gate::denies('peminjaman_ch_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        if (!auth()->user()->is_admin) {
+            $peminjamanChes = PeminjamanCh::with(['ruangan', 'user'])->where('user_id', auth()->id())->get();
+            return view('admin.peminjamanChes.index', compact('peminjamanChes'));
+        }
         $peminjamanChes = PeminjamanCh::with(['ruangan', 'user'])->get();
 
         return view('admin.peminjamanChes.index', compact('peminjamanChes'));
@@ -54,7 +58,7 @@ class PeminjamanChController extends Controller
         $attr = $request->all();
         $attr['ruangan_id'] = 1;
         $attr['user_id'] = auth()->id();
-        
+
         $peminjamanCh->update($attr);
 
         return redirect()->route('admin.peminjaman-ches.index');

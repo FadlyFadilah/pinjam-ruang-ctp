@@ -21,7 +21,10 @@ class PklController extends Controller
     public function index()
     {
         abort_if(Gate::denies('pkl_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        if (!auth()->user()->is_admin) {
+            $pkls = Pkl::with(['user', 'media'])->where('user_id', auth()->id())->get();
+            return view('admin.pkls.index', compact('pkls'));
+        }
         $pkls = Pkl::with(['user', 'media'])->get();
 
         return view('admin.pkls.index', compact('pkls'));

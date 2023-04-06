@@ -19,6 +19,10 @@ class PeminjamanRuangKacaBitcController extends Controller
     {
         abort_if(Gate::denies('peminjaman_ruang_kaca_bitc_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        if (!auth()->user()->is_admin) {
+            $peminjamanRuangKacaBitcs = PeminjamanRuangKacaBitc::with(['ruangan', 'user'])->where('user_id', auth()->id())->get();
+            return view('admin.peminjamanRuangKacaBitcs.index', compact('peminjamanRuangKacaBitcs'));
+        }
         $peminjamanRuangKacaBitcs = PeminjamanRuangKacaBitc::with(['ruangan', 'user'])->get();
 
         return view('admin.peminjamanRuangKacaBitcs.index', compact('peminjamanRuangKacaBitcs'));

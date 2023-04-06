@@ -21,8 +21,10 @@
                 @foreach ($ruangans as $item)
                     <div class="col-5 mx-auto text-center">
                         <div class="card room-wrap p-2 m-4">
-                            <a href="#" class="img"
-                                style="background-image: url({{ asset($barang->gambar->getUrl('thumb')) }});"></a>
+                            @if ($item->gambar)
+                                <a href="#" target="_blank" style="display: inline-block;background-image: url({{ asset($item->gambar->getUrl('thumb')) }});">
+                                </a>
+                            @endif
                             <div class="half left-arrow d-flex align-items-center">
                                 <div class="text p-4 p-xl-5 text-center">
                                     <p class="star mb-0"><span class="fa fa-star"></span><span
@@ -30,12 +32,11 @@
                                             class="fa fa-star"></span><span class="fa fa-star"></span></p>
                                     <h3 class="mb-3"><a href="rooms.html">{{ $item->nama_ruangan }}</a></h3>
                                     <ul class="list-accomodation">
-                                        <li><span>Maks:</span> {{ $item->kapasitas }} Orang</li>
+                                        <li><span>Maks:</span> {{ $item->kapasitas ?? 'Semua' }} Orang</li>
                                         <li><span>Lokasi:</span> {{ $item->lokasi }}</li>
                                         <li><span>Deskripsi:</span> {{ $item->deskripsi }}</li>
                                         <li><span>Status:</span> {{ $item->status }}
                                         </li>
-                                        <li>{!! implode('<br>', $item->status) !!}</li>
                                     </ul>
                                     <p class="pt-1"><a href="#" id="buttonBorrowRoomModal"
                                             class="btn-custom px-3 py-2" data-toggle="modal" data-target="#borrowRoomModal"

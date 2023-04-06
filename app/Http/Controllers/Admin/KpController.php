@@ -22,6 +22,10 @@ class KpController extends Controller
     {
         abort_if(Gate::denies('kp_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        if (!auth()->user()->is_admin) {
+            $kps = Kp::with(['user', 'media'])->where('user_id', auth()->id())->get();
+            return view('admin.kps.index', compact('kps'));
+        }
         $kps = Kp::with(['user', 'media'])->get();
 
         return view('admin.kps.index', compact('kps'));
@@ -69,7 +73,7 @@ class KpController extends Controller
         $kp->update($attr);
 
         if ($request->input('kesbang', false)) {
-            if (! $kp->kesbang || $request->input('kesbang') !== $kp->kesbang->file_name) {
+            if (!$kp->kesbang || $request->input('kesbang') !== $kp->kesbang->file_name) {
                 if ($kp->kesbang) {
                     $kp->kesbang->delete();
                 }
@@ -80,7 +84,7 @@ class KpController extends Controller
         }
 
         if ($request->input('hasil', false)) {
-            if (! $kp->hasil || $request->input('hasil') !== $kp->hasil->file_name) {
+            if (!$kp->hasil || $request->input('hasil') !== $kp->hasil->file_name) {
                 if ($kp->hasil) {
                     $kp->hasil->delete();
                 }

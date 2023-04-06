@@ -10,13 +10,13 @@ class HomeController extends Controller
 {
     public function rooms()
     {
-        $ruangans = Ruangan::all();
+        $ruangans = Ruangan::with(['media'])->get();
         return view('pages.rooms', compact('ruangans'));
     }
 
     public function items()
     {
-        $barangs = Barang::all();
+        $barangs = Barang::with(['media'])->get();
         return view('pages.items', compact('barangs'));
     }
 }

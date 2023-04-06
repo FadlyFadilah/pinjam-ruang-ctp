@@ -21,7 +21,10 @@ class PenelitianController extends Controller
     public function index()
     {
         abort_if(Gate::denies('penelitian_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        if (!auth()->user()->is_admin) {
+            $penelitians = Penelitian::with(['user', 'media'])->where('user_id', auth()->id())->get();
+            return view('admin.penelitians.index', compact('penelitians'));
+        }
         $penelitians = Penelitian::with(['user', 'media'])->get();
 
         return view('admin.penelitians.index', compact('penelitians'));

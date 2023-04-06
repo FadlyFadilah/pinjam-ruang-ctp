@@ -18,7 +18,10 @@ class PeminjamanStudioDubbingController extends Controller
     public function index()
     {
         abort_if(Gate::denies('peminjaman_studio_dubbing_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        if (!auth()->user()->is_admin) {
+            $peminjamanStudioDubbings = PeminjamanStudioDubbing::with(['ruangan', 'user'])->where('user_id', auth()->id())->get();
+            return view('admin.peminjamanStudioDubbings.index', compact('peminjamanStudioDubbings'));
+        }
         $peminjamanStudioDubbings = PeminjamanStudioDubbing::with(['ruangan', 'user'])->get();
 
         return view('admin.peminjamanStudioDubbings.index', compact('peminjamanStudioDubbings'));
