@@ -23,7 +23,7 @@
                         <div class="card room-wrap p-2 m-4">
                             @if ($item->gambar)
                                 <a href="#" class="img"
-                                    style="background-image: url({{ $item->gambar->getUrl('thumb') }});"></a>
+                                    style="background-image: url({{ $item->gambar->getUrl() }});"></a>
                             @endif
                             
                             <div class="half left-arrow d-flex align-items-center">
