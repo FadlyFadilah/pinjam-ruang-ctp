@@ -19,10 +19,8 @@ Route::view('/aboutus', 'pages.aboutus')->name('aboutus');
 
 Auth::routes();
 
-Auth::routes();
-
-Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
-    Route::get('/dashboard', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
+    Route::get('/', 'HomeController@index')->name('home');
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
@@ -91,4 +89,42 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
         Route::post('profile', 'ChangePasswordController@updateProfile')->name('password.updateProfile');
         Route::post('profile/destroy', 'ChangePasswordController@destroy')->name('password.destroyProfile');
     }
+});
+Route::group(['as' => 'user.', 'namespace' => 'User', 'middleware' => ['auth']], function () {
+    Route::get('/dashboard', 'HomeController@index')->name('home');
+    // Peminjaman Studio Dubbing
+    Route::delete('peminjaman-studio-dubbings/destroy', 'PeminjamanStudioDubbingController@massDestroy')->name('peminjaman-studio-dubbings.massDestroy');
+    Route::resource('peminjaman-studio-dubbings', 'PeminjamanStudioDubbingController');
+
+    // Peminjaman Ruang Kaca Bitc
+    Route::delete('peminjaman-ruang-kaca-bitcs/destroy', 'PeminjamanRuangKacaBitcController@massDestroy')->name('peminjaman-ruang-kaca-bitcs.massDestroy');
+    Route::resource('peminjaman-ruang-kaca-bitcs', 'PeminjamanRuangKacaBitcController');
+
+    // Peminjaman Ch
+    Route::delete('peminjaman-ches/destroy', 'PeminjamanChController@massDestroy')->name('peminjaman-ches.massDestroy');
+    Route::resource('peminjaman-ches', 'PeminjamanChController');
+
+    // Peminjaman Barang
+    Route::delete('peminjaman-barangs/destroy', 'PeminjamanBarangController@massDestroy')->name('peminjaman-barangs.massDestroy');
+    Route::resource('peminjaman-barangs', 'PeminjamanBarangController');
+
+    // Penelitian
+    Route::delete('penelitians/destroy', 'PenelitianController@massDestroy')->name('penelitians.massDestroy');
+    Route::post('penelitians/media', 'PenelitianController@storeMedia')->name('penelitians.storeMedia');
+    Route::post('penelitians/ckmedia', 'PenelitianController@storeCKEditorImages')->name('penelitians.storeCKEditorImages');
+    Route::resource('penelitians', 'PenelitianController');
+
+    // Kp
+    Route::delete('kps/destroy', 'KpController@massDestroy')->name('kps.massDestroy');
+    Route::post('kps/media', 'KpController@storeMedia')->name('kps.storeMedia');
+    Route::post('kps/ckmedia', 'KpController@storeCKEditorImages')->name('kps.storeCKEditorImages');
+    Route::resource('kps', 'KpController');
+
+    // Pkl
+    Route::delete('pkls/destroy', 'PklController@massDestroy')->name('pkls.massDestroy');
+    Route::post('pkls/media', 'PklController@storeMedia')->name('pkls.storeMedia');
+    Route::post('pkls/ckmedia', 'PklController@storeCKEditorImages')->name('pkls.storeCKEditorImages');
+    Route::resource('pkls', 'PklController');
+
+    Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });

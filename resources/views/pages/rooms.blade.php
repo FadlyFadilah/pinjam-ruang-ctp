@@ -22,9 +22,10 @@
                     <div class="col-5 mx-auto text-center">
                         <div class="card room-wrap p-2 m-4">
                             @if ($item->gambar)
-                                <a href="#" target="_blank" style="display: inline-block;background-image: url({{ asset($item->gambar->getUrl('thumb')) }});">
-                                </a>
+                                <a href="#" class="img"
+                                    style="background-image: url({{ $item->gambar->getUrl('thumb') }});"></a>
                             @endif
+                            
                             <div class="half left-arrow d-flex align-items-center">
                                 <div class="text p-4 p-xl-5 text-center">
                                     <p class="star mb-0"><span class="fa fa-star"></span><span
