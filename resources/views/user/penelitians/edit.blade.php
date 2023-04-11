@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.user')
 @section('content')
 
 <div class="card">
@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("admin.penelitians.update", [$penelitian->id]) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route("user.penelitians.update", [$penelitian->id]) }}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="form-group">
@@ -100,7 +100,7 @@
 @section('scripts')
 <script>
     Dropzone.options.kesbangDropzone = {
-    url: '{{ route('admin.penelitians.storeMedia') }}',
+    url: '{{ route('user.penelitians.storeMedia') }}',
     maxFilesize: 2, // MB
     maxFiles: 1,
     addRemoveLinks: true,
@@ -150,7 +150,7 @@
 </script>
 <script>
     Dropzone.options.hasilDropzone = {
-    url: '{{ route('admin.penelitians.storeMedia') }}',
+    url: '{{ route('user.penelitians.storeMedia') }}',
     maxFilesize: 2, // MB
     maxFiles: 1,
     addRemoveLinks: true,

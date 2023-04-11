@@ -3,7 +3,7 @@
 @can('kp_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.kps.create') }}">
+            <a class="btn btn-success" href="{{ route('user.kps.create') }}">
                 {{ trans('global.add') }} {{ trans('cruds.kp.title_singular') }}
             </a>
         </div>
@@ -97,19 +97,19 @@
                             </td>
                             <td>
                                 @can('kp_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.kps.show', $kp->id) }}">
+                                    <a class="btn btn-xs btn-primary" href="{{ route('user.kps.show', $kp->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
 
                                 @can('kp_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.kps.edit', $kp->id) }}">
+                                    <a class="btn btn-xs btn-info" href="{{ route('user.kps.edit', $kp->id) }}">
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
 
                                 @can('kp_delete')
-                                    <form action="{{ route('admin.kps.destroy', $kp->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                    <form action="{{ route('user.kps.destroy', $kp->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
@@ -138,7 +138,7 @@
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.kps.massDestroy') }}",
+    url: "{{ route('user.kps.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
