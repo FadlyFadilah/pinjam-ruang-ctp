@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.user')
 @section('content')
 
 <div class="card">
@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("admin.studio-fotos.store") }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route("user.studio-fotos.store") }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label class="required" for="pemohon">{{ trans('cruds.studioFoto.fields.pemohon') }}</label>
@@ -95,7 +95,7 @@
 @section('scripts')
 <script>
     Dropzone.options.ktpDropzone = {
-    url: '{{ route('admin.studio-fotos.storeMedia') }}',
+    url: '{{ route('user.studio-fotos.storeMedia') }}',
     maxFilesize: 2, // MB
     maxFiles: 1,
     addRemoveLinks: true,

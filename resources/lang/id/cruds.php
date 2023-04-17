@@ -262,7 +262,7 @@ return [
             'konten'            => 'Konten Promosi yang Akan dibuat',
             'konten_helper'     => ' ',
             'ktp'               => 'Foto KTP',
-            'ktp_helper'        => 'Maksimah 2  Mb',
+            'ktp_helper'        => 'Maksimal 2  Mb',
             'oss'               => 'No Oss',
             'oss_helper'        => ' ',
             'created_at'        => 'Created at',

@@ -172,8 +172,8 @@
                                         @endcan
                                         @can('studio_foto_access')
                                             <li class="nav-item">
-                                                <a href="{{ route('admin.studio-fotos.index') }}"
-                                                    class="nav-link {{ request()->is('admin/studio-fotos') || request()->is('admin/studio-fotos/*') ? 'active' : '' }}">
+                                                <a href="{{ route('user.studio-fotos.index') }}"
+                                                    class="nav-link {{ request()->is('user/studio-fotos') || request()->is('user/studio-fotos/*') ? 'active' : '' }}">
                                                     <i class="fa-fw nav-icon fas fa-camera">
 
                                                     </i>

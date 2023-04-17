@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
@@ -32,7 +32,7 @@ class StudioFotoController extends Controller
 
         $users = User::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.studioFotos.create', compact('users'));
+        return view('user.studioFotos.create', compact('users'));
     }
 
     public function store(StoreStudioFotoRequest $request)
@@ -48,7 +48,7 @@ class StudioFotoController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $studioFoto->id]);
         }
 
-        return redirect()->route('admin.studio-fotos.index');
+        return redirect()->route('user.studio-fotos.index');
     }
 
     public function edit(StudioFoto $studioFoto)
@@ -57,7 +57,7 @@ class StudioFotoController extends Controller
 
         $studioFoto->load('user');
 
-        return view('admin.studioFotos.edit', compact('studioFoto'));
+        return view('user.studioFotos.edit', compact('studioFoto'));
     }
 
     public function update(UpdateStudioFotoRequest $request, StudioFoto $studioFoto)
@@ -76,7 +76,7 @@ class StudioFotoController extends Controller
             $studioFoto->ktp->delete();
         }
 
-        return redirect()->route('admin.studio-fotos.index');
+        return redirect()->route('user.studio-fotos.index');
     }
 
     public function show(StudioFoto $studioFoto)
@@ -85,7 +85,7 @@ class StudioFotoController extends Controller
 
         $studioFoto->load('user');
 
-        return view('admin.studioFotos.show', compact('studioFoto'));
+        return view('user.studioFotos.show', compact('studioFoto'));
     }
 
     public function destroy(StudioFoto $studioFoto)
