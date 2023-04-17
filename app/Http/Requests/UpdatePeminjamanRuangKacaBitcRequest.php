@@ -17,10 +17,6 @@ class UpdatePeminjamanRuangKacaBitcRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id' => [
-                'required',
-                'integer',
-            ],
             'nama' => [
                 'string',
                 'required',

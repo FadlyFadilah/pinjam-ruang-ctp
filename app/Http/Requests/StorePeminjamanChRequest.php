@@ -17,10 +17,6 @@ class StorePeminjamanChRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id' => [
-                'required',
-                'integer',
-            ],
             'ktp' => [
                 'string',
                 'required',

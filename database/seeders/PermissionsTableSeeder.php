@@ -184,90 +184,110 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 44,
-                'title' => 'peminjaman_barang_create',
+                'title' => 'studio_foto_create',
             ],
             [
                 'id'    => 45,
-                'title' => 'peminjaman_barang_edit',
+                'title' => 'studio_foto_edit',
             ],
             [
                 'id'    => 46,
-                'title' => 'peminjaman_barang_show',
+                'title' => 'studio_foto_show',
             ],
             [
                 'id'    => 47,
-                'title' => 'peminjaman_barang_delete',
+                'title' => 'studio_foto_delete',
             ],
             [
                 'id'    => 48,
-                'title' => 'peminjaman_barang_access',
+                'title' => 'studio_foto_access',
             ],
             [
                 'id'    => 49,
-                'title' => 'pendaftaran_access',
+                'title' => 'peminjaman_barang_create',
             ],
             [
                 'id'    => 50,
-                'title' => 'penelitian_create',
+                'title' => 'peminjaman_barang_edit',
             ],
             [
                 'id'    => 51,
-                'title' => 'penelitian_edit',
+                'title' => 'peminjaman_barang_show',
             ],
             [
                 'id'    => 52,
-                'title' => 'penelitian_show',
+                'title' => 'peminjaman_barang_delete',
             ],
             [
                 'id'    => 53,
-                'title' => 'penelitian_delete',
+                'title' => 'peminjaman_barang_access',
             ],
             [
                 'id'    => 54,
-                'title' => 'penelitian_access',
+                'title' => 'pendaftaran_access',
             ],
             [
                 'id'    => 55,
-                'title' => 'kp_create',
+                'title' => 'penelitian_create',
             ],
             [
                 'id'    => 56,
-                'title' => 'kp_edit',
+                'title' => 'penelitian_edit',
             ],
             [
                 'id'    => 57,
-                'title' => 'kp_show',
+                'title' => 'penelitian_show',
             ],
             [
                 'id'    => 58,
-                'title' => 'kp_delete',
+                'title' => 'penelitian_delete',
             ],
             [
                 'id'    => 59,
-                'title' => 'kp_access',
+                'title' => 'penelitian_access',
             ],
             [
                 'id'    => 60,
-                'title' => 'pkl_create',
+                'title' => 'kp_create',
             ],
             [
                 'id'    => 61,
-                'title' => 'pkl_edit',
+                'title' => 'kp_edit',
             ],
             [
                 'id'    => 62,
-                'title' => 'pkl_show',
+                'title' => 'kp_show',
             ],
             [
                 'id'    => 63,
-                'title' => 'pkl_delete',
+                'title' => 'kp_delete',
             ],
             [
                 'id'    => 64,
-                'title' => 'pkl_access',
+                'title' => 'kp_access',
             ],
             [
                 'id'    => 65,
+                'title' => 'pkl_create',
+            ],
+            [
+                'id'    => 66,
+                'title' => 'pkl_edit',
+            ],
+            [
+                'id'    => 67,
+                'title' => 'pkl_show',
+            ],
+            [
+                'id'    => 68,
+                'title' => 'pkl_delete',
+            ],
+            [
+                'id'    => 69,
+                'title' => 'pkl_access',
+            ],
+            [
+                'id'    => 70,
                 'title' => 'profile_password_edit',
             ],
         ];

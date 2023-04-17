@@ -57,6 +57,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('peminjaman-ches/destroy', 'PeminjamanChController@massDestroy')->name('peminjaman-ches.massDestroy');
     Route::resource('peminjaman-ches', 'PeminjamanChController');
 
+    // Studio Foto
+    Route::delete('studio-fotos/destroy', 'StudioFotoController@massDestroy')->name('studio-fotos.massDestroy');
+    Route::post('studio-fotos/media', 'StudioFotoController@storeMedia')->name('studio-fotos.storeMedia');
+    Route::post('studio-fotos/ckmedia', 'StudioFotoController@storeCKEditorImages')->name('studio-fotos.storeCKEditorImages');
+    Route::resource('studio-fotos', 'StudioFotoController');
+
     // Peminjaman Barang
     Route::delete('peminjaman-barangs/destroy', 'PeminjamanBarangController@massDestroy')->name('peminjaman-barangs.massDestroy');
     Route::resource('peminjaman-barangs', 'PeminjamanBarangController');
@@ -103,6 +109,12 @@ Route::group(['as' => 'user.', 'namespace' => 'User', 'middleware' => ['auth']],
     // Peminjaman Ch
     Route::delete('peminjaman-ches/destroy', 'PeminjamanChController@massDestroy')->name('peminjaman-ches.massDestroy');
     Route::resource('peminjaman-ches', 'PeminjamanChController');
+    
+    // Studio Foto
+    Route::delete('studio-fotos/destroy', 'StudioFotoController@massDestroy')->name('studio-fotos.massDestroy');
+    Route::post('studio-fotos/media', 'StudioFotoController@storeMedia')->name('studio-fotos.storeMedia');
+    Route::post('studio-fotos/ckmedia', 'StudioFotoController@storeCKEditorImages')->name('studio-fotos.storeCKEditorImages');
+    Route::resource('studio-fotos', 'StudioFotoController');
 
     // Peminjaman Barang
     Route::delete('peminjaman-barangs/destroy', 'PeminjamanBarangController@massDestroy')->name('peminjaman-barangs.massDestroy');

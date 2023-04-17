@@ -37,7 +37,7 @@ class PeminjamanChController extends Controller
 
         $peminjamanCh = PeminjamanCh::create($attr);
 
-        return redirect()->route('user.peminjaman-ches.index');
+        return redirect()->route('user.peminjaman-ches.index')->with('message', 'Segera Hubungi nomor whatsapp ini! ');
     }
 
     public function edit(PeminjamanCh $peminjamanCh)

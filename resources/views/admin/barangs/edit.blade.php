@@ -43,12 +43,17 @@
                 <span class="help-block">{{ trans('cruds.barang.fields.deskripsi_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="status">{{ trans('cruds.barang.fields.status') }}</label>
-                <input class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" type="text" name="status" id="status" value="{{ old('status', $barang->status) }}">
+                <label>{{ trans('cruds.ruangan.fields.status') }}</label>
+                <select class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status" id="status">
+                    <option value disabled {{ old('status', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                    @foreach(App\Models\Ruangan::STATUS_SELECT as $key => $label)
+                        <option value="{{ $key }}" {{ old('status', $barang->status) === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
+                    @endforeach
+                </select>
                 @if($errors->has('status'))
                     <span class="text-danger">{{ $errors->first('status') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.barang.fields.status_helper') }}</span>
+                <span class="help-block">{{ trans('cruds.ruangan.fields.status_helper') }}</span>
             </div>
             <div class="form-group">
                 <label for="gambar">{{ trans('cruds.barang.fields.gambar') }}</label>
