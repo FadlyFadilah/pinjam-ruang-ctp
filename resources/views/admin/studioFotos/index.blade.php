@@ -83,8 +83,8 @@
                             </td>
                             <td>
                                 @if($studioFoto->ktp)
-                                    <a href="{{ $studioFoto->ktp->getUrl() }}" target="_blank">
-                                        {{ trans('global.view_file') }}
+                                    <a href="{{ $studioFoto->ktp->getUrl() }}" target="_blank" style="display: inline-block">
+                                        <img src="{{ $studioFoto->ktp->getUrl('thumb') }}">
                                     </a>
                                 @endif
                             </td>
