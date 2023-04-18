@@ -252,6 +252,19 @@
                                                 </a>
                                             </li>
                                         @endcan
+                                        @can('cm_access')
+                                            <li class="nav-item">
+                                                <a href="{{ route('user.cms.index') }}"
+                                                    class="nav-link {{ request()->is('user/cms') || request()->is('user/cms/*') ? 'active' : '' }}">
+                                                    <i class="fa-fw nav-icon fas fa-highlighter">
+
+                                                    </i>
+                                                    <p>
+                                                        {{ trans('cruds.cm.title') }}
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        @endcan
                                     </ul>
                                 </li>
                             @endcan

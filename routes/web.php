@@ -85,6 +85,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('pkls/ckmedia', 'PklController@storeCKEditorImages')->name('pkls.storeCKEditorImages');
     Route::resource('pkls', 'PklController');
 
+    // Cms
+    Route::delete('cms/destroy', 'CmsController@massDestroy')->name('cms.massDestroy');
+    Route::post('cms/media', 'CmsController@storeMedia')->name('cms.storeMedia');
+    Route::post('cms/ckmedia', 'CmsController@storeCKEditorImages')->name('cms.storeCKEditorImages');
+    Route::resource('cms', 'CmsController');
+
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
@@ -137,6 +143,12 @@ Route::group(['as' => 'user.', 'namespace' => 'User', 'middleware' => ['auth']],
     Route::post('pkls/media', 'PklController@storeMedia')->name('pkls.storeMedia');
     Route::post('pkls/ckmedia', 'PklController@storeCKEditorImages')->name('pkls.storeCKEditorImages');
     Route::resource('pkls', 'PklController');
+
+    // Cms
+    Route::delete('cms/destroy', 'CmsController@massDestroy')->name('cms.massDestroy');
+    Route::post('cms/media', 'CmsController@storeMedia')->name('cms.storeMedia');
+    Route::post('cms/ckmedia', 'CmsController@storeCKEditorImages')->name('cms.storeCKEditorImages');
+    Route::resource('cms', 'CmsController');
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });

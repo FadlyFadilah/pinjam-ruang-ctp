@@ -288,6 +288,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 70,
+                'title' => 'cm_create',
+            ],
+            [
+                'id'    => 71,
+                'title' => 'cm_edit',
+            ],
+            [
+                'id'    => 72,
+                'title' => 'cm_show',
+            ],
+            [
+                'id'    => 73,
+                'title' => 'cm_delete',
+            ],
+            [
+                'id'    => 74,
+                'title' => 'cm_access',
+            ],
+            [
+                'id'    => 75,
                 'title' => 'profile_password_edit',
             ],
         ];
