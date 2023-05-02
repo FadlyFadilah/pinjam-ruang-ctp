@@ -19,7 +19,7 @@ Route::view('/aboutus', 'pages.aboutus')->name('aboutus');
 
 //News
 Route::get('/news', 'PublicContentPageController@index')->name('news.public');
-Route::get('/news/{ContentPage:title}', 'PublicContentPageController@index')->name('news.show');
+Route::get('/news/{ContentPage:title}', 'PublicContentPageController@show')->name('news.show');
 
 Auth::routes();
 

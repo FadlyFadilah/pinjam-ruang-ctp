@@ -27,10 +27,11 @@ class PublicContentPageController extends Controller
         return view('pages.news', compact('contentPages', 'contentPagesAll'));
     }
 
-    public function show(ContentPage $contentPage)
+    public function show($title)
     {
+        $contentPage = ContentPage::where('title', $title)->first();
         $contentPage->load('categories', 'tags');
 
-        return view('admin.contentPages.show', compact('contentPage'));
+        return view('pages.newsShow', compact('contentPage'));
     }
 }

@@ -15,7 +15,7 @@
                         <h1 class="display-4 text-white">{{ $cp->title }}</h1>
 
                         <p class="lead">
-                            <a class="btn btn-primary btn-lg" href="#" role="button">Lihat Lebih Banyak</a>
+                            <a class="btn btn-primary btn-lg" href="{{ route('news.show', $cp->title) }}" role="button">Lihat Lebih Banyak</a>
                         </p>
                     </div>
                 </div>
