@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
@@ -24,7 +24,7 @@ class CmsController extends Controller
 
         $cm = Cm::with(['user', 'media'])->where('user_id', auth()->id())->first();
 
-        return view('admin.cms.index', compact('cm'));
+        return view('user.cms.index', compact('cm'));
     }
 
     public function create()
@@ -33,7 +33,7 @@ class CmsController extends Controller
 
         $users = User::pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.cms.create', compact('users'));
+        return view('user.cms.create', compact('users'));
     }
 
     public function store(StoreCmRequest $request)
@@ -49,7 +49,7 @@ class CmsController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $cm->id]);
         }
 
-        return redirect()->route('admin.cms.index');
+        return redirect()->route('user.cms.index');
     }
 
     public function edit(Cm $cm)
@@ -60,7 +60,7 @@ class CmsController extends Controller
 
         $cm->load('user');
 
-        return view('admin.cms.edit', compact('cm', 'users'));
+        return view('user.cms.edit', compact('cm', 'users'));
     }
 
     public function update(UpdateCmRequest $request, Cm $cm)
@@ -78,7 +78,7 @@ class CmsController extends Controller
             $cm->portofolio->delete();
         }
 
-        return redirect()->route('admin.cms.index');
+        return redirect()->route('user.cms.index');
     }
 
     public function show(Cm $cm)
@@ -87,7 +87,7 @@ class CmsController extends Controller
 
         $cm->load('user');
 
-        return view('admin.cms.show', compact('cm'));
+        return view('user.cms.show', compact('cm'));
     }
 
     public function destroy(Cm $cm)

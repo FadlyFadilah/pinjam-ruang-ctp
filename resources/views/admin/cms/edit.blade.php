@@ -99,7 +99,7 @@
                 <label>{{ trans('cruds.cm.fields.status') }}</label>
                 <select class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status" id="status">
                     <option value disabled {{ old('status', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
-                    @foreach(App\Cm::STATUS_SELECT as $key => $label)
+                    @foreach(App\Models\Cm::STATUS_SELECT as $key => $label)
                         <option value="{{ $key }}" {{ old('status', $cm->status) === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
                     @endforeach
                 </select>

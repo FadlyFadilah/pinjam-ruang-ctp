@@ -308,6 +308,74 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 75,
+                'title' => 'content_management_access',
+            ],
+            [
+                'id'    => 76,
+                'title' => 'content_category_create',
+            ],
+            [
+                'id'    => 77,
+                'title' => 'content_category_edit',
+            ],
+            [
+                'id'    => 78,
+                'title' => 'content_category_show',
+            ],
+            [
+                'id'    => 79,
+                'title' => 'content_category_delete',
+            ],
+            [
+                'id'    => 80,
+                'title' => 'content_category_access',
+            ],
+            [
+                'id'    => 81,
+                'title' => 'content_tag_create',
+            ],
+            [
+                'id'    => 82,
+                'title' => 'content_tag_edit',
+            ],
+            [
+                'id'    => 83,
+                'title' => 'content_tag_show',
+            ],
+            [
+                'id'    => 84,
+                'title' => 'content_tag_delete',
+            ],
+            [
+                'id'    => 85,
+                'title' => 'content_tag_access',
+            ],
+            [
+                'id'    => 86,
+                'title' => 'content_page_create',
+            ],
+            [
+                'id'    => 87,
+                'title' => 'content_page_edit',
+            ],
+            [
+                'id'    => 88,
+                'title' => 'content_page_show',
+            ],
+            [
+                'id'    => 89,
+                'title' => 'content_page_delete',
+            ],
+            [
+                'id'    => 90,
+                'title' => 'content_page_access',
+            ],
+            [
+                'id'    => 91,
+                'title' => 'profile_password_edit',
+            ],
+            [
+                'id'    => 92,
                 'title' => 'profile_password_edit',
             ],
         ];

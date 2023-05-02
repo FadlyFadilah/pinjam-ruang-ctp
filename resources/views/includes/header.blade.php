@@ -9,6 +9,7 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item @if(\Request::is('/')) active @endif"><a href="/" class="nav-link">Beranda</a></li>
         <li class="nav-item"><a href="{{ route('aboutus') }}" class="nav-link">Tentang</a></li>
+        <li class="nav-item"><a href="{{ route('news.public') }}" class="nav-link">Berita</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Layanan

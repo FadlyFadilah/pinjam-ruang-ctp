@@ -103,169 +103,152 @@
                         </a>
                     </li>
                 @endcan
-                @can('manajemen_peminjaman_access')
+                @can('peminjaman_ruangan_access')
                     <li
-                        class="nav-item has-treeview {{ request()->is('*') ? 'menu-open' : '' }} {{ request()->is('peminjaman-barangs*') ? 'menu-open' : '' }} {{ request()->is('*') ? 'menu-open' : '' }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is('*') ? 'active' : '' }} {{ request()->is('peminjaman-barangs*') ? 'active' : '' }} {{ request()->is('*') ? 'active' : '' }}"
+                        class="nav-item has-treeview {{ request()->is('peminjaman-studio-dubbings*') ? 'menu-open' : '' }} {{ request()->is('peminjaman-ruang-kaca-bitcs*') ? 'menu-open' : '' }} {{ request()->is('peminjaman-ches*') ? 'menu-open' : '' }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is('peminjaman-studio-dubbings*') ? 'active' : '' }} {{ request()->is('peminjaman-ruang-kaca-bitcs*') ? 'active' : '' }} {{ request()->is('peminjaman-ches*') ? 'active' : '' }}"
                             href="#">
-                            <i class="fa-fw nav-icon fas fa-home">
+                            <i class="fa-fw nav-icon fas fa-hotel">
 
                             </i>
                             <p>
-                                {{ trans('cruds.manajemenPeminjaman.title') }}
+                                {{ trans('cruds.peminjamanRuangan.title') }}
                                 <i class="right fa fa-fw fa-angle-left nav-icon"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('peminjaman_ruangan_access')
-                                <li
-                                    class="nav-item has-treeview {{ request()->is('peminjaman-studio-dubbings*') ? 'menu-open' : '' }} {{ request()->is('peminjaman-ruang-kaca-bitcs*') ? 'menu-open' : '' }} {{ request()->is('peminjaman-ches*') ? 'menu-open' : '' }}">
-                                    <a class="nav-link nav-dropdown-toggle {{ request()->is('peminjaman-studio-dubbings*') ? 'active' : '' }} {{ request()->is('peminjaman-ruang-kaca-bitcs*') ? 'active' : '' }} {{ request()->is('peminjaman-ches*') ? 'active' : '' }}"
-                                        href="#">
-                                        <i class="fa-fw nav-icon fas fa-hotel">
-
-                                        </i>
-                                        <p>
-                                            {{ trans('cruds.peminjamanRuangan.title') }}
-                                            <i class="right fa fa-fw fa-angle-left nav-icon"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        @can('peminjaman_studio_dubbing_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.peminjaman-studio-dubbings.index') }}"
-                                                    class="nav-link {{ request()->is('peminjaman-studio-dubbings') || request()->is('peminjaman-studio-dubbings/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon fas fa-microphone">
-
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.peminjamanStudioDubbing.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                        @can('peminjaman_ruang_kaca_bitc_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.peminjaman-ruang-kaca-bitcs.index') }}"
-                                                    class="nav-link {{ request()->is('peminjaman-ruang-kaca-bitcs') || request()->is('peminjaman-ruang-kaca-bitcs/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon fas fa-door-closed">
-
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.peminjamanRuangKacaBitc.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                        @can('peminjaman_ch_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.peminjaman-ches.index') }}"
-                                                    class="nav-link {{ request()->is('peminjaman-ches') || request()->is('peminjaman-ches/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon fas fa-archway">
-
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.peminjamanCh.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                        @can('studio_foto_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.studio-fotos.index') }}"
-                                                    class="nav-link {{ request()->is('user/studio-fotos') || request()->is('user/studio-fotos/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon fas fa-camera">
-
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.studioFoto.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                    </ul>
-                                </li>
-                            @endcan
-                            @can('peminjaman_barang_access')
+                            @can('peminjaman_studio_dubbing_access')
                                 <li class="nav-item">
-                                    <a href="{{ route('user.peminjaman-barangs.index') }}"
-                                        class="nav-link {{ request()->is('peminjaman-barangs') || request()->is('peminjaman-barangs/*') ? 'active' : '' }}">
-                                        <i class="fa-fw nav-icon fas fa-weight-hanging">
+                                    <a href="{{ route('user.peminjaman-studio-dubbings.index') }}"
+                                        class="nav-link {{ request()->is('peminjaman-studio-dubbings') || request()->is('peminjaman-studio-dubbings/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-microphone">
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.peminjamanBarang.title') }}
+                                            {{ trans('cruds.peminjamanStudioDubbing.title') }}
                                         </p>
                                     </a>
                                 </li>
                             @endcan
-                            @can('pendaftaran_access')
-                                <li
-                                    class="nav-item has-treeview {{ request()->is('penelitians*') ? 'menu-open' : '' }} {{ request()->is('kps*') ? 'menu-open' : '' }} {{ request()->is('pkls*') ? 'menu-open' : '' }}">
-                                    <a class="nav-link nav-dropdown-toggle {{ request()->is('penelitians*') ? 'active' : '' }} {{ request()->is('kps*') ? 'active' : '' }} {{ request()->is('pkls*') ? 'active' : '' }}"
-                                        href="#">
-                                        <i class="fa-fw nav-icon fas fa-sticky-note">
+                            @can('peminjaman_ruang_kaca_bitc_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.peminjaman-ruang-kaca-bitcs.index') }}"
+                                        class="nav-link {{ request()->is('peminjaman-ruang-kaca-bitcs') || request()->is('peminjaman-ruang-kaca-bitcs/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-door-closed">
 
                                         </i>
                                         <p>
-                                            {{ trans('cruds.pendaftaran.title') }}
-                                            <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                                            {{ trans('cruds.peminjamanRuangKacaBitc.title') }}
                                         </p>
                                     </a>
-                                    <ul class="nav nav-treeview">
-                                        @can('penelitian_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.penelitians.index') }}"
-                                                    class="nav-link {{ request()->is('penelitians') || request()->is('penelitians/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon fas fa-edit">
+                                </li>
+                            @endcan
+                            @can('peminjaman_ch_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.peminjaman-ches.index') }}"
+                                        class="nav-link {{ request()->is('peminjaman-ches') || request()->is('peminjaman-ches/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-archway">
 
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.penelitian.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                        @can('kp_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.kps.index') }}"
-                                                    class="nav-link {{ request()->is('kps') || request()->is('kps/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon far fa-edit">
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.peminjamanCh.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('studio_foto_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.studio-fotos.index') }}"
+                                        class="nav-link {{ request()->is('user/studio-fotos') || request()->is('user/studio-fotos/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-camera">
 
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.kp.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                        @can('pkl_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.pkls.index') }}"
-                                                    class="nav-link {{ request()->is('pkls') || request()->is('pkls/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon fas fa-pen">
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.studioFoto.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
+                @can('peminjaman_barang_access')
+                    <li class="nav-item">
+                        <a href="{{ route('user.peminjaman-barangs.index') }}"
+                            class="nav-link {{ request()->is('peminjaman-barangs') || request()->is('peminjaman-barangs/*') ? 'active' : '' }}">
+                            <i class="fa-fw nav-icon fas fa-weight-hanging">
 
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.pkl.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                        @can('cm_access')
-                                            <li class="nav-item">
-                                                <a href="{{ route('user.cms.index') }}"
-                                                    class="nav-link {{ request()->is('user/cms') || request()->is('user/cms/*') ? 'active' : '' }}">
-                                                    <i class="fa-fw nav-icon fas fa-highlighter">
+                            </i>
+                            <p>
+                                {{ trans('cruds.peminjamanBarang.title') }}
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('pendaftaran_access')
+                    <li
+                        class="nav-item has-treeview {{ request()->is('penelitians*') ? 'menu-open' : '' }} {{ request()->is('kps*') ? 'menu-open' : '' }} {{ request()->is('pkls*') ? 'menu-open' : '' }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is('penelitians*') ? 'active' : '' }} {{ request()->is('kps*') ? 'active' : '' }} {{ request()->is('pkls*') ? 'active' : '' }}"
+                            href="#">
+                            <i class="fa-fw nav-icon fas fa-sticky-note">
 
-                                                    </i>
-                                                    <p>
-                                                        {{ trans('cruds.cm.title') }}
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        @endcan
-                                    </ul>
+                            </i>
+                            <p>
+                                {{ trans('cruds.pendaftaran.title') }}
+                                <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @can('penelitian_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.penelitians.index') }}"
+                                        class="nav-link {{ request()->is('penelitians') || request()->is('penelitians/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-edit">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.penelitian.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('kp_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.kps.index') }}"
+                                        class="nav-link {{ request()->is('kps') || request()->is('kps/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon far fa-edit">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.kp.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('pkl_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.pkls.index') }}"
+                                        class="nav-link {{ request()->is('pkls') || request()->is('pkls/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-pen">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.pkl.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('cm_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.cms.index') }}"
+                                        class="nav-link {{ request()->is('user/cms') || request()->is('user/cms/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-highlighter">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.cm.title') }}
+                                        </p>
+                                    </a>
                                 </li>
                             @endcan
                         </ul>

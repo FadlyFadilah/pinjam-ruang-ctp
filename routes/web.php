@@ -17,6 +17,10 @@ Route::view('/contactus', 'pages.contactus')->name('contactus');
 //about us
 Route::view('/aboutus', 'pages.aboutus')->name('aboutus');
 
+//News
+Route::get('/news', 'PublicContentPageController@index')->name('news.public');
+Route::get('/news/{ContentPage:title}', 'PublicContentPageController@index')->name('news.show');
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
@@ -33,6 +37,20 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
     Route::resource('users', 'UsersController');
 
+    // Content Category
+    Route::delete('content-categories/destroy', 'ContentCategoryController@massDestroy')->name('content-categories.massDestroy');
+    Route::resource('content-categories', 'ContentCategoryController');
+
+    // Content Tag
+    Route::delete('content-tags/destroy', 'ContentTagController@massDestroy')->name('content-tags.massDestroy');
+    Route::resource('content-tags', 'ContentTagController');
+
+    // Content Page
+    Route::delete('content-pages/destroy', 'ContentPageController@massDestroy')->name('content-pages.massDestroy');
+    Route::post('content-pages/media', 'ContentPageController@storeMedia')->name('content-pages.storeMedia');
+    Route::post('content-pages/ckmedia', 'ContentPageController@storeCKEditorImages')->name('content-pages.storeCKEditorImages');
+    Route::resource('content-pages', 'ContentPageController');
+    
     // Ruangan
     Route::delete('ruangans/destroy', 'RuanganController@massDestroy')->name('ruangans.massDestroy');
     Route::post('ruangans/media', 'RuanganController@storeMedia')->name('ruangans.storeMedia');
@@ -115,7 +133,7 @@ Route::group(['as' => 'user.', 'namespace' => 'User', 'middleware' => ['auth']],
     // Peminjaman Ch
     Route::delete('peminjaman-ches/destroy', 'PeminjamanChController@massDestroy')->name('peminjaman-ches.massDestroy');
     Route::resource('peminjaman-ches', 'PeminjamanChController');
-    
+
     // Studio Foto
     Route::delete('studio-fotos/destroy', 'StudioFotoController@massDestroy')->name('studio-fotos.massDestroy');
     Route::post('studio-fotos/media', 'StudioFotoController@storeMedia')->name('studio-fotos.storeMedia');

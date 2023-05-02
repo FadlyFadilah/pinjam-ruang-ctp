@@ -3,13 +3,13 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.user.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.contentCategory.title') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.users.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.content-categories.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -17,42 +17,32 @@
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.id') }}
+                            {{ trans('cruds.contentCategory.fields.id') }}
                         </th>
                         <td>
-                            {{ $user->id }}
+                            {{ $contentCategory->id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.name') }}
+                            {{ trans('cruds.contentCategory.fields.name') }}
                         </th>
                         <td>
-                            {{ $user->name }}
+                            {{ $contentCategory->name }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Username
+                            {{ trans('cruds.contentCategory.fields.slug') }}
                         </th>
                         <td>
-                            {{ $user->username }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.user.fields.roles') }}
-                        </th>
-                        <td>
-                            @foreach($user->roles as $key => $roles)
-                                <span class="label label-info">{{ $roles->title }}</span>
-                            @endforeach
+                            {{ $contentCategory->slug }}
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.users.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.content-categories.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
