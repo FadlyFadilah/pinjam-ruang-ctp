@@ -9,7 +9,7 @@
                     <p class="breadcrumbs mb-2"><span class="mr-2"><a href="{{ route('home') }}">Beranda <i
                                     class="fa fa-chevron-right"></i></a></span> <span>Pendaftaran <i
                                 class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread">Pendaftaran</h1>
+                    <h1 class="mb-0 bread" style="font-family: 'Plus Jakarta Sans'">Pendaftaran</h1>
                 </div>
             </div>
         </div>

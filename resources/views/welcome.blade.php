@@ -7,8 +7,8 @@
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
                 data-scrollax-parent="true">
                 <div class="col-md-7 ftco-animate">
-                    <h2 class="subheading">Selamat datang di Pinjam Ruang</h2>
-                    <h1 class="mb-4">Pinjam ruangan mudah dan cepat</h1>
+                    <h2 class="subheading" style="font-family: 'Plus Jakarta Sans'">Selamat datang di Pinjam Ruang</h2>
+                    <h1 class="mb-4" style="font-family: 'Plus Jakarta Sans'">Pinjam ruangan mudah dan cepat</h1>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
                     <div class="img img-2 mb-4"
                         style="background-image: url(vendor/technext/vacation-rental/images/about.jpg);">
                     </div>
-                    <h2>Website Peminjaman dan Pendaftaran UPTD Cimahi TechnoPark </h2>
+                    <h2 style="font-family: 'Plus Jakarta Sans'">Website Peminjaman dan Pendaftaran UPTD Cimahi TechnoPark </h2>
                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
                         paradisematic country, in which roasted parts of sentences fly into your mouth. Even the
                         all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
@@ -31,7 +31,7 @@
                 <div class="col-md-6 wrap-about ftco-animate">
                     <div class="heading-section">
                         <div class="pl-md-5">
-                            <h2 class="mb-2">Apa yang kami tawarkan</h2>
+                            <h2 class="mb-2" style="font-family: 'Plus Jakarta Sans'">Apa yang kami tawarkan</h2>
                         </div>
                     </div>
                     <div class="pl-md-5">
@@ -122,7 +122,7 @@
         <div class="container-fluid ">
             <div class="row no-gutters justify-content-center pb-5 mb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h2>Peminjaman</h2>
+                    <h2 style="font-family: 'Plus Jakarta Sans'">Peminjaman</h2>
                 </div>
             </div>
 
@@ -130,7 +130,7 @@
                 <div class="card col-4">
                     <img class="card-img-top" src="vendor/technext/vacation-rental/images/image_3.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Peminjaman Ruangan</h5>
+                        <h5 class="card-title" style="font-family: 'Plus Jakarta Sans'">Peminjaman Ruangan</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                             card's content.</p>
                         <a href="{{ route('rooms') }}" class="btn btn-primary">Lihat Ruangan</a>
@@ -140,7 +140,7 @@
                 <div class="card col-4">
                     <img class="card-img-top" src="vendor/technext/vacation-rental/images/image_2.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Peminjaman Barang</h5>
+                        <h5 class="card-title" style="font-family: 'Plus Jakarta Sans'">Peminjaman Barang</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                             card's content.</p>
                         <a href="{{ route('items') }}" class="btn btn-primary">Lihat Barang</a>
@@ -154,7 +154,7 @@
         <div class="container">
             <div class="row justify-content-center pb-5 mb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h2>Tata Cara Peminjaman</h2>
+                    <h2 style="font-family: 'Plus Jakarta Sans'">Tata Cara Peminjaman</h2>
                 </div>
             </div>
             <div class="row ftco-animate">
@@ -173,7 +173,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm text-center">
-                    <h2>Ayo daftar sekarang juga</h2>
+                    <h2 style="font-family: 'Plus Jakarta Sans'">Ayo daftar sekarang juga</h2>
                     <p class="mb-2">Mudah dan cepat.</p>
                     <p class="mb-0">
                         <a href="{{ route('login') }}" class="btn btn-white px-4 py-3">Studio Foto</a>

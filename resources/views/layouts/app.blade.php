@@ -12,7 +12,17 @@
     <link href="{{ asset('css/adminltev3.css') }}" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+
+        <style>
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans';
+        }
+        body {
+            font-family: 'Poppins';
+        }
+    </style>
     @yield('styles')
 </head>
 
