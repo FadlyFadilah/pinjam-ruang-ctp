@@ -80,7 +80,7 @@
 <script>
     Dropzone.options.gambarDropzone = {
     url: '{{ route('admin.ruangans.storeMedia') }}',
-    maxFilesize: 10, // MB
+    maxFilesize: 15, // MB
     acceptedFiles: '.jpeg,.jpg,.png,.gif',
     maxFiles: 1,
     addRemoveLinks: true,
@@ -88,7 +88,7 @@
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 10,
+      size: 15,
       width: 4496,
       height: 4096
     },

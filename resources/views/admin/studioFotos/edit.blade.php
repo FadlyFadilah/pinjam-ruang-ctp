@@ -70,7 +70,7 @@
                 @if($errors->has('ktp'))
                     <span class="text-danger">{{ $errors->first('ktp') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.studioFoto.fields.ktp_helper') }}</span>
+                <span class="help-block text-danger">Maksimal 2MB.</span>
             </div>
             <div class="form-group">
                 <label class="required" for="oss">{{ trans('cruds.studioFoto.fields.oss') }}</label>
