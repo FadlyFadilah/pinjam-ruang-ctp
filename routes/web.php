@@ -120,8 +120,8 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
         Route::post('profile/destroy', 'ChangePasswordController@destroy')->name('password.destroyProfile');
     }
 });
-Route::group(['as' => 'user.', 'namespace' => 'User', 'middleware' => ['auth']], function () {
-    Route::get('/dashboard', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'User', 'middleware' => ['auth']], function () {
+    Route::get('/', 'HomeController@index')->name('home');
     // Peminjaman Studio Dubbing
     Route::delete('peminjaman-studio-dubbings/destroy', 'PeminjamanStudioDubbingController@massDestroy')->name('peminjaman-studio-dubbings.massDestroy');
     Route::resource('peminjaman-studio-dubbings', 'PeminjamanStudioDubbingController');
