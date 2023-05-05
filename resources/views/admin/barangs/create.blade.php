@@ -88,7 +88,7 @@
             },
             params: {
                 size: 15,
-                width: 4096,
+                width: 4496,
                 height: 4096
             },
             success: function(file, response) {

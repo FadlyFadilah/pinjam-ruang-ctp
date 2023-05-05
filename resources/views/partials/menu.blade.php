@@ -234,8 +234,7 @@
                             </p>
                         </a>
                     </li>
-                @endcan
-                
+                @endcan 
                 @can('pendaftaran_access')
                     <li
                         class="nav-item has-treeview {{ request()->is('penelitians*') ? 'menu-open' : '' }} {{ request()->is('kps*') ? 'menu-open' : '' }} {{ request()->is('pkls*') ? 'menu-open' : '' }}">
