@@ -64,9 +64,6 @@
                                 {{ $pkl->id ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->user->name ?? '' }}
-                            </td>
-                            <td>
                                 {{ $pkl->nama ?? '' }}
                             </td>
                             <td>
