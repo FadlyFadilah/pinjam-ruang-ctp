@@ -10,18 +10,6 @@
         <form method="POST" action="{{ route("admin.peminjaman-ruang-kaca-bitcs.store") }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="ruangan_id">{{ trans('cruds.peminjamanRuangKacaBitc.fields.ruangan') }}</label>
-                <select class="form-control select2 {{ $errors->has('ruangan') ? 'is-invalid' : '' }}" name="ruangan_id" id="ruangan_id">
-                    @foreach($ruangans as $id => $entry)
-                        <option value="{{ $id }}" {{ old('ruangan_id') == $id ? 'selected' : '' }}>{{ $entry }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('ruangan'))
-                    <span class="text-danger">{{ $errors->first('ruangan') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.peminjamanRuangKacaBitc.fields.ruangan_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <label class="required" for="nama">{{ trans('cruds.peminjamanRuangKacaBitc.fields.nama') }}</label>
                 <input class="form-control {{ $errors->has('nama') ? 'is-invalid' : '' }}" type="text" name="nama" id="nama" value="{{ old('nama', '') }}" required>
                 @if($errors->has('nama'))

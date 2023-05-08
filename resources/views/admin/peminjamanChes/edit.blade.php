@@ -11,18 +11,6 @@
             @method('PUT')
             @csrf
             <div class="form-group">
-                <label for="ruangan_id">{{ trans('cruds.peminjamanCh.fields.ruangan') }}</label>
-                <select class="form-control select2 {{ $errors->has('ruangan') ? 'is-invalid' : '' }}" name="ruangan_id" id="ruangan_id">
-                    @foreach($ruangans as $id => $entry)
-                        <option value="{{ $id }}" {{ (old('ruangan_id') ? old('ruangan_id') : $peminjamanCh->ruangan->id ?? '') == $id ? 'selected' : '' }}>{{ $entry }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('ruangan'))
-                    <span class="text-danger">{{ $errors->first('ruangan') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.peminjamanCh.fields.ruangan_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <label class="required" for="nama">{{ trans('cruds.peminjamanCh.fields.nama') }}</label>
                 <input class="form-control {{ $errors->has('nama') ? 'is-invalid' : '' }}" type="text" name="nama" id="nama" value="{{ old('nama', $peminjamanCh->nama) }}" required>
                 @if($errors->has('nama'))

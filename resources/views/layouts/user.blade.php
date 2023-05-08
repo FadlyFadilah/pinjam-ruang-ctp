@@ -85,7 +85,7 @@
                     <div class="row mb-2">
                         <div class="col-lg-12">
                             <div class="alert alert-success" role="alert">{{ session('message') }}<a target="_blank"
-                                    href="https://api.whatsapp.com/send?phone="> link</a></div>
+                                    href="https://api.whatsapp.com/send?phone=088220972773"> link</a></div>
                         </div>
                     </div>
                 @endif
@@ -113,6 +113,10 @@
             {{ csrf_field() }}
         </form>
     </div>
+    <a href="https://api.whatsapp.com/send?phone=085163587878"
+            class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
