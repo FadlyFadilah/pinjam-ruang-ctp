@@ -75,7 +75,7 @@
                             <td>
                                 @if($barang->gambar)
                                     <a href="{{ $barang->gambar->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $barang->gambar->getUrl('thumb') }}">
+                                        <img src="{{ $barang->gambar->getUrl() }}" width="50" height="50">
                                     </a>
                                 @endif
                             </td>

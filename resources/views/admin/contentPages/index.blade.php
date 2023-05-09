@@ -73,7 +73,7 @@
                             <td>
                                 @if($contentPage->featured_image)
                                     <a href="{{ $contentPage->featured_image->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $contentPage->featured_image->getUrl('thumb') }}">
+                                        <img src="{{ $contentPage->featured_image->getUrl() }}" width="50" height="50">
                                     </a>
                                 @endif
                             </td>
