@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.barang.fields.kapasitas') }}
+                            Jumlah
                         </th>
                         <td>
                             {{ $barang->kapasitas }}

@@ -18,7 +18,7 @@
                     <span class="help-block">{{ trans('cruds.barang.fields.nama_barang_helper') }}</span>
                 </div>
                 <div class="form-group">
-                    <label for="kapasitas">{{ trans('cruds.barang.fields.kapasitas') }}</label>
+                    <label for="kapasitas">Jumlah</label>
                     <input class="form-control {{ $errors->has('kapasitas') ? 'is-invalid' : '' }}" type="number"
                         name="kapasitas" id="kapasitas" value="{{ old('kapasitas', '0') }}" step="1">
                     @if ($errors->has('kapasitas'))
@@ -88,7 +88,7 @@
             },
             params: {
                 size: 15,
-                width: 4496,
+                width: 6000,
                 height: 4096
             },
             success: function(file, response) {

@@ -29,7 +29,7 @@
                             {{ trans('cruds.barang.fields.nama_barang') }}
                         </th>
                         <th>
-                            {{ trans('cruds.barang.fields.kapasitas') }}
+                            Jumlah
                         </th>
                         <th>
                             {{ trans('cruds.barang.fields.lokasi') }}

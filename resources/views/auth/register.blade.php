@@ -3,8 +3,10 @@
     <div class="login-box">
         <div class="login-logo">
             <div class="login-logo">
+                <img src="{{asset('LOGO.jpeg')}}" width='150'>
+                <br>
                 <a href="#">
-                    {{ trans('panel.site_title') }}
+                    PELITA TECHNOPARK
                 </a>
             </div>
         </div>
