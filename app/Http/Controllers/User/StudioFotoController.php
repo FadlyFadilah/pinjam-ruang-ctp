@@ -48,7 +48,7 @@ class StudioFotoController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $studioFoto->id]);
         }
 
-        return redirect()->route('user.studio-fotos.index')->with('message', 'Permintaan Peminjaman Berhasil');;
+        return redirect()->route('user.studio-fotos.index')->with('berhasil', 'Permintaan Peminjaman Berhasil');;
     }
 
     public function edit(StudioFoto $studioFoto)
