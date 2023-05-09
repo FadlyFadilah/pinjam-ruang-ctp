@@ -24,6 +24,7 @@ class Penelitian extends Model implements HasMedia
 
     protected $dates = [
         'lama',
+        'sampai',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -37,6 +38,7 @@ class Penelitian extends Model implements HasMedia
         'univ',
         'alamat',
         'lama',
+        'sampai',
         'judul',
         'created_at',
         'updated_at',
@@ -64,9 +66,19 @@ class Penelitian extends Model implements HasMedia
         return $value ? Carbon::parse($value)->format(config('panel.date_format')) : null;
     }
 
+    public function getSampaiAttribute($value)
+    {
+        return $value ? Carbon::parse($value)->format(config('panel.date_format')) : null;
+    }
+
     public function setLamaAttribute($value)
     {
         $this->attributes['lama'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
+    }
+    
+    public function setSampaiAttribute($value)
+    {
+        $this->attributes['sampai'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
     }
 
     public function getKesbangAttribute()

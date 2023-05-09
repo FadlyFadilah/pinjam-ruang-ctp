@@ -16,6 +16,7 @@ class CreatePenelitiansTable extends Migration
             $table->string('univ');
             $table->longText('alamat')->nullable();
             $table->date('lama');
+            $table->date('sampai');
             $table->string('judul');
             $table->timestamps();
             $table->softDeletes();

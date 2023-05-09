@@ -36,6 +36,10 @@ class UpdatePenelitianRequest extends FormRequest
                 'required',
                 'date_format:' . config('panel.date_format'),
             ],
+            'sampai' => [
+                'required',
+                'date_format:' . config('panel.date_format'),
+            ],
             'judul' => [
                 'string',
                 'required',

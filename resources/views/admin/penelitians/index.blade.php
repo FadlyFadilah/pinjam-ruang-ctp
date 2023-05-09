@@ -41,7 +41,10 @@
                             {{ trans('cruds.penelitian.fields.alamat') }}
                         </th>
                         <th>
-                            {{ trans('cruds.penelitian.fields.lama') }}
+                            Dari Tanggal
+                        </th>
+                        <th>
+                            Sampai Tanggal
                         </th>
                         <th>
                             {{ trans('cruds.penelitian.fields.judul') }}
@@ -83,6 +86,9 @@
                             </td>
                             <td>
                                 {{ $penelitian->lama ?? '' }}
+                            </td>
+                            <td>
+                                {{ $penelitian->sampai ?? '' }}
                             </td>
                             <td>
                                 {{ $penelitian->judul ?? '' }}
