@@ -1,18 +1,17 @@
 @extends('layouts.default')
 @section('content')
-    <div class="hero-wrap js-fullheight" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
-                data-scrollax-parent="true">
-                <div class="col-md ftco-animate">
-                    <h1 class="text-center" style="font-family: 'Plus Jakarta Sans'">Contact Us</h1>
-                    <h2 class="text-center" style="font-family: 'Plus Jakarta Sans'">UPTD Cimahi Technopark</h2>
-                </div>
+<div class="hero-wrap js-fullheight">
+    <div class="background-overlay" style="background-image: url(vendor/technext/vacation-rental/images/about.jpg);"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+            data-scrollax-parent="true">
+            <div class="col-md ftco-animate">
+                <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">Contact Us</h1>
+                <h2 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color:white;">UPTD Cimahi Technopark</h2>
             </div>
         </div>
     </div>
+</div>
 
     <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');"
         data-stellar-background-ratio="0.5">
@@ -20,7 +19,7 @@
         <div class="container ">
             <div class="row">
                 <div class="col-md-4 col-md-push-8 animate-box fadeInUp animated-fast">
-                    <h2>Contact Information</h2>
+                    <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">Contact Information</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="contact-info-wrap-flex">
@@ -42,7 +41,7 @@
 
                 </div>
                 <div class="col-md-8 col-md-pull-4 animate-box fadeInUp animated-fast">
-                    <h2>Get In Touch</h2>
+                    <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">Get In Touch</h2>
                     <form action="#" method="">
                         @csrf
                         <div class="row form-group">

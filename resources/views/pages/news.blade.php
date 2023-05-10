@@ -2,21 +2,22 @@
 @section('content')
     <div class="owl-carousel">
         @foreach ($contentPages as $cp)
-            <div class="jumbotron jumbotron-fluid"
-                style="background-image: url('{{ $cp->featured_image->getUrl() }}'); background-size: cover;background-repeat: no-repeat;background-position: center center;">
+            <div class="hero-wrap js-fullheight">
+                <div class="background-overlay" style="background-image: url('{{ $cp->featured_image->getUrl() }}')"></div>
                 <div class="container">
-
-                    <div>
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                        <div class="col-md-7 ftco-animate">
                         <span class="strong">
                             <a class="text-uppercase mr-2" href="https://www.cimahitechnopark.id/category/animasi">
                                 <span style="border-left: 5px solid; padding-left: 5px;">Animasi</span>
                             </a>
                         </span>
-                        <h1 class="display-4 text-white">{{ $cp->title }}</h1>
+                        <h1 class="display-4 text-white" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">{{ $cp->title }}</h1>
 
                         <p class="lead">
                             <a class="btn btn-primary btn-lg" href="{{ route('news.show', $cp->title) }}" role="button">Lihat Lebih Banyak</a>
                         </p>
+                        </div>
                     </div>
                 </div>
             </div>

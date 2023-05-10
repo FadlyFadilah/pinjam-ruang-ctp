@@ -13,16 +13,20 @@
     <link href="{{ asset('css/adminltev3.css') }}" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css" rel="stylesheet" />
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
         <style>
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Plus Jakarta Sans';
-        }
-        body {
-            font-family: 'Poppins';
-        }
+    h1, h2, h3, h4, h5, h6, .heading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+    }
+    body, p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
     </style>
     @yield('styles')
 </head>

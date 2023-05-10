@@ -31,7 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont,'Poppins', sans-serif, 'Plus Jakarta Sans', sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem; }
 
 p {
+  font-family: 'Poppins', sans-serif;
   margin-top: 0;
   margin-bottom: 1rem; }
 
@@ -294,7 +295,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
   font-weight: 500;
   line-height: 1.2;
   color: inherit; }
@@ -7995,7 +7996,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #fff;
   font-size: 14px;
   line-height: 1.8;
@@ -8022,7 +8023,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
-  font-family: "Playfair Display", serif; }
+  font-family: 'Plus Jakarta Sans', sans-serif;; }
 
 .container {
   max-width: 1300px; }
@@ -8213,7 +8214,7 @@ h1, h2, h3, h4, h5,
     font-size: 80px;
     font-weight: 700;
     color: #fff;
-    font-family: "Playfair Display", serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;;
     line-height: 1.3;
     text-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1); }
     @media (max-width: 991.98px) {
@@ -8222,7 +8223,7 @@ h1, h2, h3, h4, h5,
         letter-spacing: 3px; } }
   .hero-wrap .slider-text h2.subheading {
     font-size: 18px;
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: white;
     display: inline-block;
@@ -8449,7 +8450,7 @@ h1, h2, h3, h4, h5,
   .services-2 .media-body {
     width: calc(100% - 70px); }
     .services-2 .media-body h3 {
-      font-family: "Poppins", Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 17px;
       font-weight: 500; }
 
@@ -8715,7 +8716,7 @@ footer {
     color: #fff;
     margin-bottom: 30px;
     font-weight: 500;
-    font-family: "Poppins", Arial, sans-serif; }
+    font-family: 'Poppins', sans-serif; }
     .footer .footer-heading .logo {
       color: #fff; }
   .footer p {
