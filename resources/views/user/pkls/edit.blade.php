@@ -51,12 +51,19 @@
                 <span class="help-block">{{ trans('cruds.pkl.fields.email_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="lama">{{ trans('cruds.pkl.fields.lama') }}</label>
-                <input class="form-control date {{ $errors->has('lama') ? 'is-invalid' : '' }}" type="text" name="lama" id="lama" value="{{ old('lama', $pkl->lama) }}">
+                <label class="required" for="lama">Dari Tanggal</label>
+                <input class="form-control date {{ $errors->has('lama') ? 'is-invalid' : '' }}" type="text" name="lama" id="lama" value="{{ old('lama', $penelitian->lama) }}" required>
                 @if($errors->has('lama'))
                     <span class="text-danger">{{ $errors->first('lama') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.pkl.fields.lama_helper') }}</span>
+                <span class="help-block">{{ trans('cruds.penelitian.fields.lama_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label class="required" for="sampai">Sampai Tanggal</label>
+                <input class="form-control date {{ $errors->has('sampai') ? 'is-invalid' : '' }}" type="text" name="sampai" id="sampai" value="{{ old('sampai', $penelitian->sampai) }}" required>
+                @if($errors->has('sampai'))
+                    <span class="text-danger">{{ $errors->first('sampai') }}</span>
+                @endif
             </div>
             <div class="form-group">
                 <label for="kesbang">{{ trans('cruds.pkl.fields.kesbang') }}</label>

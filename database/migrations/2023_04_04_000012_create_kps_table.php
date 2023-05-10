@@ -16,6 +16,7 @@ class CreateKpsTable extends Migration
             $table->string('email');
             $table->longText('alamat')->nullable();
             $table->date('lama');
+            $table->date('sampai');
             $table->timestamps();
             $table->softDeletes();
         });

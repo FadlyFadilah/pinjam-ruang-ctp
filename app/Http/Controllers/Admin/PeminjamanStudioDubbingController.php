@@ -37,7 +37,9 @@ class PeminjamanStudioDubbingController extends Controller
     public function store(StorePeminjamanStudioDubbingRequest $request)
     {
         $attr = $request->all();
-        $attr['ruangan_id'] = 1;
+        $ruangan = Ruangan::where('nama_ruangan', 'like' , '%studio d%')->first();
+        $rid = $ruangan->id;
+        $attr['ruangan_id'] = $rid;
         $attr['user_id'] = auth()->id();
 
         $peminjamanStudioDubbing = PeminjamanStudioDubbing::create($attr);

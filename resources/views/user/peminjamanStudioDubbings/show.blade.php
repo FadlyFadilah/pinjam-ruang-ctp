@@ -3,13 +3,13 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.kp.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.peminjamanStudioDubbing.title') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('user.kps.index') }}">
+                <a class="btn btn-default" href="{{ route('user.peminjaman-studio-dubbings.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -17,96 +17,88 @@
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.id') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.id') }}
                         </th>
                         <td>
-                            {{ $kp->id }}
+                            {{ $peminjamanStudioDubbing->id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.nama') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.nama') }}
                         </th>
                         <td>
-                            {{ $kp->nama }}
+                            {{ $peminjamanStudioDubbing->nama }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.univ') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.ktp') }}
                         </th>
                         <td>
-                            {{ $kp->univ }}
+                            {{ $peminjamanStudioDubbing->ktp }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.no_hp') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.alamat') }}
                         </th>
                         <td>
-                            {{ $kp->no_hp }}
+                            {{ $peminjamanStudioDubbing->alamat }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.email') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.no_hp') }}
                         </th>
                         <td>
-                            {{ $kp->email }}
+                            {{ $peminjamanStudioDubbing->no_hp }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.alamat') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.email') }}
                         </th>
                         <td>
-                            {{ $kp->alamat }}
+                            {{ $peminjamanStudioDubbing->email }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Dari Tanggal
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.booking') }}
                         </th>
                         <td>
-                            {{ $kp->lama }}
+                            {{ $peminjamanStudioDubbing->booking }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Sampai Tanggal
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.selesai_booking') }}
                         </th>
                         <td>
-                            {{ $kp->sampai }}
+                            {{ $peminjamanStudioDubbing->selesai_booking }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.kesbang') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.operator') }}
                         </th>
                         <td>
-                            @if($kp->kesbang)
-                                <a href="{{ $kp->kesbang->getUrl() }}" target="_blank">
-                                    {{ trans('global.view_file') }}
-                                </a>
-                            @endif
+                            {{ App\Models\PeminjamanStudioDubbing::OPERATOR_RADIO[$peminjamanStudioDubbing->operator] ?? '' }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.hasil') }}
+                            {{ trans('cruds.peminjamanStudioDubbing.fields.persetujuan') }}
                         </th>
                         <td>
-                            @if($kp->hasil)
-                                <a href="{{ $kp->hasil->getUrl() }}" target="_blank">
-                                    {{ trans('global.view_file') }}
-                                </a>
-                            @endif
+                            <input type="checkbox" disabled="disabled" {{ $peminjamanStudioDubbing->persetujuan ? 'checked' : '' }}>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('user.kps.index') }}">
+                <a class="btn btn-default" href="{{ route('user.peminjaman-studio-dubbings.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>

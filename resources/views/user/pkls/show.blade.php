@@ -65,10 +65,18 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.pkl.fields.lama') }}
+                            Dari Tanggal
                         </th>
                         <td>
                             {{ $pkl->lama }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                           Sampai Tanggal
+                        </th>
+                        <td>
+                            {{ $pkl->sampai }}
                         </td>
                     </tr>
                     <tr>

@@ -41,7 +41,10 @@
                             {{ trans('cruds.kp.fields.alamat') }}
                         </th>
                         <th>
-                            {{ trans('cruds.kp.fields.lama') }}
+                            Dari Tanggal
+                        </th>
+                        <th>
+                            Sampai Tanggal
                         </th>
                         <th>
                             {{ trans('cruds.kp.fields.kesbang') }}
@@ -80,6 +83,9 @@
                             </td>
                             <td>
                                 {{ $kp->lama ?? '' }}
+                            </td>
+                            <td>
+                                {{ $kp->sampai ?? '' }}
                             </td>
                             <td>
                                 @if($kp->kesbang)

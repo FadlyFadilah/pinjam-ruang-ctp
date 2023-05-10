@@ -37,7 +37,7 @@ class PeminjamanStudioDubbingController extends Controller
 
         $peminjamanStudioDubbing = PeminjamanStudioDubbing::create($attr);
 
-        return redirect()->route('user.peminjaman-studio-dubbings.index')->with('berhasil', 'Permintaan Peminjaman Berhasil');
+        return redirect()->route('user.peminjaman-studio-dubbings.index')->with('success', 'Permintaan Peminjaman Berhasil');
     }
 
     public function edit(PeminjamanStudioDubbing $peminjamanStudioDubbing)

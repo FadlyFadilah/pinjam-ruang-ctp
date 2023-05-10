@@ -41,7 +41,10 @@
                             {{ trans('cruds.pkl.fields.email') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.lama') }}
+                            Dari Tanggal
+                        </th>
+                        <th>
+                            Sampai Tanggal
                         </th>
                         <th>
                             {{ trans('cruds.pkl.fields.kesbang') }}
@@ -80,6 +83,9 @@
                             </td>
                             <td>
                                 {{ $pkl->lama ?? '' }}
+                            </td>
+                            <td>
+                                {{ $pkl->sampai ?? '' }}
                             </td>
                             <td>
                                 @if($pkl->kesbang)

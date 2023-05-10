@@ -9,8 +9,8 @@ use App\Http\Requests\UpdatePeminjamanRuangKacaBitcRequest;
 use App\Models\PeminjamanRuangKacaBitc;
 use App\Models\Ruangan;
 use App\Models\User;
-use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Symfony\Component\HttpFoundation\Response;
 
 class PeminjamanRuangKacaBitcController extends Controller
@@ -38,7 +38,9 @@ class PeminjamanRuangKacaBitcController extends Controller
     public function store(StorePeminjamanRuangKacaBitcRequest $request)
     {
         $attr = $request->all();
-        $attr['ruangan_id'] = 2;
+        $ruangan = Ruangan::where('nama_ruangan', 'like' , '%ruang%')->first();
+        $rid = $ruangan->id;
+        $attr['ruangan_id'] = $rid;
         $attr['user_id'] = auth()->id();
         $peminjamanRuangKacaBitc = PeminjamanRuangKacaBitc::create($attr);
 

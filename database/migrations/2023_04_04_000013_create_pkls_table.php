@@ -15,7 +15,8 @@ class CreatePklsTable extends Migration
             $table->longText('alamat')->nullable();
             $table->string('no_hp');
             $table->string('email');
-            $table->date('lama')->nullable();
+            $table->date('lama');
+            $table->date('sampai');
             $table->timestamps();
             $table->softDeletes();
         });

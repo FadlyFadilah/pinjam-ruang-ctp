@@ -40,7 +40,7 @@ class PeminjamanBarangController extends Controller
 
         $peminjamanBarang = PeminjamanBarang::create($attr);
 
-        return redirect()->route('user.peminjaman-barangs.index')->with('berhasil', 'Permintaan Peminjaman Berhasil');;
+        return redirect()->route('user.peminjaman-barangs.index')->with('success', 'Permintaan Peminjaman Berhasil');;
     }
 
     public function edit(PeminjamanBarang $peminjamanBarang)

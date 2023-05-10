@@ -48,7 +48,8 @@
                             @foreach (config('panel.available_languages') as $langLocale => $langName)
                                 <a class="dropdown-item"
                                     href="{{ url()->current() }}?change_language={{ $langLocale }}">{{ strtoupper($langLocale) }}
-                                    ({{ $langName }})</a>
+                                    ({{ $langName }})
+                                </a>
                             @endforeach
                         </div>
                     </li>

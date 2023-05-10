@@ -38,7 +38,9 @@ class PeminjamanChController extends Controller
     public function store(StorePeminjamanChRequest $request)
     {
         $attr = $request->all();
-        $attr['ruangan_id'] = 1;
+        $ruangan = Ruangan::where('nama_ruangan', 'like' , '%hall%')->first();
+        $rid = $ruangan->id;
+        $attr['ruangan_id'] = $rid;
         $attr['user_id'] = auth()->id();
 
         $peminjamanCh = PeminjamanCh::create($attr);

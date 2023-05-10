@@ -14,7 +14,7 @@ class SystemCalendarController extends Controller
             'field'      => 'nama',
             'prefix'     => 'Studio Dubbing',
             'suffix'     => 'BITC',
-            'route'      => 'admin.peminjaman-studio-dubbings.show',
+            'route'      => 'user.peminjaman-studio-dubbings.show',
         ], 
         [
             'model'      => '\App\Models\PeminjamanRuangKacaBitc',
@@ -22,7 +22,7 @@ class SystemCalendarController extends Controller
             'field'      => 'nama',
             'prefix'     => 'Ruang Kaca',
             'suffix'     => 'BITC',
-            'route'      => 'admin.peminjaman-ruang-kaca-bitcs.show',
+            'route'      => 'user.peminjaman-ruang-kaca-bitcs.show',
         ],
         [
             'model'      => '\App\Models\PeminjamanCh',
@@ -30,7 +30,7 @@ class SystemCalendarController extends Controller
             'field'      => 'tujuan',
             'prefix'     => 'Conventional Hall',
             'suffix'     => 'CTP',
-            'route'      => 'admin.peminjaman-ches.show',
+            'route'      => 'user.peminjaman-ches.show',
         ],
     ];
 

@@ -3,13 +3,13 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.kp.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.peminjamanBarang.title') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('user.kps.index') }}">
+                <a class="btn btn-default" href="{{ route('user.peminjaman-barangs.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -17,96 +17,88 @@
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.id') }}
+                            {{ trans('cruds.peminjamanBarang.fields.id') }}
                         </th>
                         <td>
-                            {{ $kp->id }}
+                            {{ $peminjamanBarang->id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.nama') }}
+                            {{ trans('cruds.peminjamanBarang.fields.barang') }}
                         </th>
                         <td>
-                            {{ $kp->nama }}
+                            {{ $peminjamanBarang->barang->nama_barang ?? '' }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.univ') }}
+                            {{ trans('cruds.peminjamanBarang.fields.nama_usaha') }}
                         </th>
                         <td>
-                            {{ $kp->univ }}
+                            {{ $peminjamanBarang->nama_usaha }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.no_hp') }}
+                            {{ trans('cruds.peminjamanBarang.fields.alamat') }}
                         </th>
                         <td>
-                            {{ $kp->no_hp }}
+                            {{ $peminjamanBarang->alamat }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.email') }}
+                            {{ trans('cruds.peminjamanBarang.fields.name') }}
                         </th>
                         <td>
-                            {{ $kp->email }}
+                            {{ $peminjamanBarang->name }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.alamat') }}
+                            {{ trans('cruds.peminjamanBarang.fields.ktp') }}
                         </th>
                         <td>
-                            {{ $kp->alamat }}
+                            {{ $peminjamanBarang->ktp }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Dari Tanggal
+                            {{ trans('cruds.peminjamanBarang.fields.booking') }}
                         </th>
                         <td>
-                            {{ $kp->lama }}
+                            {{ $peminjamanBarang->booking }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Sampai Tanggal
+                            {{ trans('cruds.peminjamanBarang.fields.tujuan') }}
                         </th>
                         <td>
-                            {{ $kp->sampai }}
+                            {{ $peminjamanBarang->tujuan }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.kesbang') }}
+                            {{ trans('cruds.peminjamanBarang.fields.no_hp') }}
                         </th>
                         <td>
-                            @if($kp->kesbang)
-                                <a href="{{ $kp->kesbang->getUrl() }}" target="_blank">
-                                    {{ trans('global.view_file') }}
-                                </a>
-                            @endif
+                            {{ $peminjamanBarang->no_hp }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.kp.fields.hasil') }}
+                            {{ trans('cruds.peminjamanBarang.fields.email') }}
                         </th>
                         <td>
-                            @if($kp->hasil)
-                                <a href="{{ $kp->hasil->getUrl() }}" target="_blank">
-                                    {{ trans('global.view_file') }}
-                                </a>
-                            @endif
+                            {{ $peminjamanBarang->email }}
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('user.kps.index') }}">
+                <a class="btn btn-default" href="{{ route('user.peminjaman-barangs.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
