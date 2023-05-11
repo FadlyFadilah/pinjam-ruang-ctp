@@ -39,10 +39,7 @@
                                         <li><span>Status:</span> {{ $item->status }}
                                         </li>
                                     </ul>
-                                    <p class="pt-1"><a href="#" id="buttonBorrowRoomModal"
-                                            class="btn-custom px-3 py-2" data-toggle="modal" data-target="#borrowRoomModal"
-                                            data-room-id="{{ $item->id }}" data-room-name="{{ $item->name }}">Details
-                                            <span class="icon-long-arrow-right"></span></a></p>
+                                    
                                 </div>
                             </div>
                         </div>
