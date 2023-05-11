@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
     <div class="hero-wrap js-fullheight">
-        <div class="background-overlay" style="background-image: url(vendor/technext/vacation-rental/images/about.jpg);"></div>
+        <div class="background-overlay" style="background-image: url(vendor/technext/vacation-rental/images/bg_1.jpg);"></div>
         <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
             <div class="col-md-7 ftco-animate">
