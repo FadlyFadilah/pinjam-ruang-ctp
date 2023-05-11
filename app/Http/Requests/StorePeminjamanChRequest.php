@@ -48,7 +48,7 @@ class StorePeminjamanChRequest extends FormRequest
                 'required',
                 'integer',
                 'min:0',
-                'max:200',
+                'max:100',
             ],
             'persetujuan' => [
                 'required',
