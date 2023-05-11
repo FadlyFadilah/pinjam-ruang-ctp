@@ -80,6 +80,23 @@ class CmsController extends Controller
         return redirect()->route('admin.cms.index');
     }
 
+    public function updatediterma(Cm $cm)
+    {
+        $cm->status = 'diterima';
+
+        $cm->save();
+
+        return redirect()->route('admin.cms.index');
+    }
+    public function updateditolak(Cm $cm)
+    {
+        $cm->status = 'tidak diterima';
+
+        $cm->save();
+
+        return redirect()->route('admin.cms.index');
+    }
+
     public function show(Cm $cm)
     {
         abort_if(Gate::denies('cm_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');

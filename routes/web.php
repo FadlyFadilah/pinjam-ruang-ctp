@@ -107,6 +107,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('cms/destroy', 'CmsController@massDestroy')->name('cms.massDestroy');
     Route::post('cms/media', 'CmsController@storeMedia')->name('cms.storeMedia');
     Route::post('cms/ckmedia', 'CmsController@storeCKEditorImages')->name('cms.storeCKEditorImages');
+    Route::patch('cms/status/{cm}', 'CmsController@updatediterma')->name('cms.ubahstatus');
+    Route::patch('cms/statust/{cm}', 'CmsController@updateditolak')->name('cms.ubahstatust');
     Route::resource('cms', 'CmsController');
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
