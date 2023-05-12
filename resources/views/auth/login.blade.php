@@ -3,7 +3,8 @@
 <div class="login-box">
     <div class="login-logo">
         <div class="login-logo">
-            <img src="{{asset('logo.png')}}" width='150'>
+            <img src="{{asset('logo.png
+            ')}}" width='150'>
             <br>
             <a href="{{ route('admin.home') }}">
                 PELITA TECHNOPARK
