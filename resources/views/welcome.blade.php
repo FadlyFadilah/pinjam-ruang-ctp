@@ -36,7 +36,7 @@
                         <div class="row">
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-diet"></span>
+                                    <span class="fa fa-microphone"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Peminjaman Studio Dubbing</h3>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-workout"></span>
+                                    <span class="fa fa-pie-chart"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Peminjaman Ruang Kaca</h3>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-diet-1"></span>
+                                    <span class="fa fa-institution"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Peminjaman Convention Hall</h3>
@@ -66,7 +66,7 @@
                             </div>
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-first"></span>
+                                    <span class="fa fa-vr-cardboard"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Peminjaman Oculus VR</h3>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-first"></span>
+                                    <span class="fa fa-desktop"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Peminjaman Wacom</h3>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-first"></span>
+                                    <span class="fa fa-camera-retro"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Pendaftaran Studio Foto</h3>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-first"></span>
+                                    <span class="fa fa-book"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Pendaftaran Penelitian</h3>
@@ -106,7 +106,7 @@
                             </div>
                             <div class="services-2 col-lg-6 d-flex w-100">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-first"></span>
+                                    <span class="fa fa-graduation-cap"></span>
                                 </div>
                                 <div class="media-body pl-3">
                                     <h3 class="heading" style="font-weight: 600;">Pendaftaran Praktek Kerja dan PKL</h3>
