@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-sm navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">Pelita<span>Technopark</span></a>
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="{{ asset('logo.png') }}" alt="Logo" class="logo-img" style="max-height: 70px;">
+            Pelita<span>Technopark</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span> Menu
