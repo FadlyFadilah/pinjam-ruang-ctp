@@ -73,24 +73,6 @@
                 <span class="help-block">{{ trans('cruds.penelitian.fields.judul_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="kesbang">{{ trans('cruds.penelitian.fields.kesbang') }}</label>
-                <div class="needsclick dropzone {{ $errors->has('kesbang') ? 'is-invalid' : '' }}" id="kesbang-dropzone">
-                </div>
-                @if($errors->has('kesbang'))
-                    <span class="text-danger">{{ $errors->first('kesbang') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.kesbang_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="hasil">{{ trans('cruds.penelitian.fields.hasil') }}</label>
-                <div class="needsclick dropzone {{ $errors->has('hasil') ? 'is-invalid' : '' }}" id="hasil-dropzone">
-                </div>
-                @if($errors->has('hasil'))
-                    <span class="text-danger">{{ $errors->first('hasil') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.hasil_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
