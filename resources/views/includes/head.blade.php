@@ -40,7 +40,7 @@
     bottom: 0;
     left: 0;
     background-size: cover;
-    filter: brightness(50%); /* ganti nilai 10 dengan nilai yang diinginkan */
+    filter: brightness(60%); /* ganti nilai 10 dengan nilai yang diinginkan */
     }
 
 
