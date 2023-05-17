@@ -5,7 +5,6 @@
 
 <title>Pelita Technopark</title>
 <link rel="shortcut icon" href="{{ asset('LOGO.jpeg') }}" type="image/x-icon">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/animate.css') }}">

@@ -1,3 +1,4 @@
+
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -23,23 +24,13 @@
                 </ul>
             </div>
             <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-                <h2 class="footer-heading">Langganan</h2>
-                <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                        <input type="text" class="form-control rounded-left" placeholder="Enter email address">
-                        <button type="submit" class="form-control submit rounded-right"><span
-                                class="sr-only">Submit</span><i class="fa fa-paper-plane"></i></button>
-                    </div>
-                </form>
-                <h2 class="footer-heading mt-5">Ikuti kami</h2>
+                <h2 class="footer-heading">Ikuti kami</h2>
                 <ul class="ftco-footer-social p-0">
-                    <li class="ftco-animate"><a href="https://twitter.com/cimahitpark" target="_blank"
-                            data-toggle="tooltip" data-placement="top" title="Twitter"><span
-                                class="fa fa-twitter"></span></a></li>
-                    {{-- <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li> --}}
-                    <li class="ftco-animate"><a href="https://www.instagram.com/cimahitechnopark.id/" target="_blank"
-                            data-toggle="tooltip" data-placement="top" title="Instagram"><span
-                                class="fa fa-instagram"></span></a></li>
+                    <li class="ftco-animate"><a href="https://twitter.com/cimahitpark" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <span class="fab fa-twitter-square"></span></a></li>
+                    <li class="ftco-animate">
+                        <a href="https://www.instagram.com/cimahitechnopark.id/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
+                            <span class="fab fa-instagram"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -53,7 +44,7 @@
                         Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved | This wesite is made by team PKL_CTP</a>
+                        </script> All rights reserved | PELITA CimahiTechnoPark</a>
                     </p>
                 </div>
             </div>
