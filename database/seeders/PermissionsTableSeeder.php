@@ -372,6 +372,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 91,
+                'title' => 'ruangctp_create',
+            ],
+            [
+                'id'    => 92,
+                'title' => 'ruangctp_edit',
+            ],
+            [
+                'id'    => 93,
+                'title' => 'ruangctp_show',
+            ],
+            [
+                'id'    => 94,
+                'title' => 'ruangctp_delete',
+            ],
+            [
+                'id'    => 95,
+                'title' => 'ruangctp_access',
+            ],
+            [
+                'id'    => 96,
                 'title' => 'profile_password_edit',
             ],
         ];

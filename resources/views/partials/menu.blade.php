@@ -78,8 +78,10 @@
                     </li>
                 @endcan
                 @can('content_management_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/content-categories*") ? "menu-open" : "" }} {{ request()->is("admin/content-tags*") ? "menu-open" : "" }} {{ request()->is("admin/content-pages*") ? "menu-open" : "" }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/content-categories*") ? "active" : "" }} {{ request()->is("admin/content-tags*") ? "active" : "" }} {{ request()->is("admin/content-pages*") ? "active" : "" }}" href="#">
+                    <li
+                        class="nav-item has-treeview {{ request()->is('admin/content-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/content-tags*') ? 'menu-open' : '' }} {{ request()->is('admin/content-pages*') ? 'menu-open' : '' }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is('admin/content-categories*') ? 'active' : '' }} {{ request()->is('admin/content-tags*') ? 'active' : '' }} {{ request()->is('admin/content-pages*') ? 'active' : '' }}"
+                            href="#">
                             <i class="fa-fw nav-icon fas fa-book">
 
                             </i>
@@ -91,7 +93,8 @@
                         <ul class="nav nav-treeview">
                             @can('content_category_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.content-categories.index") }}" class="nav-link {{ request()->is("admin/content-categories") || request()->is("admin/content-categories/*") ? "active" : "" }}">
+                                    <a href="{{ route('admin.content-categories.index') }}"
+                                        class="nav-link {{ request()->is('admin/content-categories') || request()->is('admin/content-categories/*') ? 'active' : '' }}">
                                         <i class="fa-fw nav-icon fas fa-folder">
 
                                         </i>
@@ -103,7 +106,8 @@
                             @endcan
                             @can('content_tag_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.content-tags.index") }}" class="nav-link {{ request()->is("admin/content-tags") || request()->is("admin/content-tags/*") ? "active" : "" }}">
+                                    <a href="{{ route('admin.content-tags.index') }}"
+                                        class="nav-link {{ request()->is('admin/content-tags') || request()->is('admin/content-tags/*') ? 'active' : '' }}">
                                         <i class="fa-fw nav-icon fas fa-tags">
 
                                         </i>
@@ -115,7 +119,8 @@
                             @endcan
                             @can('content_page_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.content-pages.index") }}" class="nav-link {{ request()->is("admin/content-pages") || request()->is("admin/content-pages/*") ? "active" : "" }}">
+                                    <a href="{{ route('admin.content-pages.index') }}"
+                                        class="nav-link {{ request()->is('admin/content-pages') || request()->is('admin/content-pages/*') ? 'active' : '' }}">
                                         <i class="fa-fw nav-icon fas fa-file">
 
                                         </i>
@@ -168,6 +173,19 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
+                            @can('ruangctp_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.ruangctps.index') }}"
+                                        class="nav-link {{ request()->is('admin/ruangctps') || request()->is('admin/ruangctps/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-door-open">
+
+                                        </i>
+                                        <p>
+                                            Peminjaman Cimahi TechnoPark
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
                             @can('peminjaman_studio_dubbing_access')
                                 <li class="nav-item">
                                     <a href="{{ route('admin.peminjaman-studio-dubbings.index') }}"
@@ -209,7 +227,8 @@
                             @endcan
                             @can('studio_foto_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.studio-fotos.index") }}" class="nav-link {{ request()->is("admin/studio-fotos") || request()->is("admin/studio-fotos/*") ? "active" : "" }}">
+                                    <a href="{{ route('admin.studio-fotos.index') }}"
+                                        class="nav-link {{ request()->is('admin/studio-fotos') || request()->is('admin/studio-fotos/*') ? 'active' : '' }}">
                                         <i class="fa-fw nav-icon fas fa-camera">
 
                                         </i>
@@ -234,7 +253,7 @@
                             </p>
                         </a>
                     </li>
-                @endcan 
+                @endcan
                 @can('pendaftaran_access')
                     <li
                         class="nav-item has-treeview {{ request()->is('penelitians*') ? 'menu-open' : '' }} {{ request()->is('kps*') ? 'menu-open' : '' }} {{ request()->is('pkls*') ? 'menu-open' : '' }}">
@@ -289,17 +308,18 @@
                                 </li>
                             @endcan
                             @can('cm_access')
-                            <li class="nav-item">
-                                <a href="{{ route("admin.cms.index") }}" class="nav-link {{ request()->is("admin/cms") || request()->is("admin/cms/*") ? "active" : "" }}">
-                                    <i class="fa-fw nav-icon fas fa-highlighter">
-        
-                                    </i>
-                                    <p>
-                                        {{ trans('cruds.cm.title') }}
-                                    </p>
-                                </a>
-                            </li>
-                        @endcan
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.cms.index') }}"
+                                        class="nav-link {{ request()->is('admin/cms') || request()->is('admin/cms/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-highlighter">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.cm.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
                         </ul>
                     </li>
                 @endcan

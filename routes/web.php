@@ -63,6 +63,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('barangs/ckmedia', 'BarangController@storeCKEditorImages')->name('barangs.storeCKEditorImages');
     Route::resource('barangs', 'BarangController');
 
+    // Ruangctp
+    Route::delete('ruangctps/destroy', 'RuangctpController@massDestroy')->name('ruangctps.massDestroy');
+    Route::post('ruangctps/media', 'RuangctpController@storeMedia')->name('ruangctps.storeMedia');
+    Route::post('ruangctps/ckmedia', 'RuangctpController@storeCKEditorImages')->name('ruangctps.storeCKEditorImages');
+    Route::patch('ruangctps/statust/{ruangctp}', 'RuangctpController@ubahstatus')->name('ruangctps.ubahstatus');
+    Route::resource('ruangctps', 'RuangctpController');
+
     // Peminjaman Studio Dubbing
     Route::delete('peminjaman-studio-dubbings/destroy', 'PeminjamanStudioDubbingController@massDestroy')->name('peminjaman-studio-dubbings.massDestroy');
     Route::patch('peminjaman-studio-dubbings/statust/{peminjaman_studio_dubbing}', 'PeminjamanStudioDubbingController@ubahstatus')->name('peminjaman-studio-dubbings.ubahstatus');

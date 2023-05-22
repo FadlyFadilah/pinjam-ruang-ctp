@@ -1,59 +1,53 @@
 @extends('layouts.admin')
 @section('content')
-@can('pkl_create')
+@can('ruangctp_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.pkls.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.pkl.title_singular') }}
+            <a class="btn btn-success" href="{{ route('admin.ruangctps.create') }}">
+                {{ trans('global.add') }} {{ trans('cruds.ruangctp.title_singular') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.pkl.title_singular') }} {{ trans('global.list') }}
+        {{ trans('cruds.ruangctp.title_singular') }} {{ trans('global.list') }}
     </div>
 
     <div class="card-body">
         <div class="table-responsive">
-            <table class=" table table-bordered table-striped table-hover datatable datatable-Pkl">
+            <table class=" table table-bordered table-striped table-hover datatable datatable-Ruangctp">
                 <thead>
                     <tr>
                         <th width="10">
 
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.id') }}
+                            {{ trans('cruds.ruangctp.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.nama') }}
+                            {{ trans('cruds.ruangctp.fields.ruangan') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.asal_sekolah') }}
+                            {{ trans('cruds.ruangctp.fields.nama') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.alamat') }}
+                            {{ trans('cruds.ruangctp.fields.mulai') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.no_hp') }}
+                            {{ trans('cruds.ruangctp.fields.mulaijam') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.email') }}
+                            {{ trans('cruds.ruangctp.fields.selesai') }}
                         </th>
                         <th>
-                            Dari Tanggal
+                            {{ trans('cruds.ruangctp.fields.selesaijam') }}
                         </th>
                         <th>
-                            Sampai Tanggal
+                            {{ trans('cruds.ruangctp.fields.nama_acara') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.kesbang') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.pkl.fields.hasil') }}
-                        </th>
-                        <th>
-                            Status
+                            {{ trans('cruds.ruangctp.fields.status') }}
                         </th>
                         <th>
                             &nbsp;
@@ -61,60 +55,46 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($pkls as $key => $pkl)
-                        <tr data-entry-id="{{ $pkl->id }}">
+                    @foreach($ruangctps as $key => $ruangctp)
+                        <tr data-entry-id="{{ $ruangctp->id }}">
                             <td>
 
                             </td>
                             <td>
-                                {{ $pkl->id ?? '' }}
+                                {{ $ruangctp->id ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->nama ?? '' }}
+                                {{ $ruangctp->ruangan->nama_ruangan ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->asal_sekolah ?? '' }}
+                                {{ $ruangctp->nama ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->alamat ?? '' }}
+                                {{ $ruangctp->mulai ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->no_hp ?? '' }}
+                                {{ $ruangctp->mulaijam ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->email ?? '' }}
+                                {{ $ruangctp->selesai ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->lama ?? '' }}
+                                {{ $ruangctp->selesaijam ?? '' }}
                             </td>
                             <td>
-                                {{ $pkl->sampai ?? '' }}
+                                {{ $ruangctp->nama_acara ?? '' }}
                             </td>
                             <td>
-                                @if($pkl->kesbang)
-                                    <a href="{{ $pkl->kesbang->getUrl() }}" target="_blank">
-                                        {{ trans('global.view_file') }}
-                                    </a>
-                                @endif
+                                {{ App\Models\Ruangctp::STATUS_SELECT[$ruangctp->status] ?? 'Sedang Dalam Proses' }}
                             </td>
                             <td>
-                                @if($pkl->hasil)
-                                    <a href="{{ $pkl->hasil->getUrl() }}" target="_blank">
-                                        {{ trans('global.view_file') }}
-                                    </a>
-                                @endif
-                            </td>
-                            <td>
-                                {{ $pkl->status ?? 'Pending' }}
-                            </td>
-                            <td>
-                                @can('pkl_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.pkls.show', $pkl->id) }}">
+                                @can('ruangctp_show')
+                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.ruangctps.show', $ruangctp->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
 
-                                <form action="{{ route('admin.pkls.ubahstatus', $pkl->id) }}" method="POST"
+                                <form action="{{ route('admin.ruangctps.ubahstatus', $ruangctp->id) }}" method="POST"
                                     onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
                                     style="display: inline-block;">
                                     @method('PATCH')
@@ -123,7 +103,7 @@
                                     <input type="submit" class="btn btn-xs btn-success" value="Terima">
                                 </form>
 
-                                <form action="{{ route('admin.pkls.ubahstatus', $pkl->id) }}" method="POST"
+                                <form action="{{ route('admin.ruangctps.ubahstatus', $ruangctp->id) }}" method="POST"
                                     onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
                                     style="display: inline-block;">
                                     @method('PATCH')
@@ -131,15 +111,14 @@
                                     <input type="hidden" name="status" value="Tidak Diterima">
                                     <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
                                 </form>
-
-                                @can('pkl_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.pkls.edit', $pkl->id) }}">
+                                @can('ruangctp_edit')
+                                    <a class="btn btn-xs btn-info" href="{{ route('admin.ruangctps.edit', $ruangctp->id) }}">
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
 
-                                @can('pkl_delete')
-                                    <form action="{{ route('admin.pkls.destroy', $pkl->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                @can('ruangctp_delete')
+                                    <form action="{{ route('admin.ruangctps.destroy', $ruangctp->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
@@ -164,11 +143,11 @@
 <script>
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('pkl_delete')
+@can('ruangctp_delete')
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.pkls.massDestroy') }}",
+    url: "{{ route('admin.ruangctps.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
@@ -197,9 +176,9 @@
   $.extend(true, $.fn.dataTable.defaults, {
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
-    pageLength: 100,
+    pageLength: 10,
   });
-  let table = $('.datatable-Pkl:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+  let table = $('.datatable-Ruangctp:not(.ajaxTable)').DataTable({ buttons: dtButtons })
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
