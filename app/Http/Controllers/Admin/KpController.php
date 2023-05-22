@@ -11,6 +11,7 @@ use App\Models\Kp;
 use App\Models\User;
 use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request as FacadesRequest;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -29,6 +30,15 @@ class KpController extends Controller
         $kps = Kp::with(['user', 'media'])->get();
 
         return view('admin.kps.index', compact('kps'));
+    }
+
+    public function ubahstatus(Request $request, Kp $kp)
+    {
+        $kp->status = $request->input('status');
+
+        $kp->save();
+
+        return redirect()->route('admin.kps.index');
     }
 
     public function create()

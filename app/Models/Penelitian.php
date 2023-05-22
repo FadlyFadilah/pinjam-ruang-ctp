@@ -40,6 +40,7 @@ class Penelitian extends Model implements HasMedia
         'lama',
         'sampai',
         'judul',
+        'status',
         'created_at',
         'updated_at',
         'deleted_at',

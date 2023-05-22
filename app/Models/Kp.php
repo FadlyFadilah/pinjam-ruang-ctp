@@ -39,6 +39,7 @@ class Kp extends Model implements HasMedia
         'alamat',
         'lama',
         'sampai',
+        'status',
         'created_at',
         'updated_at',
         'deleted_at',

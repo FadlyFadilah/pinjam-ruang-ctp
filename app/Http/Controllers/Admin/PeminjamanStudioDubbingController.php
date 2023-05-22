@@ -27,6 +27,15 @@ class PeminjamanStudioDubbingController extends Controller
         return view('admin.peminjamanStudioDubbings.index', compact('peminjamanStudioDubbings'));
     }
 
+    public function ubahstatus(PeminjamanStudioDubbing $peminjamanStudioDubbing, Request $request)
+    {
+        $peminjamanStudioDubbing->status = $request->input('status');
+
+        $peminjamanStudioDubbing->save();
+
+        return redirect()->route('admin.peminjaman-studio-dubbings.index');
+    }
+
     public function create()
     {
         abort_if(Gate::denies('peminjaman_studio_dubbing_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');

@@ -30,6 +30,15 @@ class PklController extends Controller
         return view('admin.pkls.index', compact('pkls'));
     }
 
+    public function ubahstatus(Request $request, Pkl $pkl)
+    {
+        $pkl->status = $request->input('status');
+
+        $pkl->save();
+
+        return redirect()->route('admin.pkls.index');
+    }
+
     public function create()
     {
         abort_if(Gate::denies('pkl_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');

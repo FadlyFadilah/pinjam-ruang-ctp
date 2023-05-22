@@ -52,7 +52,7 @@
             </div>
             <div class="form-group">
                 <label class="required" for="lama">Dari Tanggal</label>
-                <input class="form-control date {{ $errors->has('lama') ? 'is-invalid' : '' }}" type="text" name="lama" id="lama" value="{{ old('lama', $penelitian->lama) }}" required>
+                <input class="form-control date {{ $errors->has('lama') ? 'is-invalid' : '' }}" type="text" name="lama" id="lama" value="{{ old('lama', $kp->lama) }}" required>
                 @if($errors->has('lama'))
                     <span class="text-danger">{{ $errors->first('lama') }}</span>
                 @endif
@@ -60,7 +60,7 @@
             </div>
             <div class="form-group">
                 <label class="required" for="sampai">Sampai Tanggal</label>
-                <input class="form-control date {{ $errors->has('sampai') ? 'is-invalid' : '' }}" type="text" name="sampai" id="sampai" value="{{ old('sampai', $penelitian->sampai) }}" required>
+                <input class="form-control date {{ $errors->has('sampai') ? 'is-invalid' : '' }}" type="text" name="sampai" id="sampai" value="{{ old('sampai', $kp->sampai) }}" required>
                 @if($errors->has('sampai'))
                     <span class="text-danger">{{ $errors->first('sampai') }}</span>
                 @endif

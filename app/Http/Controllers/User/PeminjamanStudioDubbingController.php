@@ -50,7 +50,7 @@ class PeminjamanStudioDubbingController extends Controller
     public function update(UpdatePeminjamanStudioDubbingRequest $request, PeminjamanStudioDubbing $peminjamanStudioDubbing)
     {
         $attr = $request->all();
-        $attr['ruangan_id'] = 1;
+        $attr['ruangan_id'] = 3;
         $attr['user_id'] = auth()->id();
 
         $peminjamanStudioDubbing->update($attr);

@@ -59,6 +59,9 @@
                             Persetujuan
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -107,11 +110,32 @@
                                 <input type="checkbox" disabled="disabled" {{ $peminjamanRuangKacaBitc->aggrement ? 'checked' : '' }}>
                             </td>
                             <td>
+                                {{ $peminjamanRuangKacaBitc->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 @can('peminjaman_ruang_kaca_bitc_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.peminjaman-ruang-kaca-bitcs.show', $peminjamanRuangKacaBitc->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.peminjaman-ruang-kaca-bitcs.ubahstatus', $peminjamanRuangKacaBitc->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.peminjaman-ruang-kaca-bitcs.ubahstatus', $peminjamanRuangKacaBitc->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('peminjaman_ruang_kaca_bitc_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.peminjaman-ruang-kaca-bitcs.edit', $peminjamanRuangKacaBitc->id) }}">

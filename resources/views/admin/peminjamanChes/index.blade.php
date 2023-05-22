@@ -65,6 +65,9 @@
                             Persetujuan 2
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -112,6 +115,9 @@
                                 {{ App\Models\PeminjamanCh::INFOKUS_RADIO[$peminjamanCh->infokus] ?? '' }}
                             </td>
                             <td>
+                                {{ $peminjamanCh->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 <span style="display:none">{{ $peminjamanCh->persetujuan ?? '' }}</span>
                                 <input type="checkbox" disabled="disabled" {{ $peminjamanCh->persetujuan ? 'checked' : '' }}>
                             </td>
@@ -125,6 +131,24 @@
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.peminjaman-ches.ubahstatus', $peminjamanCh->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.peminjaman-ches.ubahstatus', $peminjamanCh->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('peminjaman_ch_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.peminjaman-ches.edit', $peminjamanCh->id) }}">

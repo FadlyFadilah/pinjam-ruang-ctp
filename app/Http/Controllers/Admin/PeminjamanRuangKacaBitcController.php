@@ -28,6 +28,15 @@ class PeminjamanRuangKacaBitcController extends Controller
         return view('admin.peminjamanRuangKacaBitcs.index', compact('peminjamanRuangKacaBitcs'));
     }
 
+    public function ubahstatus(Request $request, PeminjamanRuangKacaBitc $peminjamanRuangKacaBitc)
+    {
+        $peminjamanRuangKacaBitc->status = $request->input('status');
+
+        $peminjamanRuangKacaBitc->save();
+
+        return redirect()->route('admin.peminjaman-ruang-kaca-bitcs.index');
+    }
+    
     public function create()
     {
         abort_if(Gate::denies('peminjaman_ruang_kaca_bitc_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');

@@ -28,6 +28,15 @@ class PeminjamanChController extends Controller
         return view('admin.peminjamanChes.index', compact('peminjamanChes'));
     }
 
+    public function ubahstatus(Request $request, PeminjamanCh $peminjamanCh)
+    {
+        $peminjamanCh->status = $request->input('status');
+
+        $peminjamanCh->save();
+
+        return redirect()->route('admin.peminjaman-ches.index');
+    }
+
     public function create()
     {
         abort_if(Gate::denies('peminjaman_ch_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');

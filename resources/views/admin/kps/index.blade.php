@@ -41,13 +41,19 @@
                             {{ trans('cruds.kp.fields.alamat') }}
                         </th>
                         <th>
-                            {{ trans('cruds.kp.fields.lama') }}
+                            Dari Tanggal
+                        </th>
+                        <th>
+                            Sampai Tanggal
                         </th>
                         <th>
                             {{ trans('cruds.kp.fields.kesbang') }}
                         </th>
                         <th>
                             {{ trans('cruds.kp.fields.hasil') }}
+                        </th>
+                        <th>
+                            Status
                         </th>
                         <th>
                             &nbsp;
@@ -82,6 +88,9 @@
                                 {{ $kp->lama ?? '' }}
                             </td>
                             <td>
+                                {{ $kp->sampai ?? '' }}
+                            </td>
+                            <td>
                                 @if($kp->kesbang)
                                     <a href="{{ $kp->kesbang->getUrl() }}" target="_blank">
                                         {{ trans('global.view_file') }}
@@ -96,11 +105,32 @@
                                 @endif
                             </td>
                             <td>
+                                {{ $kp->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 @can('kp_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.kps.show', $kp->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.kps.ubahstatus', $kp->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.kps.ubahstatus', $kp->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('kp_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.kps.edit', $kp->id) }}">

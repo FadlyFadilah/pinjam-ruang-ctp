@@ -27,8 +27,8 @@ class Cm extends Model implements HasMedia
     ];
 
     public const STATUS_SELECT = [
-        'diterima'       => 'Di Terima',
-        'tidak diterima' => 'Tidak Diterima',
+        'Diterima'       => 'Di Terima',
+        'Tidak Diterima' => 'Tidak Diterima',
     ];
 
     protected $fillable = [

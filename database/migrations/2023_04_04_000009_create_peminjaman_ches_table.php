@@ -22,6 +22,7 @@ class CreatePeminjamanChesTable extends Migration
             $table->string('infokus')->nullable();
             $table->boolean('persetujuan')->default(0);
             $table->boolean('persetujuan_2')->default(0);
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

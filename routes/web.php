@@ -65,42 +65,50 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // Peminjaman Studio Dubbing
     Route::delete('peminjaman-studio-dubbings/destroy', 'PeminjamanStudioDubbingController@massDestroy')->name('peminjaman-studio-dubbings.massDestroy');
+    Route::patch('peminjaman-studio-dubbings/statust/{peminjaman_studio_dubbing}', 'PeminjamanStudioDubbingController@ubahstatus')->name('peminjaman-studio-dubbings.ubahstatus');
     Route::resource('peminjaman-studio-dubbings', 'PeminjamanStudioDubbingController');
 
     // Peminjaman Ruang Kaca Bitc
     Route::delete('peminjaman-ruang-kaca-bitcs/destroy', 'PeminjamanRuangKacaBitcController@massDestroy')->name('peminjaman-ruang-kaca-bitcs.massDestroy');
+    Route::patch('peminjaman-ruang-kaca-bitcs/statust/{peminjaman_ruang_kaca_bitc}', 'PeminjamanRuangKacaBitcController@ubahstatus')->name('peminjaman-ruang-kaca-bitcs.ubahstatus');
     Route::resource('peminjaman-ruang-kaca-bitcs', 'PeminjamanRuangKacaBitcController');
 
     // Peminjaman Ch
     Route::delete('peminjaman-ches/destroy', 'PeminjamanChController@massDestroy')->name('peminjaman-ches.massDestroy');
+    Route::patch('peminjaman-ches/statust/{peminjaman_ch}', 'PeminjamanChController@ubahstatus')->name('peminjaman-ches.ubahstatus');
     Route::resource('peminjaman-ches', 'PeminjamanChController');
 
     // Studio Foto
     Route::delete('studio-fotos/destroy', 'StudioFotoController@massDestroy')->name('studio-fotos.massDestroy');
     Route::post('studio-fotos/media', 'StudioFotoController@storeMedia')->name('studio-fotos.storeMedia');
     Route::post('studio-fotos/ckmedia', 'StudioFotoController@storeCKEditorImages')->name('studio-fotos.storeCKEditorImages');
+    Route::patch('studio-fotos/statust/{studio_foto}', 'StudioFotoController@ubahstatus')->name('studio-fotos.ubahstatus');
     Route::resource('studio-fotos', 'StudioFotoController');
 
     // Peminjaman Barang
     Route::delete('peminjaman-barangs/destroy', 'PeminjamanBarangController@massDestroy')->name('peminjaman-barangs.massDestroy');
+    Route::patch('peminjaman-barangs/statust/{peminjaman_barang}', 'PeminjamanBarangController@ubahstatus')->name('peminjaman-barangs.ubahstatus');
     Route::resource('peminjaman-barangs', 'PeminjamanBarangController');
 
     // Penelitian
     Route::delete('penelitians/destroy', 'PenelitianController@massDestroy')->name('penelitians.massDestroy');
     Route::post('penelitians/media', 'PenelitianController@storeMedia')->name('penelitians.storeMedia');
     Route::post('penelitians/ckmedia', 'PenelitianController@storeCKEditorImages')->name('penelitians.storeCKEditorImages');
+    Route::patch('penelitians/statust/{penelitian}', 'PenelitianController@ubahstatus')->name('penelitians.ubahstatus');
     Route::resource('penelitians', 'PenelitianController');
 
     // Kp
     Route::delete('kps/destroy', 'KpController@massDestroy')->name('kps.massDestroy');
     Route::post('kps/media', 'KpController@storeMedia')->name('kps.storeMedia');
     Route::post('kps/ckmedia', 'KpController@storeCKEditorImages')->name('kps.storeCKEditorImages');
+    Route::patch('kps/statust/{kp}', 'KpController@ubahstatus')->name('kps.ubahstatus');
     Route::resource('kps', 'KpController');
 
     // Pkl
     Route::delete('pkls/destroy', 'PklController@massDestroy')->name('pkls.massDestroy');
     Route::post('pkls/media', 'PklController@storeMedia')->name('pkls.storeMedia');
     Route::post('pkls/ckmedia', 'PklController@storeCKEditorImages')->name('pkls.storeCKEditorImages');
+    Route::patch('pkls/statust/{pkl}', 'PklController@ubahstatus')->name('pkls.ubahstatus');
     Route::resource('pkls', 'PklController');
 
     // Cms

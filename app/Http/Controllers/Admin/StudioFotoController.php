@@ -27,6 +27,15 @@ class StudioFotoController extends Controller
         return view('admin.studioFotos.index', compact('studioFotos'));
     }
 
+    public function ubahstatus(Request $request, StudioFoto $studioFoto)
+    {
+        $studioFoto->status = $request->input('status');
+
+        $studioFoto->save();
+
+        return redirect()->route('admin.studio-fotos.index');
+    }
+
     public function create()
     {
         abort_if(Gate::denies('studio_foto_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');

@@ -51,12 +51,19 @@
                 <span class="help-block">{{ trans('cruds.kp.fields.alamat_helper') }}</span>
             </div>
             <div class="form-group">
-                <label class="required" for="lama">{{ trans('cruds.kp.fields.lama') }}</label>
+                <label class="required" for="lama">Dari Tanggal</label>
                 <input class="form-control date {{ $errors->has('lama') ? 'is-invalid' : '' }}" type="text" name="lama" id="lama" value="{{ old('lama', $kp->lama) }}" required>
                 @if($errors->has('lama'))
                     <span class="text-danger">{{ $errors->first('lama') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.kp.fields.lama_helper') }}</span>
+                <span class="help-block">{{ trans('cruds.penelitian.fields.lama_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label class="required" for="sampai">Sampai Tanggal</label>
+                <input class="form-control date {{ $errors->has('sampai') ? 'is-invalid' : '' }}" type="text" name="sampai" id="sampai" value="{{ old('sampai', $kp->sampai) }}" required>
+                @if($errors->has('sampai'))
+                    <span class="text-danger">{{ $errors->first('sampai') }}</span>
+                @endif
             </div>
             <div class="form-group">
                 <label for="kesbang">{{ trans('cruds.kp.fields.kesbang') }}</label>

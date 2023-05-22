@@ -18,6 +18,7 @@ class CreatePeminjamanBarangsTable extends Migration
             $table->string('tujuan');
             $table->string('no_hp');
             $table->string('email');
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

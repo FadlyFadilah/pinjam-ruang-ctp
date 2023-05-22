@@ -17,6 +17,7 @@ class CreatePklsTable extends Migration
             $table->string('email');
             $table->date('lama');
             $table->date('sampai');
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -35,6 +35,7 @@ class StudioFoto extends Model implements HasMedia
         'profil',
         'konten',
         'oss',
+        'status',
         'created_at',
         'updated_at',
         'deleted_at',

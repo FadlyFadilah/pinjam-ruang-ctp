@@ -56,6 +56,9 @@
                             {{ trans('cruds.penelitian.fields.hasil') }}
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -106,6 +109,9 @@
                                         {{ trans('global.view_file') }}
                                     </a>
                                 @endif
+                            </td>
+                            <td>
+                                {{ $penelitian->status ?? 'Pending' }}
                             </td>
                             <td>
                                 @can('penelitian_show')

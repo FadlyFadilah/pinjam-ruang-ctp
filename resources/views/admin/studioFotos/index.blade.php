@@ -50,6 +50,9 @@
                             {{ trans('cruds.studioFoto.fields.oss') }}
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -92,11 +95,32 @@
                                 {{ $studioFoto->oss ?? '' }}
                             </td>
                             <td>
+                                {{ $studioFoto->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 @can('studio_foto_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.studio-fotos.show', $studioFoto->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.studio-fotos.ubahstatus', $studioFoto->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.studio-fotos.ubahstatus', $studioFoto->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('studio_foto_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.studio-fotos.edit', $studioFoto->id) }}">

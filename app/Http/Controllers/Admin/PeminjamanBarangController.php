@@ -28,6 +28,15 @@ class PeminjamanBarangController extends Controller
         return view('admin.peminjamanBarangs.index', compact('peminjamanBarangs'));
     }
 
+    public function ubahstatus(Request $request, PeminjamanBarang $peminjamanBarang)
+    {
+        $peminjamanBarang->status = $request->input('status');
+
+        $peminjamanBarang->save();
+
+        return redirect()->route('admin.peminjaman-barangs.index');
+    }
+
     public function create()
     {
         abort_if(Gate::denies('peminjaman_barang_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');

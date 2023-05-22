@@ -56,6 +56,9 @@
                             {{ trans('cruds.penelitian.fields.hasil') }}
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -108,11 +111,32 @@
                                 @endif
                             </td>
                             <td>
+                                {{ $penelitian->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 @can('penelitian_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.penelitians.show', $penelitian->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.penelitians.ubahstatus', $penelitian->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.penelitians.ubahstatus', $penelitian->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('penelitian_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.penelitians.edit', $penelitian->id) }}">

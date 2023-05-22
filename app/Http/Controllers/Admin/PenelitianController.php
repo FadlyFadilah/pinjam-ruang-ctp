@@ -30,6 +30,15 @@ class PenelitianController extends Controller
         return view('admin.penelitians.index', compact('penelitians'));
     }
 
+    public function ubahstatus(Request $request, Penelitian $penelitian)
+    {
+        $penelitian->status = $request->input('status');
+
+        $penelitian->save();
+
+        return redirect()->route('admin.penelitians.index');
+    }
+
     public function create()
     {
         abort_if(Gate::denies('penelitian_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');

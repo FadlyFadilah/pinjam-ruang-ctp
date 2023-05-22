@@ -58,10 +58,10 @@
                 <span class="help-block">{{ trans('cruds.penelitian.fields.lama_helper') }}</span>
             </div>
             <div class="form-group">
-                <label class="required" for="samapai">Sampai Tanggal</label>
-                <input class="form-control date {{ $errors->has('samapai') ? 'is-invalid' : '' }}" type="text" name="samapai" id="samapai" value="{{ old('samapai') }}" required>
-                @if($errors->has('samapai'))
-                    <span class="text-danger">{{ $errors->first('samapai') }}</span>
+                <label class="required" for="sampai">Sampai Tanggal</label>
+                <input class="form-control date {{ $errors->has('sampai') ? 'is-invalid' : '' }}" type="text" name="sampai" id="sampai" value="{{ old('sampai') }}" required>
+                @if($errors->has('sampai'))
+                    <span class="text-danger">{{ $errors->first('sampai') }}</span>
                 @endif
             </div>
             <div class="form-group">

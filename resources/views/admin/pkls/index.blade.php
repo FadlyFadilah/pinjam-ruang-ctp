@@ -47,7 +47,13 @@
                             {{ trans('cruds.pkl.fields.kesbang') }}
                         </th>
                         <th>
-                            {{ trans('cruds.pkl.fields.hasil') }}
+                            Dari Tanggal
+                        </th>
+                        <th>
+                            Sampai Tanggal
+                        </th>
+                        <th>
+                            Status
                         </th>
                         <th>
                             &nbsp;
@@ -82,6 +88,9 @@
                                 {{ $pkl->lama ?? '' }}
                             </td>
                             <td>
+                                {{ $pkl->sampai ?? '' }}
+                            </td>
+                            <td>
                                 @if($pkl->kesbang)
                                     <a href="{{ $pkl->kesbang->getUrl() }}" target="_blank">
                                         {{ trans('global.view_file') }}
@@ -96,11 +105,32 @@
                                 @endif
                             </td>
                             <td>
+                                {{ $pkl->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 @can('pkl_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.pkls.show', $pkl->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.pkls.ubahstatus', $pkl->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.pkls.ubahstatus', $pkl->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('pkl_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.pkls.edit', $pkl->id) }}">

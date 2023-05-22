@@ -20,6 +20,7 @@ class CreatePeminjamanRuangKacaBitcsTable extends Migration
             $table->integer('jumlah');
             $table->boolean('aggrement')->default(0);
             $table->string('infokus')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

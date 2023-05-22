@@ -39,6 +39,7 @@ class PeminjamanStudioDubbing extends Model
         'selesai_booking',
         'operator',
         'persetujuan',
+        'status',
         'created_at',
         'updated_at',
         'deleted_at',

@@ -17,6 +17,7 @@ class CreateStudioFotosTable extends Migration
             $table->longText('profil');
             $table->string('konten');
             $table->string('oss');
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

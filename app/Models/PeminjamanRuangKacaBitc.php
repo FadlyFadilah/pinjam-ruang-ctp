@@ -40,6 +40,7 @@ class PeminjamanRuangKacaBitc extends Model
         'jumlah',
         'aggrement',
         'infokus',
+        'status',
         'created_at',
         'updated_at',
         'deleted_at',

@@ -42,6 +42,7 @@ class PeminjamanCh extends Model
         'infokus',
         'persetujuan',
         'persetujuan_2',
+        'status',
         'created_at',
         'updated_at',
         'deleted_at',

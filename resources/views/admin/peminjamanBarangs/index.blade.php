@@ -53,6 +53,9 @@
                             {{ trans('cruds.peminjamanBarang.fields.email') }}
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -94,11 +97,32 @@
                                 {{ $peminjamanBarang->email ?? '' }}
                             </td>
                             <td>
+                                {{ $peminjamanBarang->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 @can('peminjaman_barang_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.peminjaman-barangs.show', $peminjamanBarang->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.peminjaman-barangs.ubahstatus', $peminjamanBarang->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.peminjaman-barangs.ubahstatus', $peminjamanBarang->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('peminjaman_barang_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.peminjaman-barangs.edit', $peminjamanBarang->id) }}">

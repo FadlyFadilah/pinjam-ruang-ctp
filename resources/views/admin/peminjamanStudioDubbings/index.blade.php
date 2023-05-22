@@ -53,6 +53,9 @@
                             Persetujuan
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -95,11 +98,32 @@
                                 <input type="checkbox" disabled="disabled" {{ $peminjamanStudioDubbing->persetujuan ? 'checked' : '' }}>
                             </td>
                             <td>
+                                {{ $peminjamanStudioDubbing->status ?? 'Pending' }}
+                            </td>
+                            <td>
                                 @can('peminjaman_studio_dubbing_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.peminjaman-studio-dubbings.show', $peminjamanStudioDubbing->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
                                 @endcan
+
+                                <form action="{{ route('admin.peminjaman-studio-dubbings.ubahstatus', $peminjamanStudioDubbing->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Diterima">
+                                    <input type="submit" class="btn btn-xs btn-success" value="Terima">
+                                </form>
+
+                                <form action="{{ route('admin.peminjaman-studio-dubbings.ubahstatus', $peminjamanStudioDubbing->id) }}" method="POST"
+                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                    style="display: inline-block;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <input type="hidden" name="status" value="Tidak Diterima">
+                                    <input type="submit" class="btn btn-xs btn-warning" value="Tolak">
+                                </form>
 
                                 @can('peminjaman_studio_dubbing_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.peminjaman-studio-dubbings.edit', $peminjamanStudioDubbing->id) }}">

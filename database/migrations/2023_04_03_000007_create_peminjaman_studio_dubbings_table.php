@@ -19,6 +19,7 @@ class CreatePeminjamanStudioDubbingsTable extends Migration
             $table->date('selesai_booking')->nullable();
             $table->string('operator')->nullable();
             $table->boolean('persetujuan')->default(0);
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

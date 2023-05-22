@@ -53,6 +53,9 @@
                             {{ trans('cruds.kp.fields.hasil') }}
                         </th>
                         <th>
+                            Status
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -100,6 +103,9 @@
                                         {{ trans('global.view_file') }}
                                     </a>
                                 @endif
+                            </td>
+                            <td>
+                                {{ $kp->status ?? 'Pending' }}
                             </td>
                             <td>
                                 @can('kp_show')
