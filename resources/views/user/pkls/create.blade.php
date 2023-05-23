@@ -25,7 +25,7 @@
                 </div>
                 <div class="bs-stepper-content">
                     <!-- your steps content here -->
-                    <form method="POST" action="{{ route('admin.pkls.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('user.pkls.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
