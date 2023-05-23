@@ -4,7 +4,7 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('user.ruangctps.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.ruangctp.title_singular') }}
+                Ajukan Permohonan
             </a>
         </div>
     </div>
