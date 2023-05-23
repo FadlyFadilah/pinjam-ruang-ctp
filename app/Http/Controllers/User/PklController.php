@@ -68,7 +68,7 @@ class PklController extends Controller
     public function update(UpdatePklRequest $request, Pkl $pkl)
     {
         $attr = $request->all();
-        $attr['user_id'] = auth()->id();
+        $attr['user_id'] = $pkl->id;
         $pkl->update($attr);
 
         if ($request->input('kesbang', false)) {

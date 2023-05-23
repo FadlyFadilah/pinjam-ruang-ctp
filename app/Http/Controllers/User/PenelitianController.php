@@ -21,11 +21,8 @@ class PenelitianController extends Controller
     public function index()
     {
         abort_if(Gate::denies('penelitian_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        if (!auth()->user()->is_admin) {
-            $penelitians = Penelitian::with(['user', 'media'])->where('user_id', auth()->id())->get();
-            return view('user.penelitians.index', compact('penelitians'));
-        }
-        $penelitians = Penelitian::with(['user', 'media'])->get();
+
+        $penelitians = Penelitian::with(['user', 'media'])->where('user_id', auth()->id())->get();
 
         return view('user.penelitians.index', compact('penelitians'));
     }
@@ -68,11 +65,11 @@ class PenelitianController extends Controller
     public function update(UpdatePenelitianRequest $request, Penelitian $penelitian)
     {
         $attr = $request->all();
-        $attr['user_id'] = auth()->id();
+        $attr['user_id'] = $penelitian->id;
         $penelitian->update($attr);
 
         if ($request->input('kesbang', false)) {
-            if (! $penelitian->kesbang || $request->input('kesbang') !== $penelitian->kesbang->file_name) {
+            if (!$penelitian->kesbang || $request->input('kesbang') !== $penelitian->kesbang->file_name) {
                 if ($penelitian->kesbang) {
                     $penelitian->kesbang->delete();
                 }
@@ -83,7 +80,7 @@ class PenelitianController extends Controller
         }
 
         if ($request->input('hasil', false)) {
-            if (! $penelitian->hasil || $request->input('hasil') !== $penelitian->hasil->file_name) {
+            if (!$penelitian->hasil || $request->input('hasil') !== $penelitian->hasil->file_name) {
                 if ($penelitian->hasil) {
                     $penelitian->hasil->delete();
                 }
