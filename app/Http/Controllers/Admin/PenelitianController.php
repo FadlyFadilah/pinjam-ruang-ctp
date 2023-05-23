@@ -77,7 +77,7 @@ class PenelitianController extends Controller
     public function update(UpdatePenelitianRequest $request, Penelitian $penelitian)
     {
         $attr = $request->all();
-        $attr['user_id'] = auth()->id();
+        $attr['user_id'] = $penelitian->user_id;
         $penelitian->update($attr);
 
         if ($request->input('kesbang', false)) {

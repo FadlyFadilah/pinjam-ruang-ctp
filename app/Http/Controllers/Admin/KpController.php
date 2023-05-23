@@ -79,7 +79,7 @@ class KpController extends Controller
     public function update(UpdateKpRequest $request, Kp $kp)
     {
         $attr = $request->all();
-        $attr['user_id'] = auth()->id();
+        $attr['user_id'] = $kp->user_id;
         $kp->update($attr);
 
         if ($request->input('kesbang', false)) {
