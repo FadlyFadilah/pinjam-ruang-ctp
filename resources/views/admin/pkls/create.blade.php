@@ -29,15 +29,14 @@
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio possimus magnam
-                                provident quisquam voluptate id illo consequatur maxime. Vel dolorum exercitationem
-                                similique dolore aliquid amet magni praesentium consequatur, maiores suscipit, ut doloribus
-                                veniam, eum ipsum ea? Mollitia voluptatum minima placeat sint tenetur vel ipsam aspernatur
-                                eligendi, facere cupiditate quam minus est ad, voluptate voluptatem, aliquam deleniti dicta.
-                                Dignissimos totam soluta dicta aut necessitatibus voluptates rerum libero adipisci
-                                aspernatur ab architecto deserunt repudiandae mollitia excepturi odio, nesciunt nihil
-                                dolorum? Dolores aperiam sed at veniam, sunt sit fugiat? Consequatur quisquam veritatis,
-                                mollitia, sit dicta et facilis laborum reiciendis tempora a iure.</p>
+                            <p>   
+                                1.	Yang akan magang dan penelitian, wajib mengisi formulir dan upload surat resmi dari sekolah atau universitas di website :  http://pelita.cimahitechnopark.id/<br>
+                                2.	Setelah surat tersebut masuk, Management CTP akan mendisposisi surat tersebut kepada Kepala UPTD. Cimahi Techno Park <br>
+                                3.	Setelah turun disposisi, akan ada arahan dari Kepala UPTD. Cimahi Techno Park untuk di setujui atau di terima<br>
+                                4.	Apabila disponya di setujui atau di terima, maka akan dibuatkan surat pengantar untuk ke Kesbang <br>
+                                5.	Setelah ke Kesbang, yang akan melakukan penelitian akan mendapatkan surat rekomendasi dari Kesbang untuk melakukan penelitian atau magang<br>
+                                6.	Setelah surat di terima, yang akan melakukan penlitian dapat melaksanakan penelitian atau pkl sesuai dengan tanggal yang tertera.
+                            </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
                                 <label class="form-check-label" for="checkbox">

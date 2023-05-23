@@ -154,23 +154,6 @@
         </div>
     </section>
 
-    <section class="ftco-section testimony-section bg-light">
-        <div class="container">
-            <div class="row justify-content-center pb-5 mb-3">
-                <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h2 style="font-family: 'Plus Jakarta Sans'; font-weight: 600;">Tata Cara Peminjaman</h2>
-                </div>
-            </div>
-            <div class="row ftco-animate">
-                <div class="col-md-12 wrap-about">
-                    <div class="text-center">
-                        <img src="{{ asset('vendor/vonso/FlowchartV1.jpg') }}" class="img-fluid" alt="...">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="ftco-intro" style="background-image: url(vendor/technext/vacation-rental/images/bg_1.jpg);"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>

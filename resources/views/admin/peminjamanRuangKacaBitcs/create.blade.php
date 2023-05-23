@@ -30,15 +30,15 @@
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio possimus magnam
-                                provident quisquam voluptate id illo consequatur maxime. Vel dolorum exercitationem
-                                similique dolore aliquid amet magni praesentium consequatur, maiores suscipit, ut doloribus
-                                veniam, eum ipsum ea? Mollitia voluptatum minima placeat sint tenetur vel ipsam aspernatur
-                                eligendi, facere cupiditate quam minus est ad, voluptate voluptatem, aliquam deleniti dicta.
-                                Dignissimos totam soluta dicta aut necessitatibus voluptates rerum libero adipisci
-                                aspernatur ab architecto deserunt repudiandae mollitia excepturi odio, nesciunt nihil
-                                dolorum? Dolores aperiam sed at veniam, sunt sit fugiat? Consequatur quisquam veritatis,
-                                mollitia, sit dicta et facilis laborum reiciendis tempora a iure.</p>
+                            <p>
+                                1.	Tenant wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/<br>
+                                2.	Apabila ada jadwal yang kosong, tenant dapat booking ruangan kaca sesuai jadwal yang tersedia<br>
+                                3.	Setelah booking CS akan mengkonfirmasi tanggal yang tersedia dan  tenant dapat menggunakan ruang kaca tersebut<br>
+                                4.	Waktu yang dapat digunakan untuk Ruang Kaca yaitu Maksimal 4 (empat) jam <br>
+                                5.	Apabila ada asset yang akan digunakan di ruang kaca, tenant wajib izin ke Pengelola Gedung BITC <br>
+                                6.	Pada saat penggunaan Ruang Kaca BITC, tenant wajib menjaga dan menaati peraturan yang telah di sepakati
+                                
+                            </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
                                 <label class="form-check-label" for="checkbox">

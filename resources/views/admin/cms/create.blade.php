@@ -29,15 +29,14 @@
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio possimus magnam
-                                provident quisquam voluptate id illo consequatur maxime. Vel dolorum exercitationem
-                                similique dolore aliquid amet magni praesentium consequatur, maiores suscipit, ut doloribus
-                                veniam, eum ipsum ea? Mollitia voluptatum minima placeat sint tenetur vel ipsam aspernatur
-                                eligendi, facere cupiditate quam minus est ad, voluptate voluptatem, aliquam deleniti dicta.
-                                Dignissimos totam soluta dicta aut necessitatibus voluptates rerum libero adipisci
-                                aspernatur ab architecto deserunt repudiandae mollitia excepturi odio, nesciunt nihil
-                                dolorum? Dolores aperiam sed at veniam, sunt sit fugiat? Consequatur quisquam veritatis,
-                                mollitia, sit dicta et facilis laborum reiciendis tempora a iure.</p>
+                            <p>
+                                1. Yang akan mendaftarkan Cimahi Maker Space, wajib mengisi formulir di website : http://pelita.cimahitechnopark.id/<br>
+                                2. Setelah mengisi formulir di website, calon peserta CMS wajib mengikuti seleksi talent scouting (menyerahkan portfolio) ke tim Publikasi<br>
+                                3. Setelah mengikuti talent scouting peserta yang lolos akan di panggil untuk mengikuti seleksi pitching project dengan Mentor <br>
+                                4. Peserta yang lolos berhak mengikuti program Cimahi Maker Space selama 1 (satu) tahun<br>
+                                5. Dalam Program Cimahi Maker Space, peserta Cimahi Maker Space wajib mengikuti kegiatan diantaranya Workshop 4x dalam setahun,Bootcamp Satu Tahun Hanya 1x, dan Evaluasi Setiap Bulan<br>
+                                6. Setelah melakukan program Cimahi Maker Space selama 1 (satu) tahun, di akhir kegiatan akan ada penilaian akhir dan Kegiatan Maneuver Day di akhir kegiatan, untuk memperlihatkan hasil karya peserta Cimahi Maker Space
+                            </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
                                 <label class="form-check-label" for="checkbox">
