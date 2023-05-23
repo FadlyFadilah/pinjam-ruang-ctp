@@ -47,19 +47,28 @@
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio possimus magnam
-                                provident quisquam voluptate id illo consequatur maxime. Vel dolorum exercitationem
-                                similique dolore aliquid amet magni praesentium consequatur, maiores suscipit, ut doloribus
-                                veniam, eum ipsum ea? Mollitia voluptatum minima placeat sint tenetur vel ipsam aspernatur
-                                eligendi, facere cupiditate quam minus est ad, voluptate voluptatem, aliquam deleniti dicta.
-                                Dignissimos totam soluta dicta aut necessitatibus voluptates rerum libero adipisci
-                                aspernatur ab architecto deserunt repudiandae mollitia excepturi odio, nesciunt nihil
-                                dolorum? Dolores aperiam sed at veniam, sunt sit fugiat? Consequatur quisquam veritatis,
-                                mollitia, sit dicta et facilis laborum reiciendis tempora a iure.</p>
+                            <p>
+                                1. Mengakses web peminjaman.cimahitechnopark.id, Lalu Mengajukan Surat Permohonan Fasilitasi Kegiatan ke Dinas Perdagangan KUKM dan Perindustrian Kota Cimahi.<br>
+                                
+                                2. Evaluasi Kelengkapan Persyaratan yaitu meliputi:
+                                <ul>
+                                    <li>Surat Permohonan Peminjaman Tempat</li>
+                                    <li>Proposal </li>
+                                    <li>Surat Rekomendasi (Jika perlu)</li>
+                                    <li>Rundown (Loading & Kegiatan)</li>
+                                    <li>Layout </li>
+                                </ul>
+                                <br>
+                                3. Analisa Kegiatan dan Input Informasi / Instruksi di Kartu Disposisi Surat Masuk<br>
+                                4. Analisa Kegiatan dan Input Informasi / Instruksi di Kartu Disposisi Surat Masuk<br>
+                                5. Menghubungi Pengguna Gedung setelah Proses Administrasi Surat selesai (Sesuai Isi Disposisi)<br>
+                                6. Kegiatan di Fasilitasi
+
+                            </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
                                 <label class="form-check-label" for="checkbox">
-                                    Ya saya sudah mengetahui nya.
+                                    Ya, saya sudah membaca dan saya setuju atas prosedur diatas.
                                 </label>
                             </div>
                             <button id="nextButton" class="btn btn-primary" onclick="stepper.next()" disabled>Next</button>
