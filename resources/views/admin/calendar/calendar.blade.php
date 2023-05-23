@@ -33,7 +33,13 @@
             $('#calendar').fullCalendar({
                 // put your options and callbacks here
                 events: events,
+                eventAfterRender: function(event, element, view) {
+                    var eventTitle = element.find('.fc-title');
+                    var eventWidth = eventTitle.width() +
+                    5; // Menambahkan margin untuk memperhitungkan ruang kosong
 
+                    element.css('width', eventWidth + 'px');
+                },
 
             })
         });

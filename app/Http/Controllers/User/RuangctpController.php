@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
@@ -9,6 +9,7 @@ use App\Http\Requests\StoreRuangctpRequest;
 use App\Http\Requests\UpdateRuangctpRequest;
 use App\Models\Ruangan;
 use App\Models\Ruangctp;
+use App\Models\TanggalLibur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -22,17 +23,25 @@ class RuangctpController extends Controller
     {
         abort_if(Gate::denies('ruangctp_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $ruangctps = Ruangctp::with(['ruangan', 'media'])->get();
+        $ruangctps = Ruangctp::with(['ruangan', 'media'])->where('user_id', auth()->id())->get();
 
-        return view('admin.ruangctps.index', compact('ruangctps'));
+        return view('user.ruangctps.index', compact('ruangctps'));
     }
-    public function ubahstatus(Request $request, Ruangctp $ruangctp)
+    
+    public function data()
     {
-        $ruangctp->status = $request->input('status');
+        $holidays = TanggalLibur::pluck('tanggal')->toArray();
 
-        $ruangctp->save();
+        return response()->json($holidays);
+    }
 
-        return redirect()->route('admin.ruangctps.index');
+    public function ubahstatus(Request $request, Ruangctp $ruangctps)
+    {
+        $ruangctps->status = $request->input('status');
+
+        $ruangctps->save();
+
+        return redirect()->route('user.ruangctps.index');
     }
 
     public function create()
@@ -41,7 +50,7 @@ class RuangctpController extends Controller
 
         $ruangans = Ruangan::where('id', '>', 4 )->pluck('nama_ruangan', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.ruangctps.create', compact('ruangans'));
+        return view('user.ruangctps.create', compact('ruangans'));
     }
 
     public function store(StoreRuangctpRequest $request)
@@ -69,7 +78,7 @@ class RuangctpController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $ruangctp->id]);
         }
 
-        return redirect()->route('admin.ruangctps.index');
+        return redirect()->route('user.ruangctps.index');
     }
 
     public function edit(Ruangctp $ruangctp)
@@ -80,7 +89,7 @@ class RuangctpController extends Controller
 
         $ruangctp->load('ruangan');
 
-        return view('admin.ruangctps.edit', compact('ruangans', 'ruangctp'));
+        return view('user.ruangctps.edit', compact('ruangans', 'ruangctp'));
     }
 
     public function update(UpdateRuangctpRequest $request, Ruangctp $ruangctp)
@@ -131,7 +140,7 @@ class RuangctpController extends Controller
             $ruangctp->rundown_persiapan->delete();
         }
 
-        return redirect()->route('admin.ruangctps.index');
+        return redirect()->route('user.ruangctps.index');
     }
 
     public function show(Ruangctp $ruangctp)
@@ -140,7 +149,7 @@ class RuangctpController extends Controller
 
         $ruangctp->load('ruangan');
 
-        return view('admin.ruangctps.show', compact('ruangctp'));
+        return view('user.ruangctps.show', compact('ruangctp'));
     }
 
     public function destroy(Ruangctp $ruangctp)

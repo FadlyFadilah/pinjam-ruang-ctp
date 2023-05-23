@@ -53,6 +53,7 @@ class Ruangctp extends Model implements HasMedia
     ];
 
     protected $fillable = [
+        'user_id',
         'ruangan_id',
         'skpd',
         'bidang_kegiatan',

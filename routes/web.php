@@ -127,6 +127,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('cms', 'CmsController');
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
+
+    // Tanggal Libur
+    Route::delete('tanggal-liburs/destroy', 'TanggalLiburController@massDestroy')->name('tanggal-liburs.massDestroy');
+    Route::get('/holidays', 'TanggalLiburController@data');
+    Route::resource('tanggal-liburs', 'TanggalLiburController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
@@ -139,6 +144,14 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
 });
 Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'User', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/holidays', 'TanggalLiburController@data');
+
+    // Ruangctp
+    Route::delete('ruangctps/destroy', 'RuangctpController@massDestroy')->name('ruangctps.massDestroy');
+    Route::post('ruangctps/media', 'RuangctpController@storeMedia')->name('ruangctps.storeMedia');
+    Route::post('ruangctps/ckmedia', 'RuangctpController@storeCKEditorImages')->name('ruangctps.storeCKEditorImages');
+    Route::resource('ruangctps', 'RuangctpController');
+
     // Peminjaman Studio Dubbing
     Route::delete('peminjaman-studio-dubbings/destroy', 'PeminjamanStudioDubbingController@massDestroy')->name('peminjaman-studio-dubbings.massDestroy');
     Route::resource('peminjaman-studio-dubbings', 'PeminjamanStudioDubbingController');

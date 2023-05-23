@@ -589,5 +589,23 @@ return [
             'ruangan_helper'           => ' ',
         ],
     ],
+    'tanggalLibur' => [
+        'title'          => 'Tanggal Libur',
+        'title_singular' => 'Tanggal Libur',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'tanggal'           => 'Tanggal',
+            'tanggal_helper'    => ' ',
+            'keterangan'        => 'Keterangan',
+            'keterangan_helper' => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => ' ',
+        ],
+    ],
 
 ];

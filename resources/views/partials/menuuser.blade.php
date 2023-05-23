@@ -117,6 +117,19 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
+                            @can('ruangctp_access')
+                                <li class="nav-item">
+                                    <a href="{{ route('user.ruangctps.index') }}"
+                                        class="nav-link {{ request()->is('ruangctps') || request()->is('ruangctps/*') ? 'active' : '' }}">
+                                        <i class="fa-fw nav-icon fas fa-door-open">
+
+                                        </i>
+                                        <p>
+                                            Peminjaman Cimahi TechnoPark
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
                             @can('peminjaman_studio_dubbing_access')
                                 <li class="nav-item">
                                     <a href="{{ route('user.peminjaman-studio-dubbings.index') }}"

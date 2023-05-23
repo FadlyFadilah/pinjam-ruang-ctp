@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.user')
 @section('content')
     <div class="card">
         <div class="card-header">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="bs-stepper-content">
                     <!-- your steps content here -->
-                    <form method="POST" id="form" action="{{ route('admin.ruangctps.store') }}"
+                    <form method="POST" id="form" action="{{ route('user.ruangctps.store') }}"
                         enctype="multipart/form-data">
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
@@ -549,7 +549,7 @@
         $(document).ready(function() {
             // Mendapatkan data hari libur Indonesia dari endpoint /holidays
             $.ajax({
-                url: '/admin/holidays',
+                url: '/user/holidays',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -600,7 +600,7 @@
         $(document).ready(function() {
             // Mendapatkan data hari libur Indonesia dari endpoint /holidays
             $.ajax({
-                url: '/admin/holidays',
+                url: '/user/holidays',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -839,7 +839,7 @@
     </script>
     <script>
         Dropzone.options.suratPermohonanDropzone = {
-            url: '{{ route('admin.ruangctps.storeMedia') }}',
+            url: '{{ route('user.ruangctps.storeMedia') }}',
             maxFilesize: 5, // MB
             maxFiles: 1,
             addRemoveLinks: true,
@@ -889,7 +889,7 @@
     </script>
     <script>
         Dropzone.options.rundownProposalDropzone = {
-            url: '{{ route('admin.ruangctps.storeMedia') }}',
+            url: '{{ route('user.ruangctps.storeMedia') }}',
             maxFilesize: 5, // MB
             maxFiles: 1,
             addRemoveLinks: true,
@@ -939,7 +939,7 @@
     </script>
     <script>
         Dropzone.options.rundownBarangDropzone = {
-            url: '{{ route('admin.ruangctps.storeMedia') }}',
+            url: '{{ route('user.ruangctps.storeMedia') }}',
             maxFilesize: 5, // MB
             maxFiles: 1,
             addRemoveLinks: true,
@@ -989,7 +989,7 @@
     </script>
     <script>
         Dropzone.options.rundownPersiapanDropzone = {
-            url: '{{ route('admin.ruangctps.storeMedia') }}',
+            url: '{{ route('user.ruangctps.storeMedia') }}',
             maxFilesize: 5, // MB
             maxFiles: 1,
             addRemoveLinks: true,

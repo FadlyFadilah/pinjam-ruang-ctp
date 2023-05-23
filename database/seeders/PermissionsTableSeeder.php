@@ -392,6 +392,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 96,
+                'title' => 'tanggal_libur_create',
+            ],
+            [
+                'id'    => 97,
+                'title' => 'tanggal_libur_edit',
+            ],
+            [
+                'id'    => 98,
+                'title' => 'tanggal_libur_show',
+            ],
+            [
+                'id'    => 99,
+                'title' => 'tanggal_libur_delete',
+            ],
+            [
+                'id'    => 100,
+                'title' => 'tanggal_libur_access',
+            ],
+            [
+                'id'    => 101,
                 'title' => 'profile_password_edit',
             ],
         ];

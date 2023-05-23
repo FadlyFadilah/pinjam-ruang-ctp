@@ -15,7 +15,7 @@ class SystemCalendarController extends Controller
             'prefix'     => 'Studio Dubbing',
             'suffix'     => 'BITC',
             'route'      => 'admin.peminjaman-studio-dubbings.show',
-        ], 
+        ],
         [
             'model'      => '\App\Models\PeminjamanRuangKacaBitc',
             'date_field' => 'tanggal_booking',
@@ -32,21 +32,35 @@ class SystemCalendarController extends Controller
             'suffix'     => 'CTP',
             'route'      => 'admin.peminjaman-ches.show',
         ],
+        [
+            'model'      => '\App\Models\Ruangctp',
+            'date_field' => 'mulai',
+            'field'      => 'nama_acara',
+            'prefix'     => 'Gedung',
+            'suffix'     => 'CTP',
+            'route'      => 'admin.ruangctps.show',
+        ],
     ];
 
     public function index()
     {
         $events = [];
         foreach ($this->sources as $source) {
-            foreach ($source['model']::where('status', 'diterima')->get() as $model) {
+            foreach ($source['model']::where('status', 'Diterima')->get() as $model) {
                 $crudFieldValue = $model->getAttributes()[$source['date_field']];
 
                 if (!$crudFieldValue) {
                     continue;
                 }
 
+                $prefixModel = $source['model']::first(); // Ganti 'Prefix' dengan model yang sesuai
+                $prefixValue = $prefixModel->ruangan->nama_ruangan; // Ganti 'value' dengan kolom yang sesuai
+
+                $suffixModel = $source['model']::first(); // Ganti 'Suffix' dengan model yang sesuai
+                $suffixValue = $suffixModel->mulai; // Ganti 'value' dengan kolom yang sesuai
+
                 $events[] = [
-                    'title' => trim($source['prefix'] . ' ' . $model->{$source['field']} . ' ' . $source['suffix']),
+                    'title' => trim($prefixValue . ' ' . $model->{$source['field']} . ' ' . $suffixValue),
                     'start' => $crudFieldValue,
                     'url'   => route($source['route'], $model->id),
                 ];
