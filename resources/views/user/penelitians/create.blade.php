@@ -7,94 +7,153 @@
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("user.penelitians.store") }}" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group">
-                <label class="required" for="nama">{{ trans('cruds.penelitian.fields.nama') }}</label>
-                <input class="form-control {{ $errors->has('nama') ? 'is-invalid' : '' }}" type="text" name="nama" id="nama" value="{{ old('nama', '') }}" required>
-                @if($errors->has('nama'))
-                    <span class="text-danger">{{ $errors->first('nama') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.nama_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label class="required" for="no_hp">{{ trans('cruds.penelitian.fields.no_hp') }}</label>
-                <input class="form-control {{ $errors->has('no_hp') ? 'is-invalid' : '' }}" type="text" name="no_hp" id="no_hp" value="{{ old('no_hp', '') }}" required>
-                @if($errors->has('no_hp'))
-                    <span class="text-danger">{{ $errors->first('no_hp') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.no_hp_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label class="required" for="email">{{ trans('cruds.penelitian.fields.email') }}</label>
-                <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email" name="email" id="email" value="{{ old('email') }}" required>
-                @if($errors->has('email'))
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.email_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label class="required" for="univ">{{ trans('cruds.penelitian.fields.univ') }}</label>
-                <input class="form-control {{ $errors->has('univ') ? 'is-invalid' : '' }}" type="text" name="univ" id="univ" value="{{ old('univ', '') }}" required>
-                @if($errors->has('univ'))
-                    <span class="text-danger">{{ $errors->first('univ') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.univ_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="alamat">{{ trans('cruds.penelitian.fields.alamat') }}</label>
-                <textarea class="form-control {{ $errors->has('alamat') ? 'is-invalid' : '' }}" name="alamat" id="alamat">{{ old('alamat') }}</textarea>
-                @if($errors->has('alamat'))
-                    <span class="text-danger">{{ $errors->first('alamat') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.alamat_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label class="required" for="lama">Dari Tanggal</label>
-                <input class="form-control date {{ $errors->has('lama') ? 'is-invalid' : '' }}" type="text" name="lama" id="lama" value="{{ old('lama') }}" required>
-                @if($errors->has('lama'))
-                    <span class="text-danger">{{ $errors->first('lama') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.lama_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label class="required" for="sampai">Sampai Tanggal</label>
-                <input class="form-control date {{ $errors->has('sampai') ? 'is-invalid' : '' }}" type="text" name="sampai" id="sampai" value="{{ old('sampai') }}" required>
-                @if($errors->has('sampai'))
-                    <span class="text-danger">{{ $errors->first('sampai') }}</span>
-                @endif
-            </div>
-            <div class="form-group">
-                <label class="required" for="judul">{{ trans('cruds.penelitian.fields.judul') }}</label>
-                <input class="form-control {{ $errors->has('judul') ? 'is-invalid' : '' }}" type="text" name="judul" id="judul" value="{{ old('judul', '') }}" required>
-                @if($errors->has('judul'))
-                    <span class="text-danger">{{ $errors->first('judul') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.judul_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="hasil">{{ trans('cruds.penelitian.fields.hasil') }}</label>
-                <div class="needsclick dropzone {{ $errors->has('hasil') ? 'is-invalid' : '' }}" id="hasil-dropzone">
+        <div class="bs-stepper">
+            <div class="bs-stepper-header" role="tablist">
+                <!-- your steps here -->
+                <div class="step" data-target="#alur">
+                    <button type="button" class="step-trigger" role="tab" aria-controls="alur" id="alur-trigger">
+                        <span class="bs-stepper-circle">1</span>
+                        <span class="bs-stepper-label">Alur Pendaftaran Penelitian</span>
+                    </button>
                 </div>
-                @if($errors->has('hasil'))
-                    <span class="text-danger">{{ $errors->first('hasil') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.penelitian.fields.hasil_helper') }}</span>
+                <div class="line"></div>
+                <div class="step" data-target="#data">
+                    <button type="button" class="step-trigger" role="tab" aria-controls="data" id="data-trigger">
+                        <span class="bs-stepper-circle">2</span>
+                        <span class="bs-stepper-label">Data Pemohon</span>
+                    </button>
+                </div>
             </div>
-            <div class="form-group">
-                <button class="btn btn-danger" type="submit">
-                    {{ trans('global.save') }}
-                </button>
+            <div class="bs-stepper-content">
+                <!-- your steps content here -->
+                <form method="POST" action="{{ route('user.penelitians.store') }}" enctype="multipart/form-data">
+                    @csrf
+                    <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
+                        <h1>SOP</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio possimus magnam
+                            provident quisquam voluptate id illo consequatur maxime. Vel dolorum exercitationem
+                            similique dolore aliquid amet magni praesentium consequatur, maiores suscipit, ut doloribus
+                            veniam, eum ipsum ea? Mollitia voluptatum minima placeat sint tenetur vel ipsam aspernatur
+                            eligendi, facere cupiditate quam minus est ad, voluptate voluptatem, aliquam deleniti dicta.
+                            Dignissimos totam soluta dicta aut necessitatibus voluptates rerum libero adipisci
+                            aspernatur ab architecto deserunt repudiandae mollitia excepturi odio, nesciunt nihil
+                            dolorum? Dolores aperiam sed at veniam, sunt sit fugiat? Consequatur quisquam veritatis,
+                            mollitia, sit dicta et facilis laborum reiciendis tempora a iure.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
+                            <label class="form-check-label" for="checkbox">
+                                Ya saya sudah mengetahui nya.
+                            </label>
+                        </div>
+                        <button id="nextButton" class="btn btn-primary" onclick="stepper.next()" disabled>Next</button>
+
+                    </div>
+                    <div id="data" class="content" role="tabpanel" aria-labelledby="data-trigger">
+
+                        <div class="form-group">
+                            <label class="required" for="nama">{{ trans('cruds.penelitian.fields.nama') }}</label>
+                            <input class="form-control {{ $errors->has('nama') ? 'is-invalid' : '' }}" type="text"
+                                name="nama" id="nama" value="{{ old('nama', '') }}" required>
+                            @if ($errors->has('nama'))
+                                <span class="text-danger">{{ $errors->first('nama') }}</span>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.penelitian.fields.nama_helper') }}</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="no_hp">{{ trans('cruds.penelitian.fields.no_hp') }}</label>
+                            <input class="form-control {{ $errors->has('no_hp') ? 'is-invalid' : '' }}" type="text"
+                                name="no_hp" id="no_hp" value="{{ old('no_hp', '') }}" required>
+                            @if ($errors->has('no_hp'))
+                                <span class="text-danger">{{ $errors->first('no_hp') }}</span>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.penelitian.fields.no_hp_helper') }}</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="email">{{ trans('cruds.penelitian.fields.email') }}</label>
+                            <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email"
+                                name="email" id="email" value="{{ old('email') }}" required>
+                            @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.penelitian.fields.email_helper') }}</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="univ">{{ trans('cruds.penelitian.fields.univ') }}</label>
+                            <input class="form-control {{ $errors->has('univ') ? 'is-invalid' : '' }}" type="text"
+                                name="univ" id="univ" value="{{ old('univ', '') }}" required>
+                            @if ($errors->has('univ'))
+                                <span class="text-danger">{{ $errors->first('univ') }}</span>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.penelitian.fields.univ_helper') }}</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">{{ trans('cruds.penelitian.fields.alamat') }}</label>
+                            <textarea class="form-control {{ $errors->has('alamat') ? 'is-invalid' : '' }}" name="alamat" id="alamat">{{ old('alamat') }}</textarea>
+                            @if ($errors->has('alamat'))
+                                <span class="text-danger">{{ $errors->first('alamat') }}</span>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.penelitian.fields.alamat_helper') }}</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="lama">Dari Tanggal</label>
+                            <input class="form-control date {{ $errors->has('lama') ? 'is-invalid' : '' }}"
+                                type="text" name="lama" id="lama" value="{{ old('lama') }}" required>
+                            @if ($errors->has('lama'))
+                                <span class="text-danger">{{ $errors->first('lama') }}</span>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.penelitian.fields.lama_helper') }}</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="sampai">Sampai Tanggal</label>
+                            <input class="form-control date {{ $errors->has('sampai') ? 'is-invalid' : '' }}"
+                                type="text" name="sampai" id="sampai" value="{{ old('sampai') }}" required>
+                            @if ($errors->has('sampai'))
+                                <span class="text-danger">{{ $errors->first('sampai') }}</span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label class="required"
+                                for="judul">{{ trans('cruds.penelitian.fields.judul') }}</label>
+                            <input class="form-control {{ $errors->has('judul') ? 'is-invalid' : '' }}"
+                                type="text" name="judul" id="judul" value="{{ old('judul', '') }}"
+                                required>
+                            @if ($errors->has('judul'))
+                                <span class="text-danger">{{ $errors->first('judul') }}</span>
+                            @endif
+                            <span class="help-block">{{ trans('cruds.penelitian.fields.judul_helper') }}</span>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
+                            <button class="btn btn-danger" type="submit">
+                                {{ trans('global.save') }}
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
-
-
-
 @endsection
 
 @section('scripts')
+<script>
+    function toggleButton() {
+        var checkbox = document.getElementById("checkboxId");
+        var nextButton = document.getElementById("nextButton");
+
+        if (checkbox.checked) {
+            nextButton.disabled = false;
+        } else {
+            nextButton.disabled = true;
+        }
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
+</script>
 <script>
     Dropzone.options.kesbangDropzone = {
     url: '{{ route('user.penelitians.storeMedia') }}',
