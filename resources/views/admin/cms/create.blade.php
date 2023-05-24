@@ -30,12 +30,12 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1. Yang akan mendaftarkan Cimahi Maker Space, wajib mengisi formulir di website : http://pelita.cimahitechnopark.id/<br>
-                                2. Setelah mengisi formulir di website, calon peserta CMS wajib mengikuti seleksi talent scouting (menyerahkan portfolio) ke tim Publikasi<br>
-                                3. Setelah mengikuti talent scouting peserta yang lolos akan di panggil untuk mengikuti seleksi pitching project dengan Mentor <br>
-                                4. Peserta yang lolos berhak mengikuti program Cimahi Maker Space selama 1 (satu) tahun<br>
-                                5. Dalam Program Cimahi Maker Space, peserta Cimahi Maker Space wajib mengikuti kegiatan diantaranya Workshop 4x dalam setahun,Bootcamp Satu Tahun Hanya 1x, dan Evaluasi Setiap Bulan<br>
-                                6. Setelah melakukan program Cimahi Maker Space selama 1 (satu) tahun, di akhir kegiatan akan ada penilaian akhir dan Kegiatan Maneuver Day di akhir kegiatan, untuk memperlihatkan hasil karya peserta Cimahi Maker Space
+                                1. Yang akan mendaftarkan Cimahi Maker Space, wajib mengisi formulir di website : http://pelita.cimahitechnopark.id/ .<br>
+                                2. Setelah mengisi formulir di website, calon peserta CMS wajib mengikuti seleksi talent scouting (menyerahkan portfolio) ke tim Publikasi.<br>
+                                3. Setelah mengikuti talent scouting peserta yang lolos akan di panggil untuk mengikuti seleksi pitching project dengan Mentor. <br>
+                                4. Peserta yang lolos berhak mengikuti program Cimahi Maker Space selama 1 (satu) tahun.<br>
+                                5. Dalam Program Cimahi Maker Space, peserta Cimahi Maker Space wajib mengikuti kegiatan diantaranya Workshop 4x dalam setahun,Bootcamp Satu Tahun Hanya 1x, dan Evaluasi Setiap Bulan.<br>
+                                6. Setelah melakukan program Cimahi Maker Space selama 1 (satu) tahun, di akhir kegiatan akan ada penilaian akhir dan Kegiatan Maneuver Day di akhir kegiatan, untuk memperlihatkan hasil karya peserta Cimahi Maker Space.
                             </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">

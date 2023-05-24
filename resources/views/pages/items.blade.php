@@ -10,7 +10,7 @@
                     <p class="breadcrumbs mb-2"><span class="mr-2"><a href="{{ route('home') }}">Beranda <i
                                     class="fa fa-chevron-right"></i></a></span> <span>Barang <i
                                 class="fa fa-chevron-right"></i></span></p>
-                                <h1 class="mb-0 bread" style="font-family: 'Plus Jakarta Sans'">Daftar Barang</h1>
+                    <h1 class="mb-0 bread" style="font-family: 'Plus Jakarta Sans'">Daftar Barang</h1>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
         <div class="container-fluid px-md-0">
             <div class="row no-gutters">
                 @foreach ($barangs as $item)
-                    <div class="col-5 mx-auto text-center">
+                    <div class="col-md-6 col-lg-4 mx-auto text-center">
                         <div class="card room-wrap p-2 m-4">
                             @if ($item->gambar)
                                 <a href="#" class="img"
@@ -40,7 +40,6 @@
                                         <li><span>Status:</span> {{ $item->status }}
                                         </li>
                                     </ul>
-                                    
                                 </div>
                             </div>
                         </div>

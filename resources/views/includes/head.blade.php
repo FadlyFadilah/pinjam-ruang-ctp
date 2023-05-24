@@ -8,6 +8,8 @@
 
 <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/animate.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.7.0/css/bootstrap.min.css">
+
 
 <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/owl.theme.default.min.css') }}">
@@ -15,8 +17,8 @@
 
 <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" />
 
-{{-- <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/bootstrap-datepicker.css') }}"> --}}
-{{-- <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/jquery.timepicker.css') }}"> --}}
+<link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/bootstrap-datepicker.css') }}">
+<link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/jquery.timepicker.css') }}">
 
 <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/flaticon.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/technext/vacation-rental/css/style.css') }}">

@@ -30,9 +30,9 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1. Yang akan melakukan foto produk, wajib mengisi formulir di website : http://pelita.cimahitechnopark.id/<br>
-                                2. Setelah mengisi data di website,  admin akan mendisposisi surat tersebut kepada Kepala UPTD. Cimahi Techno Park<br> 
-                                3. Setelah turun disposisi, akan ada arahan dari Kepala UPTD. Cimahi Techno Park kepada Admin<br>
+                                1. Yang akan melakukan foto produk, wajib mengisi formulir di website : http://pelita.cimahitechnopark.id/.<br>
+                                2. Setelah mengisi data di website,  admin akan mendisposisi surat tersebut kepada Kepala UPTD. Cimahi Techno Park.<br> 
+                                3. Setelah turun disposisi, akan ada arahan dari Kepala UPTD. Cimahi Techno Park kepada Admin.<br>
                                 4. Admin akan menghubungi Tenant atau UKM apabila di setujui sesuai dengan waktu yang telah dijadwalkan.<br>
                                 5. Setelah selesai pengerjaan Foto Produk tenant/UKM, admin akan menghubungi untuk melihat hasil yang telah di buat.
 

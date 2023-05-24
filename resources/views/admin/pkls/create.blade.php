@@ -30,11 +30,11 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>   
-                                1.	Yang akan magang dan penelitian, wajib mengisi formulir dan upload surat resmi dari sekolah atau universitas di website :  http://pelita.cimahitechnopark.id/<br>
-                                2.	Setelah surat tersebut masuk, Management CTP akan mendisposisi surat tersebut kepada Kepala UPTD. Cimahi Techno Park <br>
-                                3.	Setelah turun disposisi, akan ada arahan dari Kepala UPTD. Cimahi Techno Park untuk di setujui atau di terima<br>
-                                4.	Apabila disponya di setujui atau di terima, maka akan dibuatkan surat pengantar untuk ke Kesbang <br>
-                                5.	Setelah ke Kesbang, yang akan melakukan penelitian akan mendapatkan surat rekomendasi dari Kesbang untuk melakukan penelitian atau magang<br>
+                                1.	Yang akan magang dan penelitian, wajib mengisi formulir dan upload surat resmi dari sekolah atau universitas di website :  http://pelita.cimahitechnopark.id/ .<br>
+                                2.	Setelah surat tersebut masuk, Management CTP akan mendisposisi surat tersebut kepada Kepala UPTD. Cimahi Techno Park. <br>
+                                3.	Setelah turun disposisi, akan ada arahan dari Kepala UPTD. Cimahi Techno Park untuk di setujui atau di terima.<br>
+                                4.	Apabila disponya di setujui atau di terima, maka akan dibuatkan surat pengantar untuk ke Kesbang. <br>
+                                5.	Setelah ke Kesbang, yang akan melakukan penelitian akan mendapatkan surat rekomendasi dari Kesbang untuk melakukan penelitian atau magang.<br>
                                 6.	Setelah surat di terima, yang akan melakukan penlitian dapat melaksanakan penelitian atau pkl sesuai dengan tanggal yang tertera.
                             </p>
                             <div class="form-check">

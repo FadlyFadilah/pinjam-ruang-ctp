@@ -7,16 +7,16 @@
                 <div class="container">
                     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
                         <div class="col-md-7 ftco-animate">
-                        <span class="strong">
-                            <a class="text-uppercase mr-2" href="https://www.cimahitechnopark.id/category/animasi">
-                                <span style="border-left: 5px solid; padding-left: 5px;">Animasi</span>
-                            </a>
-                        </span>
-                        <h1 class="display-4 text-white" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">{{ $cp->title }}</h1>
+                            <span class="strong">
+                                <a class="text-uppercase mr-2" href="https://www.cimahitechnopark.id/category/animasi">
+                                    <span style="border-left: 5px solid; padding-left: 5px;">Animasi</span>
+                                </a>
+                            </span>
+                            <h1 class="display-4 text-white" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">{{ $cp->title }}</h1>
 
-                        <p class="lead">
-                            <a class="btn btn-primary btn-lg" href="{{ route('news.show', $cp->title) }}" role="button">Lihat Lebih Banyak</a>
-                        </p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="{{ route('news.show', $cp->title) }}" role="button">Lihat Lebih Banyak</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     @foreach ($contentPages as $cpa)
-                        <div class="col-lg-3 mt-4">
+                        <div class="col-md-6 col-lg-3 mt-4">
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top"
                                     src="{{ $cpa->featured_image->getUrl() }}"
@@ -50,6 +50,7 @@
         </div>
     </section>
 @endsection
+
 
 @section('scripts')
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>

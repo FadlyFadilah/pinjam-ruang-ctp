@@ -31,13 +31,13 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1.	Peminjam yang akan meminjam Wacom, Oculus, dan Halobox wajib mengisi formulir yang tersedia di website :  http://pelita.cimahitechnopark.id/<br>
-                                2.	Setelah mengisi Formulir yang ada di website :  pinjam-ruang-ctp.test, CS akan mencocokan jadwal <br>
-                                3.	Admin akan mendispo peminjaman tersebut ke Kepala UPT dan Kasubag TU<br>
-                                4.	Apabila disepekati, Admin akan ACC kegiatan tersbut dan peminjam boleh menggunakan nya sesuai dgn tgl yg disepakati<br>
-                                5.	Peminjam wajib menjaga barang tersebut sesuai dengan kondisi yang ada pada awal dan tidak rusak<br>
-                                6.	Peminjam wajib mengembalikan barang tersebut sesuai dengan tanggal yang disepakati<br>
-                                7.	Apabila barang tersebut rusak atau hilang Peminjam wajib mengganti dan bertanggung jawab atas barang tersebut
+                                1.	Peminjam yang akan meminjam Wacom, Oculus, dan Halobox wajib mengisi formulir yang tersedia di website :  http://pelita.cimahitechnopark.id/ .<br>
+                                2.	Setelah mengisi Formulir yang ada di website :  pinjam-ruang-ctp.test, CS akan mencocokan jadwal. <br>
+                                3.	Admin akan mendispo peminjaman tersebut ke Kepala UPT dan Kasubag TU.<br>
+                                4.	Apabila disepekati, Admin akan ACC kegiatan tersbut dan peminjam boleh menggunakan nya sesuai dgn tgl yg disepakati.<br>
+                                5.	Peminjam wajib menjaga barang tersebut sesuai dengan kondisi yang ada pada awal dan tidak rusak.<br>
+                                6.	Peminjam wajib mengembalikan barang tersebut sesuai dengan tanggal yang disepakati.<br>
+                                7.	Apabila barang tersebut rusak atau hilang Peminjam wajib mengganti dan bertanggung jawab atas barang tersebut.
 
                             </p>
                             <div class="form-check">

@@ -30,12 +30,12 @@
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
-                            <p>1.	Tenant  wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/<br>
-                                2.	Apabila ada jadwal yang kosong, tenant dapat booking Studio Dubbing sesuai jadwal yang tersedia<br>
-                                3.	CS BITC akan berkoordinasi dengan Koordinator Gedung bitc, apabila sudah acc CS BITC akan menghubungi tenant<br>
-                                4.	Waktu yang dapat digunakan untuk Studio Dubbing : (Tenant yang menyewa Co Working Space (dalam 1 bulan yaitu 16 jam), dan untuk tenant yang menyewa Space ruang kantor (dalam 1 bulan yaitu 32 jam))<br>
-                                5.	Apabila ada asset yang akan digunakan di ruang Studio, tenant wajib izin ke Pengelola Gedung BITC<br>
-                                6.	Pada saat penggunaan Ruang Studio Dubbing, tenant wajib menjaga dan menaati peraturan yang telah di sepakati
+                            <p> 1.	Tenant  wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
+                                2.	Apabila ada jadwal yang kosong, tenant dapat booking Studio Dubbing sesuai jadwal yang tersedia.<br>
+                                3.	CS BITC akan berkoordinasi dengan Koordinator Gedung bitc, apabila sudah acc CS BITC akan menghubungi tenant.<br>
+                                4.	Waktu yang dapat digunakan untuk Studio Dubbing : (Tenant yang menyewa Co Working Space (dalam 1 bulan yaitu 16 jam), dan untuk tenant yang menyewa Space ruang kantor (dalam 1 bulan yaitu 32 jam)).<br>
+                                5.	Apabila ada asset yang akan digunakan di ruang Studio, tenant wajib izin ke Pengelola Gedung BITC.<br>
+                                6.	Pada saat penggunaan Ruang Studio Dubbing, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.
 
                                 </p>
                             <div class="form-check">

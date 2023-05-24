@@ -31,12 +31,12 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1.	Tenant wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/<br>
-                                2.	Apabila ada jadwal yang kosong, tenant dapat booking ruangan kaca sesuai jadwal yang tersedia<br>
-                                3.	Setelah booking CS akan mengkonfirmasi tanggal yang tersedia dan  tenant dapat menggunakan ruang kaca tersebut<br>
-                                4.	Waktu yang dapat digunakan untuk Ruang Kaca yaitu Maksimal 4 (empat) jam <br>
-                                5.	Apabila ada asset yang akan digunakan di ruang kaca, tenant wajib izin ke Pengelola Gedung BITC <br>
-                                6.	Pada saat penggunaan Ruang Kaca BITC, tenant wajib menjaga dan menaati peraturan yang telah di sepakati
+                                1.	Tenant wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
+                                2.	Apabila ada jadwal yang kosong, tenant dapat booking ruangan kaca sesuai jadwal yang tersedia.<br>
+                                3.	Setelah booking CS akan mengkonfirmasi tanggal yang tersedia dan  tenant dapat menggunakan ruang kaca tersebut.<br>
+                                4.	Waktu yang dapat digunakan untuk Ruang Kaca yaitu Maksimal 4 (empat) jam. <br>
+                                5.	Apabila ada asset yang akan digunakan di ruang kaca, tenant wajib izin ke Pengelola Gedung BITC. <br>
+                                6.	Pada saat penggunaan Ruang Kaca BITC, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.
                                 
                             </p>
                             <div class="form-check">

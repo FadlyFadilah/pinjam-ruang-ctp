@@ -30,19 +30,20 @@
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio possimus magnam
-                                provident quisquam voluptate id illo consequatur maxime. Vel dolorum exercitationem
-                                similique dolore aliquid amet magni praesentium consequatur, maiores suscipit, ut doloribus
-                                veniam, eum ipsum ea? Mollitia voluptatum minima placeat sint tenetur vel ipsam aspernatur
-                                eligendi, facere cupiditate quam minus est ad, voluptate voluptatem, aliquam deleniti dicta.
-                                Dignissimos totam soluta dicta aut necessitatibus voluptates rerum libero adipisci
-                                aspernatur ab architecto deserunt repudiandae mollitia excepturi odio, nesciunt nihil
-                                dolorum? Dolores aperiam sed at veniam, sunt sit fugiat? Consequatur quisquam veritatis,
-                                mollitia, sit dicta et facilis laborum reiciendis tempora a iure.</p>
+                            <p>
+                                1.	Peminjam yang akan meminjam Wacom, Oculus, dan Halobox wajib mengisi formulir yang tersedia di website :  http://pelita.cimahitechnopark.id/ .<br>
+                                2.	Setelah mengisi Formulir yang ada di website :  pinjam-ruang-ctp.test, CS akan mencocokan jadwal. <br>
+                                3.	Admin akan mendispo peminjaman tersebut ke Kepala UPT dan Kasubag TU.<br>
+                                4.	Apabila disepekati, Admin akan ACC kegiatan tersbut dan peminjam boleh menggunakan nya sesuai dgn tgl yg disepakati.<br>
+                                5.	Peminjam wajib menjaga barang tersebut sesuai dengan kondisi yang ada pada awal dan tidak rusak.<br>
+                                6.	Peminjam wajib mengembalikan barang tersebut sesuai dengan tanggal yang disepakati.<br>
+                                7.	Apabila barang tersebut rusak atau hilang Peminjam wajib mengganti dan bertanggung jawab atas barang tersebut.
+
+                            </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
                                 <label class="form-check-label" for="checkbox">
-                                    Ya saya sudah mengetahui nya.
+                                    Ya, saya sudah membaca dan saya setuju atas prosedur diatas.
                                 </label>
                             </div>
                             <button id="nextButton" class="btn btn-primary" onclick="stepper.next()" disabled>Next</button>

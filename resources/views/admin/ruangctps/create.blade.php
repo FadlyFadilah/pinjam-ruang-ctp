@@ -52,17 +52,17 @@
                                 
                                 2. Evaluasi Kelengkapan Persyaratan yaitu meliputi:
                                 <ul>
-                                    <li>Surat Permohonan Peminjaman Tempat</li>
-                                    <li>Proposal </li>
-                                    <li>Surat Rekomendasi (Jika perlu)</li>
-                                    <li>Rundown (Loading & Kegiatan)</li>
-                                    <li>Layout </li>
+                                    <li>Surat Permohonan Peminjaman Tempat.</li>
+                                    <li>Proposal. </li>
+                                    <li>Surat Rekomendasi (Jika perlu).</li>
+                                    <li>Rundown (Loading & Kegiatan).</li>
+                                    <li>Layout. </li>
                                 </ul>
                                 <br>
-                                3. Analisa Kegiatan dan Input Informasi / Instruksi di Kartu Disposisi Surat Masuk<br>
-                                4. Analisa Kegiatan dan Input Informasi / Instruksi di Kartu Disposisi Surat Masuk<br>
-                                5. Menghubungi Pengguna Gedung setelah Proses Administrasi Surat selesai (Sesuai Isi Disposisi)<br>
-                                6. Kegiatan di Fasilitasi
+                                3. Analisa Kegiatan dan Input Informasi / Instruksi di Kartu Disposisi Surat Masuk.<br>
+                                4. Analisa Kegiatan dan Input Informasi / Instruksi di Kartu Disposisi Surat Masuk.<br>
+                                5. Menghubungi Pengguna Gedung setelah Proses Administrasi Surat selesai (Sesuai Isi Disposisi).<br>
+                                6. Kegiatan di Fasilitasi.
 
                             </p>
                             <div class="form-check">

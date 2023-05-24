@@ -19,7 +19,7 @@
         <div class="container-fluid px-md-0">
             <div class="row no-gutters">
                 @foreach ($ruangans as $item)
-                    <div class="col-5 mx-auto text-center">
+                    <div class="col-md-6 col-lg-4 mx-auto text-center">
                         <div class="card room-wrap p-2 m-4">
                             @if ($item->gambar)
                                 <a href="#" class="img"

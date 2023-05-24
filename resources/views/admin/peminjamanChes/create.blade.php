@@ -30,24 +30,16 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1. Peminjam yang akan meminjam Wacom, Oculus, dan Halobox wajib mengisi formulir yang
-                                tersedia di website : http://pelita.cimahitechnopark.id/<br>
-                                2. Setelah mengisi Formulir yang ada di website : pinjam-ruang-ctp.test, CS akan mencocokan
-                                jadwal <br>
-                                3. Admin akan mendispo peminjaman tersebut ke Kepala UPT dan Kasubag TU<br>
-                                4. Apabila disepekati, Admin akan ACC kegiatan tersbut dan peminjam boleh menggunakan nya
-                                sesuai dgn tgl yg disepakati<br>
-                                5. Peminjam wajib menjaga barang tersebut sesuai dengan kondisi yang ada pada awal dan tidak
-                                rusak<br>
-                                6. Peminjam wajib mengembalikan barang tersebut sesuai dengan tanggal yang disepakati<br>
-                                7. Apabila barang tersebut rusak atau hilang Peminjam wajib mengganti dan bertanggung jawab
-                                atas barang tersebut
-
+                                1. Pendaftaran.<br>
+                                2. Pengajuan Formulir Pemenuhan Persyaratan. <br>
+                                3. Evaluasi Persyaratan Oleh Petugas, Petugas Memberikan SKRD.<br>
+                                4. Calon Wajib Retribusi Membayar Retribusi Ruangan Melalui RKUD dan Memberikan SSRD Kepada Petugas.<br>
+                                5. Persetujuan Menggunakan Gedung BITC.
                             </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
                                 <label class="form-check-label" for="checkbox">
-                                    Ya saya sudah mengetahui nya.
+                                    Ya, saya sudah membaca dan saya setuju atas prosedur diatas.
                                 </label>
                             </div>
                             <button id="nextButton" class="btn btn-primary" onclick="stepper.next()" disabled>Next</button>
