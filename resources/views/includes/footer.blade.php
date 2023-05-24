@@ -64,6 +64,9 @@
     </svg>
 </div>
 
+
+
+
 <script src="{{ asset('vendor/technext/vacation-rental/js/jquery.min.js') }}"></script>
 <script src="{{ asset('vendor/technext/vacation-rental/js/jquery-migrate-3.0.1.min.js') }}"></script>
 <script src="{{ asset('vendor/technext/vacation-rental/js/popper.min.js') }}"></script>
@@ -73,7 +76,7 @@
 <script src="{{ asset('vendor/technext/vacation-rental/js/jquery.stellar.min.js') }}"></script>
 <script src="{{ asset('vendor/technext/vacation-rental/js/jquery.animateNumber.min.js') }}"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
+
 <script src="{{ asset('vendor/technext/vacation-rental/js/bootstrap-datepicker.js') }}"></script>
 <script src="{{ asset('vendor/technext/vacation-rental/js/jquery.timepicker.min.js') }}"></script>
 <script src="{{ asset('vendor/technext/vacation-rental/js/owl.carousel.min.js') }}"></script>

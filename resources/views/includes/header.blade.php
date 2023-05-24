@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark  ftco_navbar ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">
+        <a class="navbar-brand " href="{{ route('home') }}">
             <img src="{{ asset('logo.png') }}" alt="Logo" class="logo-img" style="max-height: 70px;">
-            Pelita<span>Technopark</span>
+            <span class="navbar-text text-dark"> Pelita</span><span>Technopark</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
             aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,17 +27,17 @@
                             @if (auth()->user()->is_admin)
                                 <a class="dropdown-item" href="{{ route('admin.home') }}">Peminjaman Ruangan</a>
                                 <a class="dropdown-item" href="{{ route('admin.home') }}">Peminjaman Barang</a>
-                                <a class="dropdown-item" href="{{ route('admin.home') }}">Pendaftaran Kp, <br>Magang dan Penelitian</a>
+                                <a class="dropdown-item" href="{{ route('admin.home') }}">Pendaftaran Kp, Magang dan Penelitian</a>
                             @else
                                 <a class="dropdown-item" href="{{ route('login') }}">Peminjaman Ruangan</a>
                                 <a class="dropdown-item" href="{{ route('login') }}">Peminjaman Barang</a>
-                                <a class="dropdown-item" href="{{ route('login') }}">Pendaftaran Kp, <br>Magang dan Penelitian</a>
+                                <a class="dropdown-item" href="{{ route('login') }}">Pendaftaran Kp, Magang dan Penelitian</a>
                             @endif
                         @endauth
                         @guest
                             <a class="dropdown-item" href="{{ route('login') }}">Peminjaman Ruangan</a>
                             <a class="dropdown-item" href="{{ route('login') }}">Peminjaman Barang</a>
-                            <a class="dropdown-item" href="{{ route('login') }}">Pendaftaran Kp, <br>Magang dan Penelitian</a>
+                            <a class="dropdown-item" href="{{ route('login') }}">Pendaftaran Kp, Magang dan Penelitian</a>
                         @endguest
                     </div>
                 </li>
