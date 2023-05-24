@@ -43,7 +43,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
                                 <label class="form-check-label" for="checkbox">
-                                    Ya saya sudah mengetahui nya.
+                                    Ya, saya sudah membaca dan saya setuju atas prosedur diatas.
                                 </label>
                             </div>
                             <button id="nextButton" class="btn btn-primary" onclick="stepper.next()" disabled>Next</button>
