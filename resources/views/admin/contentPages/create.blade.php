@@ -58,14 +58,6 @@
                 <span class="help-block">{{ trans('cruds.contentPage.fields.page_text_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="excerpt">{{ trans('cruds.contentPage.fields.excerpt') }}</label>
-                <textarea class="form-control {{ $errors->has('excerpt') ? 'is-invalid' : '' }}" name="excerpt" id="excerpt">{{ old('excerpt') }}</textarea>
-                @if($errors->has('excerpt'))
-                    <span class="text-danger">{{ $errors->first('excerpt') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.contentPage.fields.excerpt_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <label for="featured_image">{{ trans('cruds.contentPage.fields.featured_image') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('featured_image') ? 'is-invalid' : '' }}" id="featured_image-dropzone">
                 </div>
