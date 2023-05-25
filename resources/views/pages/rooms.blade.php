@@ -19,8 +19,8 @@
         <div class="container-fluid px-md-0">
             <div class="row no-gutters">
                 @foreach ($ruangans as $item)
-                    <div class="col-md-5 p-2 mx-auto mb-2 text-center">
-                        <div class="card room-wrap" style="margin-bottom: 20px;">
+                    <div class="col-md-5 p-2 mx-auto mb-2 mt-4 text-center">
+                        <div class="card room-wrap" style="height: 700px;">
                             @if ($item->gambar)
                                 <a href="#" class="img" style="background-image: url({{ $item->gambar->getUrl() }}); height: 300px;"></a>
                             @endif
