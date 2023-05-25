@@ -33,6 +33,7 @@
 
 
 
+<<<<<<< HEAD
     <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
@@ -48,6 +49,21 @@
                                     <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
                                     <a href="{{ route('news.show', $cpa->title) }}" class="btn btn-link">Lihat Lebih
                                         Banyak</a>
+=======
+    <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="bg-light">
+            <div class="container">
+                <div class="row align-items-stretch">
+                    @foreach ($contentPages as $cpa)
+                        <div class="col-md-6 col-lg-3 mt-4">
+                            <div class="card h-100 mx-auto" style="width: 18rem;">
+                                <img class="card-img-top" src="{{ $cpa->featured_image->getUrl() }}" alt="Card image cap" style="height: 200px;">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">{{ $cpa->title }}</h5>
+                                    <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
+                                    <a href="{{ route('news.show', $cp->title) }}" class="btn btn-link mt-auto">Lihat Lebih Banyak</a>
+>>>>>>> 659b857c6566b804be7691aabe1966df30d81294
                                 </div>
                             </div>
                         </div>
@@ -56,8 +72,14 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
 @endsection
 
+=======
+    
+    @endsection
+    
+>>>>>>> 659b857c6566b804be7691aabe1966df30d81294
 
 
 @section('scripts')
@@ -69,7 +91,7 @@
                 autoHeight: true,
                 loop: true,
                 autoplay: true,
-                autoplayTimeout: 7000,
+                autoplayTimeout: 3000,
                 responsiveClass: true,
                 responsive: {
                     0: {

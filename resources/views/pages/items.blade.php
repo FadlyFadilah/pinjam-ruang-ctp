@@ -23,7 +23,7 @@
                     <div class="col-md-5 p-2 mx-auto mb-2 mt-4 text-center">
                         <div class="card room-wrap" style="height: 700px;" onclick="redirectToLogin('{{ route('login') }}')">
                             @if ($item->gambar)
-                                <a class="img" style="background-image: url({{ $item->gambar->getUrl() }}); height: 200px;"></a>
+                                <a class="img" style="background-image: url({{ $item->gambar->getUrl() }}); height: 300px;"></a>
                             @endif
 
                             <div class="half left-arrow d-flex align-items-center">
