@@ -26,30 +26,28 @@
 
 
 
-        <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');"
-            data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="bg-light">
-                <div class="container">
-                    <div class="row align-items-center">
-                        @foreach ($contentPages as $cpa)
-                            <div class="col-md-6 col-lg-3 mt-4">
-                                <div class="card" style="width: 18rem;" style="height: 500px;">
-                                    <img class="card-img-top"
-                                        src="{{ $cpa->featured_image->getUrl() }}"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $cpa->title }}</h5>
-                                        <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
-                                        <a href="{{ route('news.show', $cp->title) }}" class="btn btn-link">Lihat Lebih Banyak</a>
-                                    </div>
+    <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="bg-light">
+            <div class="container">
+                <div class="row align-items-stretch">
+                    @foreach ($contentPages as $cpa)
+                        <div class="col-md-6 col-lg-3 mt-4">
+                            <div class="card h-100" style="width: 18rem;">
+                                <img class="card-img-top" src="{{ $cpa->featured_image->getUrl() }}" alt="Card image cap">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">{{ $cpa->title }}</h5>
+                                    <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
+                                    <a href="{{ route('news.show', $cp->title) }}" class="btn btn-link mt-auto">Lihat Lebih Banyak</a>
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    
     @endsection
     
 
@@ -63,7 +61,7 @@
                 autoHeight: true,
                 loop: true,
                 autoplay: true,
-                autoplayTimeout: 7000,
+                autoplayTimeout: 3000,
                 responsiveClass: true,
                 responsive: {
                     0: {
