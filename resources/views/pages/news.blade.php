@@ -34,7 +34,7 @@
                     <div class="row align-items-center">
                         @foreach ($contentPages as $cpa)
                             <div class="col-md-6 col-lg-3 mt-4">
-                                <div class="card" style="width: 18rem;">
+                                <div class="card" style="width: 18rem;" style="height: 500px;">
                                     <img class="card-img-top"
                                         src="{{ $cpa->featured_image->getUrl() }}"
                                         alt="Card image cap">
