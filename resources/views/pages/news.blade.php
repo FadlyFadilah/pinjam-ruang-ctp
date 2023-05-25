@@ -33,23 +33,6 @@
 
 
 
-<<<<<<< HEAD
-    <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="bg-light">
-            <div class="container">
-                <div class="row align-items-center">
-                    @foreach ($contentPagesAll as $cpa)
-                        <div class="col-md-6 col-lg-3 mt-4">
-                            <div class="card" style="width: 18rem;" style="height: 500px;">
-                                <img class="card-img-top" src="{{ $cpa->featured_image->getUrl() }}" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $cpa->title }}</h5>
-                                    <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
-                                    <a href="{{ route('news.show', $cpa->title) }}" class="btn btn-link">Lihat Lebih
-                                        Banyak</a>
-=======
     <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="bg-light">
@@ -63,7 +46,6 @@
                                     <h5 class="card-title">{{ $cpa->title }}</h5>
                                     <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
                                     <a href="{{ route('news.show', $cpa->title) }}" class="btn btn-link mt-auto">Lihat Lebih Banyak</a>
->>>>>>> 659b857c6566b804be7691aabe1966df30d81294
                                 </div>
                             </div>
                         </div>
@@ -72,14 +54,9 @@
             </div>
         </div>
     </section>
-<<<<<<< HEAD
-@endsection
-
-=======
     
     @endsection
     
->>>>>>> 659b857c6566b804be7691aabe1966df30d81294
 
 
 @section('scripts')
