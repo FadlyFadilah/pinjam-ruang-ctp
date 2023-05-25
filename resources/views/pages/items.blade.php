@@ -24,7 +24,7 @@
                         <div class="card room-wrap p-2 m-4">
                             @if ($item->gambar)
                                 <a href="#" class="img"
-                                    style="background-image: url({{ $item->gambar->getUrl() }});"></a>
+                                    style="background-image: url({{ $item->gambar->getUrl() }}); background-size: cover; background-position: center; height: 300px;"></a>
                             @endif
 
                             <div class="half left-arrow d-flex align-items-center">
@@ -37,8 +37,7 @@
                                         <li><span>Maks:</span> {{ $item->kapasitas ?? 'Semua' }} Orang</li>
                                         <li><span>Lokasi:</span> {{ $item->lokasi }}</li>
                                         <li><span>Deskripsi:</span> {{ $item->deskripsi }}</li>
-                                        <li><span>Status:</span> {{ $item->status }}
-                                        </li>
+                                        <li><span>Status:</span> {{ $item->status }}</li>
                                     </ul>
                                 </div>
                             </div>

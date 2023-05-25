@@ -19,11 +19,10 @@
         <div class="container-fluid px-md-0">
             <div class="row no-gutters">
                 @foreach ($ruangans as $item)
-                    <div class="col-md-6 col-lg-4 mx-auto text-center">
-                        <div class="card room-wrap p-2 m-4">
+                    <div class="col-md-6 col-lg-6 mx-auto text-center">
+                        <div class="card room-wrap p-2 m-4" style="margin-bottom: 20px;">
                             @if ($item->gambar)
-                                <a href="#" class="img"
-                                    style="background-image: url({{ $item->gambar->getUrl() }});"></a>
+                                <a href="#" class="img" style="background-image: url({{ $item->gambar->getUrl() }}); height: 300px;"></a>
                             @endif
                             
                             <div class="half left-arrow d-flex align-items-center">
