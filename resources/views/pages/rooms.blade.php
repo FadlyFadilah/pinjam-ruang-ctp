@@ -20,33 +20,32 @@
             <div class="row no-gutters">
                 @foreach ($ruangans as $item)
                     <div class="col-md-5 p-2 mx-auto mb-2 mt-4 text-center">
-                        <a  href="{{ route('login') }}">
-                        <div class="card room-wrap" style="height: 700px;">
+                        <div class="card room-wrap" style="height: 700px;" onclick="redirectToLogin('{{ route('login') }}')">
                             @if ($item->gambar)
-                                <a  class="img" style="background-image: url({{ $item->gambar->getUrl() }}); height: 300px;"></a>
+                                <a class="img" style="background-image: url({{ $item->gambar->getUrl() }}); height: 300px;"></a>
                             @endif
-                            
+
                             <div class="half left-arrow d-flex align-items-center">
                                 <div class="text p-4 p-xl-5 text-center">
-                                    <p class="star mb-0"><span class="fa fa-star"></span><span
-                                            class="fa fa-star"></span><span class="fa fa-star"></span><span
-                                            class="fa fa-star"></span><span class="fa fa-star"></span></p>
                                     <h3 class="mb-3"><a>{{ $item->nama_ruangan }}</a></h3>
                                     <ul class="list-accomodation">
                                         <li><span>Maks:</span> {{ $item->kapasitas ?? 'Semua' }} Orang</li>
                                         <li><span>Lokasi:</span> {{ $item->lokasi }}</li>
                                         <li><span>Deskripsi:</span> {{ $item->deskripsi }}</li>
-                                        <li><span>Status:</span> {{ $item->status }}
-                                        </li>
+                                        <li><span>Status:</span> {{ $item->status }}</li>
                                     </ul>
-                                    
                                 </div>
                             </div>
                         </div>
-                        </a>
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
+
+    <script>
+        function redirectToLogin(url) {
+            window.location.href = url;
+        }
+    </script>
 @endsection
