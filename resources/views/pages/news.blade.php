@@ -47,9 +47,6 @@
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{{ $cpa->title }}</h5>
                                     <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
-                                    @foreach ($cpa->tags as $tag)
-                                        <small class="text-muted">{{ $tag->name }}</small>
-                                    @endforeach
                                     <a href="{{ route('news.show', $cpa->title) }}" class="btn btn-link mt-auto">Lihat Lebih
                                         Banyak</a>
                                 </div>

@@ -2,16 +2,21 @@
 @section('content')
     <div class="owl-carousel">
         <div class="hero-wrap js-fullheight">
-            <div class="background-overlay" style="background-image: url('{{ $contentPage->featured_image->getUrl() }}')"></div>
+            <div class="background-overlay" style="background-image: url('{{ $contentPage->featured_image->getUrl() }}')">
+            </div>
             <div class="container">
-                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+                    data-scrollax-parent="true">
                     <div class="col-md-7 ftco-animate">
-                    <span class="strong">
-                        <a class="text-uppercase mr-2" href="https://www.cimahitechnopark.id/category/animasi">
-                            <span style="border-left: 5px solid; padding-left: 5px;">Animasi</span>
-                        </a>
-                    </span>
-                    <h1 class="display-4 text-white">{{ $contentPage->title }}</h1>
+                        <span class="strong">
+                            <a class="text-uppercase mr-2" href="https://www.cimahitechnopark.id/category/animasi">
+                                @foreach ($cp->categories as $categori)
+                                    <span
+                                        style="border-left: 5px solid; padding-left: 5px;">{{ $categori->name }}</span>
+                                @endforeach
+                            </a>
+                        </span>
+                        <h1 class="display-4 text-white">{{ $contentPage->title }}</h1>
                     </div>
                 </div>
             </div>
@@ -30,6 +35,9 @@
                         <p class="lead text-muted mb-0">
                             {!! $contentPage->page_text !!}
                         </p>
+                        @foreach ($contentPages->tags as $tag)
+                            <small class="text-muted">{{ $tag->name }}</small>
+                        @endforeach
                     </div>
                 </div>
             </div>
