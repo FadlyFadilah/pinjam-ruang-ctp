@@ -50,7 +50,7 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        $roles = Role::whereNot('id', '1')->get();
+        $roles = Role::whereNot('title','LIKE','%'.'admin'.'%')->get();
         return view('auth.register', compact('roles'));
     }
     
