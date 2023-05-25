@@ -63,7 +63,7 @@
                 autoHeight: true,
                 loop: true,
                 autoplay: true,
-                autoplayTimeout: 5000,
+                autoplayTimeout: 7000,
                 responsiveClass: true,
                 responsive: {
                     0: {
