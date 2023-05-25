@@ -40,7 +40,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $cpa->title }}</h5>
                                     <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
-                                    <a href="#" class="btn btn-link">Lihat Lebih Banyak</a>
+                                    <a href="{{ route('news.show', $cp->title) }}" class="btn btn-link">Lihat Lebih Banyak</a>
                                 </div>
                             </div>
                         </div>
