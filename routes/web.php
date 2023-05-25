@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+
 
 Route::view('/', 'welcome')->name('home');
 // rooms
@@ -13,6 +15,7 @@ Route::get('/items', 'HomeController@items')->name('items');
 // contact us
 Route::view('/contactus', 'pages.contactus')->name('contactus');
 // Route::post('/contactus', [ContactUsController::class, 'sendContactUsEmail'])->name('contactus.submit');
+Route::post('/send-email', [ContactController::class, 'sendEmail'])->name('send.email');
 
 //about us
 Route::view('/aboutus', 'pages.aboutus')->name('aboutus');

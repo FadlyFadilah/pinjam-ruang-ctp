@@ -41,40 +41,36 @@
             </div>
             <div class="col-md-8 col-md-pull-4 animate-box fadeInUp animated-fast">
                 <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">Get In Touch</h2>
-                <form action="/send-email" method="POST">
+                <form action="{{ route('send.email') }}" method="POST">
                     @csrf
                     <div class="row form-group">
                         <div class="col-md-6">
-                            <input type="text" id="fname" class="form-control" placeholder="Your firstname"
-                                name="fname">
+                            <input type="text" id="fname" class="form-control" placeholder="Your firstname" name="fname">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" id="lname" class="form-control" placeholder="Your lastname"
-                                name="lname">
+                            <input type="text" id="lname" class="form-control" placeholder="Your lastname" name="lname">
                         </div>
                     </div>
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <input type="email" id="email" class="form-control" placeholder="Your email address"
-                                name="email">
+                            <input type="email" id="email" class="form-control" placeholder="Your email address" name="email">
                         </div>
                     </div>
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <input type="text" id="subject" class="form-control"
-                                placeholder="Your subject of this message" name="subject">
+                            <input type="text" id="subject" class="form-control" placeholder="Your subject of this message" name="subject">
                         </div>
                     </div>
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <textarea name="message" id="message" cols="30" rows="10" class="form-control"
-                                placeholder="Say something about us" name="message"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us" name="message"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Send Message" class="btn btn-primary">
                     </div>
                 </form>
+                
             </div>
         </div>
 
