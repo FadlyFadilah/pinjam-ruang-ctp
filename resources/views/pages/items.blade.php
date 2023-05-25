@@ -20,8 +20,8 @@
         <div class="container-fluid px-md-0">
             <div class="row no-gutters">
                 @foreach ($barangs as $item)
-                    <div class="col-md-6 col-lg-4 mx-auto text-center">
-                        <div class="card room-wrap p-2 m-4">
+                    <div class="col-md-5 p-2 mx-auto mb-2 text-center">
+                        <div class="card room-wrap ">
                             @if ($item->gambar)
                                 <a href="#" class="img"
                                     style="background-image: url({{ $item->gambar->getUrl() }}); background-size: cover; background-position: center; height: 300px;"></a>
