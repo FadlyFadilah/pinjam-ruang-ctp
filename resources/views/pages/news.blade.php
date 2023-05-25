@@ -33,7 +33,8 @@
 
 
 
-    <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <section class="ftco-section bg-light" style="background-image: url('vendor/technext/vacation-rental/images/bg_1.jpg');"
+        data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="bg-light">
             <div class="container">
@@ -41,11 +42,16 @@
                     @foreach ($contentPagesAll as $cpa)
                         <div class="col-md-6 col-lg-3 mt-4">
                             <div class="card h-100 mx-auto" style="width: 18rem;">
-                                <img class="card-img-top" src="{{ $cpa->featured_image->getUrl() }}" alt="Card image cap" style="height: 200px;">
+                                <img class="card-img-top" src="{{ $cpa->featured_image->getUrl() }}" alt="Card image cap"
+                                    style="height: 200px;">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{{ $cpa->title }}</h5>
                                     <p class="card-text">{!! substr($cpa->page_text, 0, 100) . '...' !!}</p>
-                                    <a href="{{ route('news.show', $cpa->title) }}" class="btn btn-link mt-auto">Lihat Lebih Banyak</a>
+                                    @foreach ($cpa->tags as $tag)
+                                        <small class="text-muted">{{ $tag->name }}</small>
+                                    @endforeach
+                                    <a href="{{ route('news.show', $cpa->title) }}" class="btn btn-link mt-auto">Lihat Lebih
+                                        Banyak</a>
                                 </div>
                             </div>
                         </div>
@@ -54,9 +60,8 @@
             </div>
         </div>
     </section>
-    
-    @endsection
-    
+@endsection
+
 
 
 @section('scripts')
