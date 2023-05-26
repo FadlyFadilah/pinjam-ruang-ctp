@@ -10,7 +10,7 @@
                     <div class="col-md-7 ftco-animate">
                         <span class="strong">
                             <a class="text-uppercase mr-2" href="https://www.cimahitechnopark.id/category/animasi">
-                                @foreach ($cp->categories as $categori)
+                                @foreach ($contentPage->categories as $categori)
                                     <span
                                         style="border-left: 5px solid; padding-left: 5px;">{{ $categori->name }}</span>
                                 @endforeach
@@ -35,7 +35,7 @@
                         <p class="lead text-muted mb-0">
                             {!! $contentPage->page_text !!}
                         </p>
-                        @foreach ($contentPages->tags as $tag)
+                        @foreach ($contentPage->tags as $tag)
                             <small class="text-muted">{{ $tag->name }}</small>
                         @endforeach
                     </div>
