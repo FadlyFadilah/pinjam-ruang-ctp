@@ -6,10 +6,10 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="{{ route('home') }}">Beranda <i
+                    <p class="breadcrumbs mb-2" style="font-size: 20px"><span class="mr-2"><a href="{{ route('home') }}">Beranda <i
                                     class="fa fa-chevron-right"></i></a></span> <span>Ruangan <i
                                 class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread" style="font-family: 'Plus Jakarta Sans'">Daftar Ruangan</h1>
+                    <h1 class="mb-0 bread" style="font-family: 'Plus Jakarta Sans'; font-size: 50px;">Daftar Ruangan</h1>
                 </div>
             </div>
         </div>

@@ -5,8 +5,8 @@
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
                 <div class="col-md-7 ftco-animate">
-                    <h2 class="subheading" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">Selamat Datang di Pelita Technopark</h2>
-                    <h1 class="mb-4" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">Pinjam Ruangan Mudah dan Cepat</h1>
+                    <h2 class="subheading" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 30px;">Selamat Datang di Pelita Technopark</h2>
+                    <h1 class="mb-4" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;font-size: 50px;">Pinjam Ruangan Mudah dan Cepat</h1>
                 </div>
             </div>
         </div>

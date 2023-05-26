@@ -6,8 +6,8 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
             data-scrollax-parent="true">
             <div class="col-md ftco-animate">
-                <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">Contact Us</h1>
-                <h2 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color:white;">UPTD Cimahi Technopark</h2>
+                <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 50px;">Contact Us</h1>
+                <h2 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color:white; font-size: 30px;">UPTD Cimahi Technopark</h2>
             </div>
         </div>
     </div>

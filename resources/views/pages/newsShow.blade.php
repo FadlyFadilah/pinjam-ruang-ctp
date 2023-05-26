@@ -16,7 +16,7 @@
                                 @endforeach
                             </a>
                         </span>
-                        <h1 class="display-4 text-white">{{ $contentPage->title }}</h1>
+                        <h1 class="display-4 text-white" style="font-size: 50px">{{ $contentPage->title }}</h1>
                     </div>
                 </div>
             </div>

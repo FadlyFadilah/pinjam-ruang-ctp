@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
                         data-scrollax-parent="true">
-                        <div class="col-md-7 ftco-animate">
+                        <div class="col-md-7 ftco-animate" height="200px" >
                             <span class="strong">
                                 <a class="text-uppercase mr-2" href="https://www.cimahitechnopark.id/category/animasi">
                                     @foreach ($cp->categories as $categori)
@@ -17,7 +17,7 @@
                                 </a>
                             </span>
                             <h1 class="display-4 text-white"
-                                style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;">{{ $cp->title }}
+                                style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 50px;">{{ $cp->title }}
                             </h1>
 
                             <p class="lead">
