@@ -119,6 +119,59 @@
         </div>
     </section>
 
+    <section class="ftco-section " >
+        <div class="container">
+          <div class="container-fluid">
+            <div class="row no-gutters justify-content-center pb-5 mb-3">
+              <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 style="font-family: 'Plus Jakarta Sans'; font-weight: 600;">Layanan Pendukung</h2>
+              </div>
+            </div>
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="img-container">
+                  <a href="https://disdagkoperin.cimahikota.go.id/">
+                    <img src="vendor/technext/vacation-rental/images/disgag.jpg" class="img-fluid" alt="">
+                    <div class="overlay">
+                      <div class="overlay-content">
+                        <i class="fas fa-city"></i>
+                        <h3 style="color: white; font-family: 'Plus Jakarta Sans';">DISDAGKOPERIN Kota Cimahi</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="img-container">
+                  <a href="https://bidik.cimahitechnopark.id/">
+                    <img src="vendor/technext/vacation-rental/images/bitc.jpg" class="img-fluid" alt="">
+                    <div class="overlay">
+                      <div class="overlay-content">
+                        <i class="fas fa-building"></i>
+                        <h3 style="color: white; font-family: 'Plus Jakarta Sans';">Penyewaan Working & Co-Working Space</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="img-container">
+                  <a href="https://damex.cimahitechnopark.id">
+                    <img src="vendor/technext/vacation-rental/images/ctp.jpg" class="img-fluid" alt="">
+                    <div class="overlay">
+                      <div class="overlay-content">
+                        <i class="fas fa-clipboard"></i>
+                        <h3 style="color: white; font-family: 'Plus Jakarta Sans';">Manajemen Aset CTP</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
     <section class="ftco-section bg-light">
         <div class="container-fluid">

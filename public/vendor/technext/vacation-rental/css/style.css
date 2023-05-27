@@ -8632,6 +8632,7 @@ textarea.form-control {
     font-weight: 700; }
   .ftco-intro .overlay {
     position: absolute;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;

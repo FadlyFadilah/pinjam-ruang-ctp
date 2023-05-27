@@ -58,5 +58,66 @@
         background-color: gray;
     }
     
+    .img-container {
+    width: 100%;
+    height: 100%; /* Ubah tinggi sesuai kebutuhan Anda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    }
+
+    .img-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    }
+
+    .img-container:hover {
+    transform: translateY(-5px);
+    }
+
+    .img-container:hover img {
+    transform: scale(1.1) translate(0, -5px);
+    }
+
+    .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+    }
+
+    .overlay-content {
+    text-align: left;
+    }
+
+    .overlay h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+
+    .overlay p {
+    margin-bottom: 10px;
+    }
+
+    .overlay i {
+    font-size: 20px;
+    }
+
+
 </style>
 @yield('styles')
