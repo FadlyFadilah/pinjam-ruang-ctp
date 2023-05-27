@@ -8639,7 +8639,8 @@ textarea.form-control {
     bottom: 0;
     content: '';
     opacity: .4;
-    background: #fd7792; }
+    background: #fd7792;
+    background-repeat: repeat;}
 
 .ftco-book .appointment-form {
   padding: 35px;
