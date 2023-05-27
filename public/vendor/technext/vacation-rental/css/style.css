@@ -8631,7 +8631,7 @@ textarea.form-control {
     font-size: 60px;
     font-weight: 700; }
   .ftco-intro .overlay {
-    position: relative;
+    position: inherit;
     height: 100%;
     top: 0;
     left: 0;
