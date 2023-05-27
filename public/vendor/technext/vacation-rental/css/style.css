@@ -8619,7 +8619,7 @@ textarea.form-control {
   height: 100%;
   position: inherit;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: top center;
   position: relative;
   color: rgba(255, 255, 255, 0.8); }
