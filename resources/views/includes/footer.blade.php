@@ -10,16 +10,15 @@
                 <h2 class="footer-heading">Peminjaman</h2>
                 <ul class="list-unstyled">
                     <li><a href="{{ route('rooms') }}" target="_blank" class="py-1 d-block">Peminjaman Ruangan</a></li>
-                    <li><a href="#" target="_blank" class="py-1 d-block">Peminjaman Barang</a></li>
+                    <li><a href="{{ route('items') }}" target="_blank" class="py-1 d-block">Peminjaman Barang</a></li>
                 </ul>
             </div>
             <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-                <h2 class="footer-heading">Pendaftaran</h2>
+                <h2 class="footer-heading">Layanan Pendukung</h2>
                 <ul class="list-unstyled">
-                    <li><a href="#" target="_blank" class="py-1 d-block">Studio Foto</a></li>
-                    <li><a href="#" target="_blank" class="py-1 d-block">Penelitian</a></li>
-                    <li><a href="#" target="_blank" class="py-1 d-block">Kerja Praktek</a></li>
-                    <li><a href="#" target="_blank" class="py-1 d-block">Praktek Kerja Lapangan</a></li>
+                    <li><a href="https://disdagkoperin.cimahikota.go.id/" target="_blank" class="py-1 d-block">DISDAGKOPERIN Kota Cimahi</a></li>
+                    <li><a href="https://bidik.cimahitechnopark.id/" target="_blank" class="py-1 d-block">Penyewaan Working & Co-Working Space</a></li>
+                    <li><a href="https://damex.cimahitechnopark.id/" target="_blank" class="py-1 d-block">Manajemen Aset CTP</a></li>
                 </ul>
             </div>
             <div class="col-md-6 col-lg-3 mb-md-0 mb-4">

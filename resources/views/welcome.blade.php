@@ -156,7 +156,7 @@
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
                 <div class="img-container">
-                  <a href="https://damex.cimahitechnopark.id">
+                  <a href="https://damex.cimahitechnopark.id/">
                     <img src="vendor/technext/vacation-rental/images/ctp.jpg" class="img-fluid" alt="">
                     <div class="overlay">
                       <div class="overlay-content">
