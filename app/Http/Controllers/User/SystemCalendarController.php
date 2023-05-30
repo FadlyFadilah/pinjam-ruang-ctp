@@ -36,7 +36,7 @@ class SystemCalendarController extends Controller
             'model'      => '\App\Models\Ruangctp',
             'date_field' => 'mulai',
             'field'      => 'nama_acara',
-            'prefix'     => 'Gedung',
+            'prefix'     => 'Gedung CTP',
             'suffix'     => 'CTP',
             'route'      => 'user.ruangctps.show',
         ],
@@ -53,14 +53,8 @@ class SystemCalendarController extends Controller
                     continue;
                 }
 
-                $prefixModel = $source['model']::first(); // Ganti 'Prefix' dengan model yang sesuai
-                $prefixValue = $prefixModel->ruangan->nama_ruangan; // Ganti 'value' dengan kolom yang sesuai
-
-                $suffixModel = $source['model']::first(); // Ganti 'Suffix' dengan model yang sesuai
-                $suffixValue = $suffixModel->mulai; // Ganti 'value' dengan kolom yang sesuai
-
                 $events[] = [
-                    'title' => trim($prefixValue . ' ' . $model->{$source['field']} . ' ' . $suffixValue),
+                    'title' => trim($source['prefix']),
                     'start' => $crudFieldValue,
                     'url'   => route($source['route'], $model->id),
                 ];
