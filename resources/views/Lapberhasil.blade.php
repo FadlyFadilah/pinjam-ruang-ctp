@@ -3,9 +3,9 @@
 <div class="content">
     <div class="row">
         <div class="col-lg-12">
-            <div class="card">
+            <div class="card bg-success" >
                 <div class="card-header">
-                    Dashboard
+                    Laporan
                 </div>
 
                 <div class="card-body">
@@ -16,7 +16,8 @@
                     @endif
 
                     <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;font-size: 50px;">
-                        Permohonan Peminjaman / Penyewaan Telah Berhasil
+                        Permohonan Peminjaman / Penyewaan Anda <br>
+                        Telah Berhasil
                     </h1>
                 </div>
             </div>

@@ -53,7 +53,7 @@ class PeminjamanRuangKacaBitcController extends Controller
         $attr['user_id'] = auth()->id();
         $peminjamanRuangKacaBitc = PeminjamanRuangKacaBitc::create($attr);
 
-        return redirect()->route('Lapberhasil');
+        return redirect()->route('admin.peminjaman-ruang-kaca-bitcs.sukses');
     }
 
     public function edit(PeminjamanRuangKacaBitc $peminjamanRuangKacaBitc)

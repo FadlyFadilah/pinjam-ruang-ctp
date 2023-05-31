@@ -75,16 +75,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Peminjaman Studio Dubbing
     Route::delete('peminjaman-studio-dubbings/destroy', 'PeminjamanStudioDubbingController@massDestroy')->name('peminjaman-studio-dubbings.massDestroy');
     Route::patch('peminjaman-studio-dubbings/statust/{peminjaman_studio_dubbing}', 'PeminjamanStudioDubbingController@ubahstatus')->name('peminjaman-studio-dubbings.ubahstatus');
+    Route::view('peminjaman-studio-dubbings/Sukses', 'Lapberhasil')->name('peminjaman-studio-dubbings.sukses');
     Route::resource('peminjaman-studio-dubbings', 'PeminjamanStudioDubbingController');
 
     // Peminjaman Ruang Kaca Bitc
     Route::delete('peminjaman-ruang-kaca-bitcs/destroy', 'PeminjamanRuangKacaBitcController@massDestroy')->name('peminjaman-ruang-kaca-bitcs.massDestroy');
     Route::patch('peminjaman-ruang-kaca-bitcs/statust/{peminjaman_ruang_kaca_bitc}', 'PeminjamanRuangKacaBitcController@ubahstatus')->name('peminjaman-ruang-kaca-bitcs.ubahstatus');
+    Route::view('peminjaman-ruang-kaca-bitcs/Sukses', 'Lapberhasil')->name('peminjaman-ruang-kaca-bitcs.sukses');
     Route::resource('peminjaman-ruang-kaca-bitcs', 'PeminjamanRuangKacaBitcController');
 
     // Peminjaman Ch
     Route::delete('peminjaman-ches/destroy', 'PeminjamanChController@massDestroy')->name('peminjaman-ches.massDestroy');
     Route::patch('peminjaman-ches/statust/{peminjaman_ch}', 'PeminjamanChController@ubahstatus')->name('peminjaman-ches.ubahstatus');
+    Route::view('peminjaman-ches/Sukses', 'Lapberhasil')->name('peminjaman-ches.sukses');
     Route::resource('peminjaman-ches', 'PeminjamanChController');
 
     // Studio Foto
