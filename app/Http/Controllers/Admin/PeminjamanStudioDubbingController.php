@@ -53,7 +53,7 @@ class PeminjamanStudioDubbingController extends Controller
 
         $peminjamanStudioDubbing = PeminjamanStudioDubbing::create($attr);
 
-        return redirect()->route('admin.peminjaman-studio-dubbings.index');
+        return redirect()->route('Lapberhasil');
     }
 
     public function edit(PeminjamanStudioDubbing $peminjamanStudioDubbing)

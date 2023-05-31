@@ -54,7 +54,7 @@ class PeminjamanChController extends Controller
 
         $peminjamanCh = PeminjamanCh::create($attr);
 
-        return redirect()->route('admin.peminjaman-ches.index');
+        return redirect()->route('Lapberhasil');
     }
 
     public function edit(PeminjamanCh $peminjamanCh)
