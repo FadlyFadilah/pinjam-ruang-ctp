@@ -30,12 +30,19 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1. Pendaftaran melalui Web & konfirmasi ke wa CS Bitc.<br>
+                                {{-- 1. Pendaftaran melalui Web & konfirmasi ke wa CS Bitc.<br>
                                 2. Pengajuan Surat syarat bersewa ( isi surat melimputi data Kegiatan Acara) dengan di upload di web dan atau di kirim via WA ke kontak CS Bitc, untuk info lebih jelas dapat menghubungi kontak CS Bitc. <br>
                                 3. Evaluasi Persyaratan Oleh Petugas.<br>
                                 4. Apabila telah ada info acc/verikasi penyewaan dapat berlanjut dari petugas/di hubungi oleh petugas maka calon wajib retribusi membayarar retribusi.<br>
                                 5. Persetujuan Menggunakan Gedung BITC.<br>
-                                Note : Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773).
+                                Note : Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773). --}}
+                                1. Mengisi formulir yang ada di website : Website : http://pelita.cimahitechnopark.id/.<br>
+                                2. Mengajukan Surat sebagai syarat isi surat meliputi (Data Kegiatan Acara seperti, Tema & Nama kegiatan acara, Tanggal lengkap berlangsungnya acara, Jumlah peserta acara) surat tersebut diajukan/di kirim  ke kontak WA CS BITC.<br>
+                                3. Evaluasi Persyaratan Oleh Petugas.<br>
+                                4. Apabila telah ada info acc/verikasi maka dapat berlanjut dan calon wajib retribusi membayar Retribusi.<br>
+                                5. Persetujuan Menggunakan Gedung BITC.<br>
+
+                                Note : Untuk Informasi lebih lanjut/lebih jelas mengenai alur ini hubungi kontak CS BITC di WA (088220972773).
                             </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">

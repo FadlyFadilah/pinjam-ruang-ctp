@@ -31,14 +31,21 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1.	Tenant wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
+                                {{-- 1.	Tenant wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
                                 2.	Apabila ada jadwal yang kosong, tenant dapat booking ruangan kaca sesuai jadwal yang tersedia.<br>
                                 3.	Setelah booking CS akan mengkonfirmasi tanggal yang tersedia dan  tenant dapat menggunakan ruang kaca tersebut.<br>
                                 4.	Waktu yang dapat digunakan untuk Ruang Kaca yaitu Maksimal 4 (empat) jam. <br>
                                 5.	Apabila ada asset yang akan digunakan di ruang kaca, tenant wajib izin ke Pengelola Gedung BITC. <br>
                                 6.	Pada saat penggunaan Ruang Kaca BITC, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.<br>
-                                Note : Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773).
+                                Note : Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773). --}}
+                                1	Tenant wajib mengisi formulir yang ada di website : Website http://pelita.cimahitechnopark.id/ .<br>
+                                2. Apabila ada jadwal yang kosong (Peminjaman di antara hari Senin s/d Sabtu di luar tanggal merah/hari libur) tenant dapat booking Ruang Rapat BITC dengan menyesuaikan jadwal yang tersedia.<br>
+                                3. Apabila tenant telah mengisi pendaftaran/booking jadwal Ruang Rapat BITC , untuk hasil verifikasi akan di hubungi oleh petugas/CS BITC.<br>
+                                4. Jatah Waktu yang dapat digunakan untuk peminjaman Ruang Rapat BITC (Maksimal 4 jam dalam 1 Hari).<br>
+                                5. Apabila ada Asset yang akan di pinjam/di gunakan di Ruang Rapat BITC seperti infokus, tenant wajib izin ke Pengelola Gedung BITC.<br>
+                                6. Pada saat penggunaan Ruang Rapat BITC, tenant wajib menjaga dan mentaati peraturan yang berlaku & telah di sepakati.<br>
                                 
+                                Note :  Untuk Informasi lebih lanjut/lebih jelas mengenai alur Peminjaman Ruang Rapat BITC ini hubungi kontak CS BITC di WA (088220972773).
                             </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">

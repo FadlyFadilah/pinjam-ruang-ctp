@@ -16,7 +16,7 @@
                     @endif
 
                     <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;font-size: 50px;">
-                        Permohonan Peminjaman / Penyewaan Anda <br>
+                        Permohonan Peminjaman Anda <br>
                         Telah Berhasil
                     </h1>
                 </div>

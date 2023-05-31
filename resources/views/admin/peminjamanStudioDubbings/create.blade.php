@@ -31,14 +31,27 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p> 
-                                1.	Tenant  wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
+                                {{-- 1.	Tenant  wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
                                 2.	Apabila ada jadwal yang kosong, tenant dapat booking Studio Dubbing sesuai jadwal yang tersedia.<br>
                                 3.	Apabila tenant telah mengisi pendaftaran/booking jadwal studio dubbing, untuk hasil verifikasi akan di hubungi juga oleh petugas/cs Bitc.<br>
                                 4.	Waktu yang dapat digunakan untuk Studio Dubbing : (Tenant yang menyewa Co Working Space (dalam 1 bulan yaitu 16 jam), dan untuk tenant yang menyewa Space ruang kantor (dalam 1 bulan yaitu 32 jam), (kuota/jatah waktu pemakaian di bulan tersebut apabila tidak di gunakan akan hangus)).<br>
                                 5.	Apabila ada asset yang akan digunakan di ruang Studio, tenant wajib izin ke Pengelola Gedung BITC.<br>
                                 6.	Pada saat penggunaan Ruang Studio Dubbing, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.<br>
                                 Note : <li>Peminjaman dari hari senin s/d sabtu (di luar tanggal merah/libur). </li>
-                                       <li>Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773).</li>
+                                       <li>Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773).</li> --}}
+
+                                1.	Tenant wajib mengisi formulir yang ada di website : Website http://pelita.cimahitechnopark.id/ .<br>
+                                2. Apabila ada jadwal yang kosong (Pemakaian Studio Dubbing BITC  di antara hari Senin s/d Sabtu di luar tanggal merah & di luar jam libur petugas pengelola Studio BITC ) tenant dapat booking Studio Dubbing dengan menyesuaikan jadwal yang tersedia.<br>
+                                3. Apabila tenant telah mengisi pendaftaran/booking jadwal studio dubbing, untuk hasil verifikasi akan di hubungi oleh petugas/CS BITC.<br>
+                                4. Jatah Waktu yang dapat digunakan untuk pemakaian Studio Dubbing : <br>
+                                <ul>
+                                • yang menyewa Co Working Space (Jatah kuota dalam 1 bulan yaitu 16 jam), <br>
+                                • Tenant yang menyewa Space Ruang Kantor (Jatah dalam 1 bulan yaitu 32 jam), <br>
+                                • Apabila kuota/jatah waktu pemakaian di waktu bulan tersebut (waktu bulan yang sedang berlangsung)  tidak di gunakan makan kuota/jatah waktu pemakaian akan hangus.</ul><br>
+                                5. Apabila ada asset yang akan digunakan di ruang Studio Dubbing, tenant wajib izin terlebih dahulu ke Pengelola Gedung BITC/CS BITC<br>
+                                6. Pada saat pemakaian Ruang Studio Dubbing, tenant wajib menjaga dan mentaati peraturan yang berlaku & telah di sepakati.<br>
+
+                                Note : Untuk Informasi lebih lanjut/lebih jelas mengenai alur Peminjaman Studio Dubbing BITC ini hubungi kontak CS BITC di WA (088220972773)
 
                                 </p>
                             <div class="form-check">
