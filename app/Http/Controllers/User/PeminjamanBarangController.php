@@ -37,6 +37,7 @@ class PeminjamanBarangController extends Controller
         
         $attr = $request->all();
         $attr['user_id'] = auth()->id();
+        $attr['status'] = 'Sedang Dalam Proses';
 
         $peminjamanBarang = PeminjamanBarang::create($attr);
 

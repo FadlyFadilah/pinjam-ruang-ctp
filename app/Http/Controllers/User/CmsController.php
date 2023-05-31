@@ -39,6 +39,7 @@ class CmsController extends Controller
     public function store(StoreCmRequest $request)
     {
         $request['user_id'] = auth()->id();
+        $request['status'] = 'Sedang Dalam Proses';
         $cm = Cm::create($request->all());
 
         if ($request->input('portofolio', false)) {

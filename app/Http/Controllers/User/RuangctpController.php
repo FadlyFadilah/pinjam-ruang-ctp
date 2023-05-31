@@ -56,6 +56,7 @@ class RuangctpController extends Controller
     public function store(StoreRuangctpRequest $request)
     {
         $request['user_id'] = auth()->id();
+        $request['status'] = 'Sedang Dalam Proses';
         $ruangctp = Ruangctp::create($request->all());
 
         if ($request->input('surat_permohonan', false)) {

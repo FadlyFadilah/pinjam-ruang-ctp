@@ -42,6 +42,7 @@ class KpController extends Controller
     {
         $attr = $request->all();
         $attr['user_id'] = auth()->id();
+        $attr['status'] = 'Sedang Dalam Proses';
         $kp = Kp::create($attr);
 
         if ($request->input('kesbang', false)) {

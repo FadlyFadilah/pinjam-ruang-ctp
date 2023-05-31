@@ -34,6 +34,7 @@ class PeminjamanRuangKacaBitcController extends Controller
         $attr = $request->all();
         $attr['ruangan_id'] = 2;
         $attr['user_id'] = auth()->id();
+        $attr['status'] = 'Sedang Dalam Proses';
         $peminjamanRuangKacaBitc = PeminjamanRuangKacaBitc::create($attr);
 
         return redirect()->route('user.peminjaman-ruang-kaca-bitcs.sukses')->with('success', 'Permintaan Peminjaman Berhasil');;

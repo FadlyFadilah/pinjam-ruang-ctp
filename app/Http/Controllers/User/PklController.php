@@ -41,6 +41,7 @@ class PklController extends Controller
     {
         $attr = $request->all();
         $attr['user_id'] = auth()->id();
+        $attr['status'] = 'Sedang Dalam Proses';
         $pkl = Pkl::create($attr);
 
         if ($request->input('kesbang', false)) {

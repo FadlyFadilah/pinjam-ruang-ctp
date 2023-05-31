@@ -38,6 +38,7 @@ class StudioFotoController extends Controller
     public function store(StoreStudioFotoRequest $request)
     {
         $request['user_id'] = auth()->id();
+        $request['status'] = 'Sedang Dalam Proses';
         $studioFoto = StudioFoto::create($request->all());
 
         if ($request->input('ktp', false)) {

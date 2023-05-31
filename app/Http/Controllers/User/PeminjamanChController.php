@@ -34,6 +34,7 @@ class PeminjamanChController extends Controller
         $attr = $request->all();
         $attr['ruangan_id'] = 1;
         $attr['user_id'] = auth()->id();
+        $attr['status'] = 'Sedang Dalam Proses';
 
         $peminjamanCh = PeminjamanCh::create($attr);
 
