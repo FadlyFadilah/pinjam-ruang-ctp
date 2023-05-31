@@ -30,12 +30,15 @@
                         @csrf
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
-                            <p> 1.	Tenant  wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
+                            <p> 
+                                1.	Tenant  wajib mengisi formulir yang ada di website :  website :  http://pelita.cimahitechnopark.id/ .<br>
                                 2.	Apabila ada jadwal yang kosong, tenant dapat booking Studio Dubbing sesuai jadwal yang tersedia.<br>
-                                3.	CS BITC akan berkoordinasi dengan Koordinator Gedung bitc, apabila sudah acc CS BITC akan menghubungi tenant.<br>
-                                4.	Waktu yang dapat digunakan untuk Studio Dubbing : (Tenant yang menyewa Co Working Space (dalam 1 bulan yaitu 16 jam), dan untuk tenant yang menyewa Space ruang kantor (dalam 1 bulan yaitu 32 jam)).<br>
+                                3.	Apabila tenant telah mengisi pendaftaran/booking jadwal studio dubbing, untuk hasil verifikasi akan di hubungi juga oleh petugas/cs Bitc.<br>
+                                4.	Waktu yang dapat digunakan untuk Studio Dubbing : (Tenant yang menyewa Co Working Space (dalam 1 bulan yaitu 16 jam), dan untuk tenant yang menyewa Space ruang kantor (dalam 1 bulan yaitu 32 jam), (kuota/jatah waktu pemakaian di bulan tersebut apabila tidak di gunakan akan hangus)).<br>
                                 5.	Apabila ada asset yang akan digunakan di ruang Studio, tenant wajib izin ke Pengelola Gedung BITC.<br>
-                                6.	Pada saat penggunaan Ruang Studio Dubbing, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.
+                                6.	Pada saat penggunaan Ruang Studio Dubbing, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.<br>
+                                Note : <li>Peminjaman dari hari senin s/d sabtu (di luar tanggal merah/libur). </li>
+                                       <li>Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773).</li>
 
                                 </p>
                             <div class="form-check">
