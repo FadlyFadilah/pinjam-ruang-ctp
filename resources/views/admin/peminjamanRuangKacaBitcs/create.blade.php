@@ -36,7 +36,8 @@
                                 3.	Setelah booking CS akan mengkonfirmasi tanggal yang tersedia dan  tenant dapat menggunakan ruang kaca tersebut.<br>
                                 4.	Waktu yang dapat digunakan untuk Ruang Kaca yaitu Maksimal 4 (empat) jam. <br>
                                 5.	Apabila ada asset yang akan digunakan di ruang kaca, tenant wajib izin ke Pengelola Gedung BITC. <br>
-                                6.	Pada saat penggunaan Ruang Kaca BITC, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.
+                                6.	Pada saat penggunaan Ruang Kaca BITC, tenant wajib menjaga dan menaati peraturan yang telah di sepakati.<br>
+                                Note : Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773).
                                 
                             </p>
                             <div class="form-check">

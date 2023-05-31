@@ -12,7 +12,7 @@
                     <div class="step" data-target="#alur">
                         <button type="button" class="step-trigger" role="tab" aria-controls="alur" id="alur-trigger">
                             <span class="bs-stepper-circle">1</span>
-                            <span class="bs-stepper-label">Alur Peminjaman Barang</span>
+                            <span class="bs-stepper-label">Penyewaan Conventional Hall BITC</span>
                         </button>
                     </div>
                     <div class="line"></div>
@@ -30,11 +30,12 @@
                         <div id="alur" class="content" role="tabpanel" aria-labelledby="alur-trigger">
                             <h1>SOP</h1>
                             <p>
-                                1. Pendaftaran.<br>
-                                2. Pengajuan Formulir Pemenuhan Persyaratan. <br>
-                                3. Evaluasi Persyaratan Oleh Petugas, Petugas Memberikan SKRD.<br>
-                                4. Calon Wajib Retribusi Membayar Retribusi Ruangan Melalui RKUD dan Memberikan SSRD Kepada Petugas.<br>
-                                5. Persetujuan Menggunakan Gedung BITC.
+                                1. Pendaftaran melalui Web & konfirmasi ke wa CS Bitc.<br>
+                                2. Pengajuan Surat syarat bersewa ( isi surat melimputi data Kegiatan Acara) dengan di upload di web dan atau di kirim via WA ke kontak CS Bitc, untuk info lebih jelas dapat menghubungi kontak CS Bitc. <br>
+                                3. Evaluasi Persyaratan Oleh Petugas.<br>
+                                4. Apabila telah ada info acc/verikasi penyewaan dapat berlanjut dari petugas/di hubungi oleh petugas maka calon wajib retribusi membayarar retribusi.<br>
+                                5. Persetujuan Menggunakan Gedung BITC.<br>
+                                Note : Informasi lebih lanjut/lebih jelas hubungi kontak CS BITC (088220972773).
                             </p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="checkboxId" onchange="toggleButton()">
